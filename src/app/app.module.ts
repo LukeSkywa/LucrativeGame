@@ -11,6 +11,7 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { ModificaComponent } from './components/modifica/modifica.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     DettaglioComponent,
     ModificaComponent,
     LogoutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
