@@ -13,13 +13,13 @@
         <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
     </div>
 
-    <div>
+    <!-- <div>
         <label for="ruolo">Ruolo</label>
         <select id="ruolo" formControlName="ruolo">
                     <option *ngFor="let ruolo of rules" [value]="ruolo">{{ruolo}}</option>
                 </select>
-    </div>
+    </div> -->
 
-    <input type="submit" [disabled]="loginForm.status === 'INVALID'" value="Login">
+    <input type="submit" value="Login">
 </form>
 <a href="/register">Se non sei registrato clicca qui</a>
