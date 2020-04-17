@@ -19,7 +19,7 @@ export class ListaComponent implements OnInit {
     this.httpService.getClothes().subscribe(reponse => {
       this.clothesList = reponse;
     }, err => {
-      console.log('error');
+      console.log('errore');
     });
   }
 

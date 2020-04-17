@@ -1,7 +1,8 @@
 <app-menu></app-menu>
 <ul>
     <li *ngFor="let item of clothesList">
+        {{item.id}} 
         {{item.name}}
-        <button>Vai al dettaglio</button>
+        <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
     </li>
 </ul>
