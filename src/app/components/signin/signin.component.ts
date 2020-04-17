@@ -20,11 +20,12 @@ export class SigninComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmit(user){
-    this.router.navigateByUrl('/login');
-    this.signin.addUser(user);
+    console.log(user);
+    this.signin.signin(user);
+    this.router.navigateByUrl('/home');
+    
   }
 }

@@ -7,14 +7,16 @@ import { ListaComponent } from './components/lista/lista.component';
 import { LoginComponent } from './components/login/login.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoginRouteGuardService } from './services/route-guard/login-route-guard.service';
+import { ModificaRouteGuardService } from './services/route-guard/modifica-route-guard.service';
 
 const routes: Routes = [
-    { path: 'login', component: LoginComponent },
-    { path: 'detail/:id', component: DettaglioComponent},
-    { path: 'home', component: HomeComponent},
-    { path: 'modifica', component: ModificaComponent},
-    { path: 'list', component: ListaComponent},
+    { path: 'login', component: LoginComponent},
     { path: 'signin', component: SigninComponent},
+    { path: 'detail/:id', component: DettaglioComponent, canActivate: [LoginRouteGuardService]},
+    { path: 'home', component: HomeComponent, canActivate: [LoginRouteGuardService]},
+    { path: 'modifica', component: ModificaComponent, canActivate: [LoginRouteGuardService, ModificaRouteGuardService]},
+    { path: 'list', component: ListaComponent, canActivate: [LoginRouteGuardService]},
     { path: '**', component:PageNotFoundComponent},
     { path: '', redirectTo: '/login', pathMatch: 'full' }
 ]

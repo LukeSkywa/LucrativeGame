@@ -1,5 +1,5 @@
 export interface UserItem{
-    username:string;
-    password:string;
-    ruolo:string;
+    username: string;
+    password: string;
+    admin: boolean;
 }

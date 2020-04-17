@@ -8,39 +8,25 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent implements OnInit {
-
-  get usernameControl(): FormControl{
-    return this.loginForm.get('username') as FormControl;
-  }
   
-  get passwordControl(): FormControl{
-    return this.loginForm.get('password') as FormControl;
+  
+  constructor(private loginService:LoginService, private router:Router){}
+  
+  ngOnInit(): void {}
+
+  login(username:string, password:string) {
+    this.loginService.eseguiLogin(username,password);
   }
 
-  // get ruoloControl(): FormControl{
-  //   return this.loginForm.get('ruolo') as FormControl;
-  // }
+  loginSession(username:string, password:string){ 
+    
+    sessionStorage.setItem('user', username);
+    sessionStorage.setItem('password', password);
 
-  rules:string[] = ['admin','user'];
-
-  loginForm:FormGroup;
-
-  constructor(private loginService:LoginService, private fb:FormBuilder, private  router:Router) {
-    this.loginForm=this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
-      //ruolo: ['', Validators.required],
-    });
-   }
-
-  ngOnInit(): void {
+    this.loginService.eseguiLoginSession();
   }
-
-  login() {
-      this.loginService.eseguiLogin(this.usernameControl.value,this.passwordControl.value);
-      // this.loginService.eseguiLogin(this.usernameControl.value,this.passwordControl.value,this.ruoloControl.value);
-  }
-
+ 
 }
 
