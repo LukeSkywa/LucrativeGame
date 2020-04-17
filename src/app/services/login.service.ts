@@ -38,9 +38,10 @@ export class LoginService {
     }
   }
 
-  eseguiRegister(ut:string, psw:string){
-    this.userListStored.push({username: ut, password:psw, ruolo:'user'});
-    console.log(this.userListStored);
+  addUser(user:UserItem){
+    user.ruolo = "user";
+    console.log(user);    
+    this.userListStored.push(user);
   }
 
 }
