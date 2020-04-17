@@ -12,6 +12,7 @@ import { ModificaComponent } from './components/modifica/modifica.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,11 @@ import { MenuComponent } from './components/menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
