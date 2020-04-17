@@ -3,35 +3,48 @@ $textcolor: darkblue;
 $fontsize: 19px;
 
 /* Use the variables */
+
 body {
-  background-color: $bgcolor;
-  color: $textcolor;
-  font-size: $fontsize;
-  height: 1000px;
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+    height: 20%;
 }
+
 
 /* Barra di Navigazione */
-ul { /*Impostazioni Barra */
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: lightblue;
+
+ul {
+    /*Impostazioni Barra */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightblue;
 }
 
-li {  /*Allineamento testo */
-  float: left;
+li {
+    /*Allineamento testo */
+    float: left;
 }
 
-li a { /*Impostazioni testo */
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+li a {
+    /*Impostazioni testo */
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-li a:hover { /* Colore ppassaggio mouse */
-  background-color: rgb(29, 102, 126);
+li a:hover {
+    /* Colore ppassaggio mouse */
+    background-color: rgb(29, 102, 126);
 }
+
+img {
+    padding-left: 40%;
+}
+
+
 /* Fine Barra di Navigazione */

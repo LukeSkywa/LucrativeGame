@@ -1,0 +1,26 @@
+        $bgcolor: lightblue;
+        $textcolor: darkblue;
+        $fontsize: 19px;
+        /* Use the variables */
+        
+        div {
+            background-image: linear-gradient(to right, RGB(0, 107, 255), RGB(0, 194, 255));
+            color: $textcolor;
+            font-size: $fontsize;
+            height: 100%;
+            margin-top: -5%;
+            padding-top: 3%;
+        }
+        
+        .titolo {
+            font-size: 300%;
+            color: white;
+            padding-left: 1%;
+            font-family: Vistol;
+        }
+        
+        .testo {
+            color: white;
+            padding-left: 1%;
+            font-size: 200%;
+        }
