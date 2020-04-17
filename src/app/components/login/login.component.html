@@ -1,1 +1,25 @@
-<p>login works!</p>
+<H1>LOGIN</H1>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username" placeholder="Username">
+        <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
+
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" placeholder="Password">
+        <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
+    </div>
+
+    <div>
+        <label for="ruolo">Ruolo</label>
+        <select id="ruolo" formControlName="ruolo">
+                    <option *ngFor="let ruolo of rules" [value]="ruolo">{{ruolo}}</option>
+                </select>
+    </div>
+
+    <input type="submit" [disabled]="loginForm.status === 'INVALID'" value="Login">
+</form>
+<a href="/register">Se non sei registrato clicca qui</a>
