@@ -18,9 +18,9 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('password') as FormControl;
   }
 
-  get ruoloControl(): FormControl{
-    return this.loginForm.get('ruolo') as FormControl;
-  }
+  // get ruoloControl(): FormControl{
+  //   return this.loginForm.get('ruolo') as FormControl;
+  // }
 
   rules:string[] = ['admin','user'];
 
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.loginForm=this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
-      ruolo: ['', Validators.required],
+      //ruolo: ['', Validators.required],
     });
    }
 
@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-      this.loginService.eseguiLogin(this.usernameControl.value,this.passwordControl.value,this.ruoloControl.value);
+      this.loginService.eseguiLogin(this.usernameControl.value,this.passwordControl.value);
+      // this.loginService.eseguiLogin(this.usernameControl.value,this.passwordControl.value,this.ruoloControl.value);
   }
 
 }

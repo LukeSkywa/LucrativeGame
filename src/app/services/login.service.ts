@@ -14,17 +14,21 @@ export class LoginService {
 
   constructor(private router: Router) { }
 
-  isLogin(ut:String, psw:String, rule:string):boolean{
+  //isLogin(ut:String, psw:String, rule:string):boolean{
+  isLogin(ut:String, psw:String):boolean{
     for(let i=0;i<this.userListStored.length;i++)
-      if(this.userListStored[i].username===ut && this.userListStored[i].password===psw && this.userListStored[i].ruolo===rule)
+      //if(this.userListStored[i].username===ut && this.userListStored[i].password===psw && this.userListStored[i].ruolo===rule)
+      if(this.userListStored[i].username===ut && this.userListStored[i].password===psw)
         return true;
       return false;
   }
 
-  eseguiLogin(ut:string, psw:string, ruolo:string){
-    if(this.isLogin(ut,psw,ruolo)){
+  // eseguiLogin(ut:string, psw:string, ruolo:string){
+    eseguiLogin(ut:string, psw:string){
+    //if(this.isLogin(ut,psw,ruolo)){
+    if(this.isLogin(ut,psw)){
       sessionStorage.setItem('user', ut);
-      sessionStorage.setItem('ruolo', ruolo);
+      //sessionStorage.setItem('ruolo', ruolo);
       window.alert("login effettuato")
       this.router.navigateByUrl('/home');
     }
@@ -34,9 +38,10 @@ export class LoginService {
     }
   }
 
-  eseguiRegister(ut:string, psw:string){
-    this.userListStored.push({username: ut, password:psw, ruolo:'user'});
-    console.log(this.userListStored);
+  addUser(user:UserItem){
+    user.ruolo = "user";
+    console.log(user);    
+    this.userListStored.push(user);
   }
 
 }
