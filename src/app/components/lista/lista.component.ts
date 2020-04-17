@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { ClothesListService } from 'src/app/services/clothes-list.service';
+import { Router } from '@angular/router';
+import { HttpService } from 'src/app/services/http/http.service';
 
 @Component({
   selector: 'app-lista',
@@ -8,13 +10,21 @@ import { ClothesListService } from 'src/app/services/clothes-list.service';
   styleUrls: ['./lista.component.scss']
 })
 export class ListaComponent implements OnInit {
+  
   clothesList: ClothesItem[] = [];
 
-  constructor(private clothesListService: ClothesListService) {
-    this.clothesList = this.clothesListService.getClothesList();
+  constructor(private router:Router, private httpService:HttpService) { }
+
+  retrieveClothes(){
+    this.httpService.getClothes().subscribe(reponse => {
+      this.clothesList = reponse;
+    }, err => {
+      console.log('error');
+    });
   }
 
   ngOnInit(): void {
+    this.retrieveClothes();
   }
 
 }
