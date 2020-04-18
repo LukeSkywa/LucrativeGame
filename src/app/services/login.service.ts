@@ -38,6 +38,9 @@ export class LoginService {
   eseguiLogin(form){
     if(this.isPres(form)){
       sessionStorage.setItem('username',form.username);
+
+      console.log(sessionStorage.getItem('username'));
+
       this.router.navigateByUrl('/home');
       window.alert("LOGIN EFFETTUATTO");
     }

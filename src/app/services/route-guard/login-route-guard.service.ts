@@ -10,7 +10,8 @@ export class LoginRouteGuardService {
   constructor(private router:Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    if (sessionStorage.getItem('username') != null) {
+    
+    if (sessionStorage.getItem('username') != null ){
       return true;
     } else {
       this.router.navigateByUrl('/login');
