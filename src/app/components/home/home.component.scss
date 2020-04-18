@@ -1,10 +1,12 @@
         $bgcolor: lightblue;
         $textcolor: darkblue;
         $fontsize: 19px;
+        $coloreInizioSfumatura: RGB(0, 107, 255);
+        $coloreFineSfumatura: RGB(0, 194, 255);
         /* Use the variables */
         
         div {
-            background-image: linear-gradient(to right, RGB(0, 107, 255), RGB(0, 194, 255));
+            background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
             color: $textcolor;
             font-size: $fontsize;
             height: 100%;
