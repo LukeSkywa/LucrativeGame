@@ -1,4 +1,5 @@
 export interface User{
+    id:string;
     nome: string;
     cognome: string;
     username: string;

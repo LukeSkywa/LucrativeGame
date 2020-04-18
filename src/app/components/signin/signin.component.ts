@@ -19,19 +19,21 @@ export class SigninComponent implements OnInit {
 
   constructor(private signinService: SigninService, private fb: FormBuilder, private router:Router, private httpService:HttpService) { 
     this.signinForm = this.fb.group({
+      id:'',
       nome:'',
       cognome:'',
       email:'',
       username: '',
       password: '',
       telefono:'',
-      genere:''
+      genere:'',
+      admin: false
     });
   }
 
   ngOnInit(): void {}
 
   signin(){
-    this.signinService.addUser();
+    this.signinService.addUser(this.signinForm.value);
   }
 }

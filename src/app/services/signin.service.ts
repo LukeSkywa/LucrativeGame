@@ -21,19 +21,8 @@ export class SigninService {
     });
   }
 
-  user: User = { 
-    nome: "Davide",
-    cognome: "Carizzoni",
-    username: "davidecarizzoni",  
-    password: "12345", 
-    email: "davidecarizzoni@gmail.com",
-    telefono: "000000000",
-    genere: "M", 
-    "admin": true
-  }
-
-  addUser(){
-    this.httpService.postUser(this.user).subscribe(()=>{
+  addUser(form){
+    this.httpService.postUser(form).subscribe(()=>{
       this.retrieveUsers();
     });
   }
