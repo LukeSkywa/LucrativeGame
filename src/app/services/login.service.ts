@@ -1,49 +1,62 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserItem } from '../../models/user.interface';
+import { User } from 'src/models/user.interface';
+import { HttpService } from './http/http.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  private userListStored: UserItem [] = [
-    {username: 'Alessio', password: 'Ciao', admin: true},
-    {username: 'Luca', password: 'Psw', admin: false}
-  ];
+  private userListStored: User [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private httpService:HttpService) { 
+    this.retrieveUsers() 
+  }
 
-  isPres(username:String, password:String):boolean{
+  retrieveUsers(){
+    this.httpService.getUsers().subscribe(reponse => {
+      this.userListStored = reponse;
+      console.log(this.userListStored);
+    }, err => {
+      console.log('error');
+    });
+  }
+
+  isPres(form):boolean{
+    console.log(form.username);
+    console.log(form.password);
+  
     let controllo = false;
     this.userListStored.forEach(element => {
-      if(element.username === username && element.password === password){
+      if(element.username==form.username && element.password==form.password){
         element.admin === true ? sessionStorage.setItem('privilege','admin') : sessionStorage.setItem('privilege','user')
         controllo = true;
+       
       } 
     });
     return controllo;
   }
 
-  eseguiLogin(username:string, password:string){
-    if(this.isPres(username, password)){
-      sessionStorage.setItem('username',username);
+  eseguiLogin(form){
+    if(this.isPres(form)){
+      sessionStorage.setItem('username',form.username);
       this.router.navigateByUrl('/home');
+      window.alert("LOGIN EFFETTUATTO");
     }
+    else{
+      window.alert("ERRORE");
+      this.router.navigateByUrl('/login');
+    }
+      
   }
 
-  eseguiLoginSession(){
-    let username = sessionStorage.getItem('username');
-    let password = sessionStorage.getItem('password');
-
-    if(this.isPres(username,password)){
-      this.router.navigateByUrl('/home');
-    }
-  }
-
-  signin(user: UserItem){
+  signin(user: User){
     user.admin = false; 
     this.userListStored.push(user);
   }
+
+  
 
 }

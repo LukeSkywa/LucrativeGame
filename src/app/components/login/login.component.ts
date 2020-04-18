@@ -11,21 +11,19 @@ import { Router } from '@angular/router';
 
 export class LoginComponent implements OnInit {
   
+  loginForm: FormGroup;
   
-  constructor(private loginService:LoginService, private router:Router){}
+  constructor(private loginService:LoginService, private router:Router, private fb:FormBuilder){
+    this.loginForm = this.fb.group({
+      username: '',
+      password: ''
+    })
+  }
   
   ngOnInit(): void {}
 
-  login(username:string, password:string) {
-    this.loginService.eseguiLogin(username,password);
-  }
-
-  loginSession(username:string, password:string){ 
-    
-    sessionStorage.setItem('user', username);
-    sessionStorage.setItem('password', password);
-
-    this.loginService.eseguiLoginSession();
+  login(form) {
+    this.loginService.eseguiLogin(form);
   }
  
 }
