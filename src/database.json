@@ -1,0 +1,48 @@
+{
+    "clothes": [
+        { 
+            "id": 1, 
+            "name": "vestito1", 
+            "prezzo": 200,
+            "description" : "Descrizione vistito 1", 
+            "genere" : "abito"
+        },
+        { 
+            "id": 2, 
+            "name": "vestito2", 
+            "prezzo": 75,
+            "description" : "Descrizione vistito 2", 
+            "genere" : "intimo"
+        },
+        { 
+            "id": 3, 
+            "name": "vestito3", 
+            "prezzo": 64,
+            "description" : "Descrizione vistito 3", 
+            "genere" : "sportivo"
+        }
+    ],
+    
+    "users": [
+        { 
+            "nome": "Davide",
+            "cognome": "Carizzoni",
+            "username": "davidecarizzoni",  
+            "password": "12345", 
+            "email": "davidecarizzoni@gmail.com",
+            "telefono": "000000000",
+            "genere": "M", 
+            "admin": true
+        },
+        { 
+            "nome": "Antonino",
+            "cognome": "Pigolotti",
+            "username": "antoninopigolotti",  
+            "password": "ciao", 
+            "email": "antoninopigolotti@gmail.com",
+            "telefono": "456767889",
+            "genere": "M", 
+            "admin": false
+        }
+    ]
+}
