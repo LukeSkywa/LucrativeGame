@@ -1,5 +1,13 @@
 <div>
-    <form (ngSubmit)="onSubmit(signinForm.value)"  [formGroup]="signinForm">
+    <form (ngSubmit)="signin()"  [formGroup]="signinForm">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" required formControlName="nome">
+        </div>
+        <div>
+            <label for="cognome">Cognome</label>
+            <input type="text" id="cognome" required formControlName="cognome">
+        </div>
         <div>
             <label for="username">Username</label>
             <input type="text" id="username" required formControlName="username">
@@ -7,6 +15,18 @@
         <div>
             <label for="password">Password</label>
             <input type="password" id="password" required formControlName="password">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" required formControlName="email">
+        </div>
+        <div>
+            <label for="telefono">Telefono</label>
+            <input type="text" id="telefono" required formControlName="telefono">
+        </div>
+        <div>
+            <label for="genere">Genere</label>
+            <input type="text" id="genere" required formControlName="genere">
         </div>
         <button type="submit">Sign in</button>
     </form>

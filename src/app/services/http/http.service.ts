@@ -12,31 +12,30 @@ export class HttpService {
 
   constructor(private httpClient: HttpClient) { }
 
-
   // CLOTHES
   getClothes(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/clothes');
   }
 
   getClothesId(id: number):Observable<ClothesItem> {
-    return this.httpClient.get<ClothesItem>('http://localhost:3000/clothes/'+id);
+    return this.httpClient.get<ClothesItem>('http://localhost:3000/clothes/' + id);
   }
+
+  getClothesGenere(genere?:string): Observable<HttpResponse<ClothesItem[]>> {
+    let params: HttpParams;
+    if(genere != null && genere != ""){
+      params = new HttpParams().set('genere',genere);
+    }
+    return this.httpClient.get<ClothesItem[]>('http://localhost:3000/clothes', {observe: 'response', params: params})
+  }
+
 
   // USERS
   getUsers():Observable<any>{
     return this.httpClient.get('http://localhost:3000/users');
   }
 
-  // getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
-  //   let genere: string=""+author;
-  //   let params: HttpParams;
-  //   if (genere != null) {
-  //     params = new HttpParams().set('genere', genere);
-  //   }
-  //   return this.httpClient.get<User[]>('http://localhost:3000/games', { observe: 'response', params: params });
-  // }
-
-  postUser(user:User){
+  postUser(user: User){
     return this.httpClient.post('http://localhost:3000/users', user);
   }
 

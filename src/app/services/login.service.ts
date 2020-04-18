@@ -25,15 +25,11 @@ export class LoginService {
   }
 
   isPres(form):boolean{
-    console.log(form.username);
-    console.log(form.password);
-  
     let controllo = false;
     this.userListStored.forEach(element => {
-      if(element.username==form.username && element.password==form.password){
+      if(element.username === form.username && element.password === form.password){
         element.admin === true ? sessionStorage.setItem('privilege','admin') : sessionStorage.setItem('privilege','user')
         controllo = true;
-       
       } 
     });
     return controllo;
@@ -46,15 +42,10 @@ export class LoginService {
       window.alert("LOGIN EFFETTUATTO");
     }
     else{
-      window.alert("ERRORE");
+      window.alert("LOGIN ERRATO");
       this.router.navigateByUrl('/login');
     }
       
-  }
-
-  signin(user: User){
-    user.admin = false; 
-    this.userListStored.push(user);
   }
 
   
