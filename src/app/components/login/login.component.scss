@@ -1,0 +1,21 @@
+$sfondoInserimento: RGB(25, 184, 255);
+$coloreInizioSfumaturaPagina: RGB(0, 107, 255);
+$coloreFineSfumaturaPagina: RGB(0, 194, 255);
+$coloreInizioSfumaturaInserimento: RGB(25, 128, 255);
+$coloreFineSfumaturaInserimento: RGB(25, 194, 255);
+body {
+    background-image: linear-gradient(to right, $coloreInizioSfumaturaPagina, $coloreFineSfumaturaPagina);
+}
+
+.grid-container {
+    background-image: linear-gradient(to right, $coloreInizioSfumaturaInserimento, $coloreFineSfumaturaInserimento);
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 50%;
+    align-items: center;
+}
+
+.item1 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}

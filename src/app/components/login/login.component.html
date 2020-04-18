@@ -1,25 +1,53 @@
-<H1>LOGIN</H1>
-<form [formGroup]="loginForm" (ngSubmit)="login()">
-    <div>
-        <label for="username">Username</label>
-        <input type="text" id="username" formControlName="username" placeholder="Username">
-        <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
-    </div>
+<body align="center">
 
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" formControlName="password" placeholder="Password">
-        <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
-    </div>
 
-    <!-- <div>
+    <img src="" alt="">
+    <H1>Accedi</H1>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="grid-container">
+            <div class="item1">
+                <span class="material-icons">
+                    account_box
+                </span>
+            </div>
+            <div class="item2">
+                <label for="nomeUtente">
+                    Nome utente
+                </label>
+            </div>
+            <div class="item3">
+                <input type="text" id="username" formControlName="username" placeholder="Username">
+                <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="item1">
+                <span class="material-icons">
+                    lock
+                </span>
+            </div>
+            <div class="item2">
+                <label for="password">Password</label>
+            </div>
+            <div class="item3">
+                <input type="password" id="password" formControlName="password" placeholder="Password">
+                <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
+            </div>
+        </div>
+
+        <!-- <div>
         <label for="ruolo">Ruolo</label>
         <select id="ruolo" formControlName="ruolo">
                     <option *ngFor="let ruolo of rules" [value]="ruolo">{{ruolo}}</option>
                 </select>
     </div> -->
 
-    <input type="submit" value="Login">
-</form>
-<a href="/register">Se non sei registrato clicca qui</a>
+        <input type="submit" value="Login">
+    </form>
+    <a href="/register">Se non sei registrato clicca qui</a>
+</body>
