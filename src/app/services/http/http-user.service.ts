@@ -19,4 +19,8 @@ export class HttpUserService {
     return this.httpClient.post('http://localhost:3000/users', user);
   }
 
+  updateUser(user: User){
+    return this.httpClient.put('http://localhost:3000/users/'+user.username, user);
+  }
+
 }
