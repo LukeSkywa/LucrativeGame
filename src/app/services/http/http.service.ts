@@ -17,7 +17,7 @@ export class HttpService {
     return this.httpClient.get('http://localhost:3000/clothes');
   }
 
-  getClothesId(id: number):Observable<ClothesItem> {
+  getClothesId(id: string):Observable<ClothesItem> {
     return this.httpClient.get<ClothesItem>('http://localhost:3000/clothes/' + id);
   }
 

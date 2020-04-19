@@ -11,22 +11,22 @@ import { HttpService } from 'src/app/services/http/http.service';
 export class DettaglioComponent implements OnInit {
 
   clothes: ClothesItem;
-  id:number;
+  id:string;
 
   constructor(private router: Router, private httpService: HttpService, private activatedRoute: ActivatedRoute) { }
 
   catchId(){
     this.activatedRoute.paramMap.subscribe( params => {
       console.log(params);
-      this.id = Number(params.get('id'));
+      this.id = params.get('id');
       console.log("CATCH ID: "+ this.id)
     })
   }
 
-  retrieveSingleClothes(id:number){
-    this.httpService.getClothesId(id).subscribe(reponse => {
+  retrieveSingleClothes(id:string){
+    this.httpService.getClothesId(this.id).subscribe(reponse => {
       this.clothes = reponse;
-      console.log(this.clothes);
+      console.log("vestito" + this.clothes + typeof(this.clothes));
     }, err => {
       console.log('errore');
     });
