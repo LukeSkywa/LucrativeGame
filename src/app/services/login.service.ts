@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/models/user.interface';
-import { HttpService } from './http/http.service';
+import { HttpUserService } from './http/http-user.service';
 
 
 @Injectable({
@@ -11,14 +11,13 @@ export class LoginService {
 
   private userListStored: User [];
 
-  constructor(private router: Router, private httpService:HttpService) { 
+  constructor(private router: Router, private httpUserService:HttpUserService) { 
     this.retrieveUsers() 
   }
 
   retrieveUsers(){
-    this.httpService.getUsers().subscribe(reponse => {
+    this.httpUserService.getUsers().subscribe(reponse => {
       this.userListStored = reponse;
-      console.log(this.userListStored);
     }, err => {
       console.log('error');
     });
@@ -38,9 +37,6 @@ export class LoginService {
   eseguiLogin(form){
     if(this.isPres(form)){
       sessionStorage.setItem('username',form.username);
-
-      console.log(sessionStorage.getItem('username'));
-
       this.router.navigateByUrl('/home');
       window.alert("LOGIN EFFETTUATTO");
     }
