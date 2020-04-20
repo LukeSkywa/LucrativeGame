@@ -15,7 +15,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'signup', component: SignupComponent},
     { path: 'detail/:id', component: DettaglioComponent, canActivate: [LoginRouteGuardService]},
-    { path: 'home', component: HomeComponent, canActivate: [LoginRouteGuardService]},
+    { path: 'home', component: HomeComponent},
     { path: 'feedback', component: FeedbackComponent, canActivate: [LoginRouteGuardService]}, //Non può accedere al feedback se non è loggato
     { path: 'modifica', component: ModificaComponent, canActivate: [LoginRouteGuardService, ModificaRouteGuardService]},
     { path: 'list', component: ListaComponent, canActivate: [LoginRouteGuardService]},
