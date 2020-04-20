@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
-import { SigninService } from 'src/app/services/signin.service';
 import { HttpService } from 'src/app/services/http/http.service';
 import { User } from 'src/models/user.interface';
+import { LoginSignupService } from 'src/app/services/login-signup.service';
 
 @Component({
   selector: 'app-signin',
@@ -17,7 +16,7 @@ export class SigninComponent implements OnInit {
   userListStored: User[];
 
 
-  constructor(private signinService: SigninService, private fb: FormBuilder, private router:Router, private httpService:HttpService) { 
+  constructor(private loginSignUp:LoginSignupService, private fb: FormBuilder, private router:Router, private httpService:HttpService) { 
     this.signinForm = this.fb.group({
       id:'',
       nome:'',
@@ -34,6 +33,6 @@ export class SigninComponent implements OnInit {
   ngOnInit(): void {}
 
   signin(){
-    this.signinService.addUser(this.signinForm.value);
+    this.loginSignUp.addUser(this.signinForm.value);
   }
 }

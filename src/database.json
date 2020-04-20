@@ -22,51 +22,61 @@
       "genere": "sportivo"
     }
   ],
-  
   "users": [
     {
-        "id": "1",
-        "nome": "Davide",
-        "cognome": "Carizzoni",
-        "username": "davidecarizzoni",
-         "password": "12345",
-         "email": "davidecarizzoni@gmail.com",
-        "telefono": "000000000",
-        "genere": "M",
-        "admin": true
+      "id": "1",
+      "nome": "Davide",
+      "cognome": "Carizzoni",
+      "username": "davidecarizzoni",
+      "password": "12345",
+      "email": "davidecarizzoni@gmail.com",
+      "telefono": "000000000",
+      "genere": "M",
+      "admin": true
     },
     {
-        "id": "2",
-        "nome": "Antonino",
-        "cognome": "Pigolotti",
-        "username": "antoninopigolotti",
-        "password": "ciao",
-        "email": "antoninopigolotti@gmail.com",
-        "telefono": "456767889",
-        "genere": "M",
-        "admin": true
+      "id": "2",
+      "nome": "Antonino",
+      "cognome": "Pigolotti",
+      "username": "antoninopigolotti",
+      "password": "ciao",
+      "email": "antoninopigolotti@gmail.com",
+      "telefono": "456767889",
+      "genere": "M",
+      "admin": true
     },
     {
-        "id": "3",
-        "nome": "Matteo",
-        "cognome": "Sorti",
-        "username": "matteosorti",
-        "password": "1234",
-        "email": "matteosorti@gmail.com",
-        "telefono": "34567788",
-        "genere": "M",
-        "admin": true
+      "id": "3",
+      "nome": "Matteo",
+      "cognome": "Sorti",
+      "username": "matteosorti",
+      "password": "1234",
+      "email": "matteosorti@gmail.com",
+      "telefono": "34567788",
+      "genere": "M",
+      "admin": true
     },
     {
-        "id": "4",
-        "nome": "Andrea",
-        "cognome": "Bonardi",
-        "username": "andreabonardi",
-        "password": "123456",
-        "email": "andreabonardi@gmail.com",
-        "telefono": "00110022",
-        "genere": "M",
-        "admin": true
+      "id": "4",
+      "nome": "Andrea",
+      "cognome": "Bonardi",
+      "username": "andreabonardi",
+      "password": "123456",
+      "email": "andreabonardi@gmail.com",
+      "telefono": "00110022",
+      "genere": "M",
+      "admin": true
+    },
+    {
+      "id": "aCRo-ZG",
+      "nome": "as",
+      "cognome": "as",
+      "email": "as",
+      "username": "as",
+      "password": "as",
+      "telefono": "as",
+      "genere": "as",
+      "admin": false
     }
   ]
 }

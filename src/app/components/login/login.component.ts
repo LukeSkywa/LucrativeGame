@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/services/login.service';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginSignupService } from 'src/app/services/login-signup.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   
   loginForm: FormGroup;
   
-  constructor(private loginService:LoginService, private router:Router, private fb:FormBuilder){
+  constructor(private loginSignUp:LoginSignupService, private router:Router, private fb:FormBuilder){
     this.loginForm = this.fb.group({
       username: '',
       password: ''
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login(form) {
-    this.loginService.eseguiLogin(form);
+    this.loginSignUp.eseguiLogin(form);
   }
  
 }
