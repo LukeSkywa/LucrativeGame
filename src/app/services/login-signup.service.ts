@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from 'src/models/user.interface';
-<<<<<<< HEAD:src/app/services/login-signup.service.ts
-import { Router } from '@angular/router';
-import { HttpService } from './http/http.service';
-=======
 import { HttpUserService } from './http/http-user.service';
->>>>>>> origin/master:src/app/services/login.service.ts
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -51,7 +47,7 @@ export class LoginSignupService {
   }
 
   addUser(form){
-    this.httpService.postUser(form).subscribe(()=>{
+    this.httpUserService.postUser(form).subscribe(()=>{
       this.retrieveUsers();
       this.router.navigateByUrl('/login');
     });

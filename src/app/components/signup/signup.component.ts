@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { LoginSignupService } from 'src/app/services/login-signup.service';
 import { Router } from '@angular/router';
-import { HttpService } from 'src/app/services/http/http.service';
+
 import { User } from 'src/models/user.interface';
+import { HttpUserService } from 'src/app/services/http/http-user.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +17,7 @@ export class SignupComponent implements OnInit {
   userListStored: User[];
 
 
-  constructor(private loginSignUp:LoginSignupService, private fb: FormBuilder, private router:Router, private httpService:HttpService) { 
+  constructor(private loginSignUp:LoginSignupService, private fb: FormBuilder, private router:Router, private httpUserService:HttpUserService) { 
     this.signupForm = this.fb.group({
       id:'',
       nome:'',

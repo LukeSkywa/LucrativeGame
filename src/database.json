@@ -66,21 +66,9 @@
       "telefono": "00110022",
       "genere": "M",
       "admin": true
-<<<<<<< HEAD
     },
     {
-      "id": "aCRo-ZG",
-      "nome": "as",
-      "cognome": "as",
-      "email": "as",
-      "username": "as",
-      "password": "as",
-      "telefono": "as",
-      "genere": "as",
-      "admin": false
-    },
-    {
-      "id": "nNj1eTY",
+      "id": "0YWqy39",
       "nome": "we",
       "cognome": "we",
       "email": "we",
@@ -89,8 +77,6 @@
       "telefono": "we",
       "genere": "we",
       "admin": false
-=======
->>>>>>> origin/master
     }
   ]
 }
