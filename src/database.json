@@ -77,6 +77,17 @@
       "telefono": "as",
       "genere": "as",
       "admin": false
+    },
+    {
+      "id": "nNj1eTY",
+      "nome": "we",
+      "cognome": "we",
+      "email": "we",
+      "username": "we",
+      "password": "we",
+      "telefono": "we",
+      "genere": "we",
+      "admin": false
     }
   ]
 }

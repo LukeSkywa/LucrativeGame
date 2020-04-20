@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { SigninComponent } from './components/signin/signin.component';
 import { ListaComponent } from './components/lista/lista.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { ModificaComponent } from './components/modifica/modifica.component';
@@ -13,18 +12,19 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { MenuComponent } from './components/menu/menu.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SigninComponent,
     ListaComponent,
     DettaglioComponent,
     ModificaComponent,
     PageNotFoundComponent,
-    MenuComponent
+    MenuComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

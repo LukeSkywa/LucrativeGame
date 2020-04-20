@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { LoginSignupService } from 'src/app/services/login-signup.service';
 import { Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http/http.service';
 import { User } from 'src/models/user.interface';
-import { LoginSignupService } from 'src/app/services/login-signup.service';
 
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.scss']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.scss']
 })
-export class SigninComponent implements OnInit {
+export class SignupComponent implements OnInit {
 
-  signinForm: FormGroup;
+  signupForm: FormGroup;
   userListStored: User[];
 
 
   constructor(private loginSignUp:LoginSignupService, private fb: FormBuilder, private router:Router, private httpService:HttpService) { 
-    this.signinForm = this.fb.group({
+    this.signupForm = this.fb.group({
       id:'',
       nome:'',
       cognome:'',
@@ -32,7 +32,8 @@ export class SigninComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  signin(){
-    this.loginSignUp.addUser(this.signinForm.value);
+  signup(){
+    this.loginSignUp.addUser(this.signupForm.value);
   }
+
 }
