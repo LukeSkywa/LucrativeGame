@@ -1,29 +1,29 @@
+<html>
+
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-
-
     <img src="" alt="">
     <span class="material-icons" id="circle">
-        add_circle_outline
-    </span>
+                <a href="/register">add_circle_outline</a>
+            </span>
     <H1>Accedi</H1>
     <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="grid-container">
             <div class="item1">
                 <span class="material-icons">
-                    account_box
-                </span>
+                            account_box
+                        </span>
             </div>
             <div class="item2">
                 <label for="nomeUtente">
-                    Nome utente
-                </label>
+                            Nome utente
+                        </label>
             </div>
             <div class="item3">
-                <input type="text" id="username" formControlName="username" placeholder="Username">
+                <input type="text" id="username" formControlName="username" placeholder="Username" class="inserimento">
                 <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
             </div>
         </div>
@@ -38,7 +38,7 @@
                 <label for="password">Password</label>
             </div>
             <div class="item3">
-                <input type="password" id="password" formControlName="password" placeholder="Password">
+                <input type="password" id="password" formControlName="password" placeholder="Password" class="inserimento">
                 <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
             </div>
         </div>
@@ -50,7 +50,8 @@
                 </select>
     </div> -->
 
-        <input type="submit" value="Accedi">
+        <input type="submit" value="Accedi" class="bottone">
     </form>
-    <a href="/register">Se non sei registrato clicca qui</a>
 </body>
+
+</html>

@@ -6,16 +6,22 @@ $coloreInizioSfumaturaInserimento: RGB(25, 128, 255);
 $coloreFineSfumaturaInserimento: RGB(25, 194, 255);
 $textColor: white;
 $coloreTastoPiu: RGB(0, 106, 255);
+$coloreSfondoBottone: rgb(242, 242, 242);
+$coloreTestoBottone: rgb(81, 152, 251);
+$sfumaturaCorpoPagina: RGB(127, 181, 255);
 //fine definizione variabili
 //inizio definizione stile
 body {
-    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
     background-image: linear-gradient(to right, $coloreInizioSfumaturaPagina, $coloreFineSfumaturaPagina);
     color: $textColor;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 37%;
+    margin-right: 37%;
     text-align: center;
-    height: 200%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -10px -10px 5px $sfumaturaCorpoPagina;
 }
 
 .grid-container {
@@ -26,6 +32,10 @@ body {
     margin-left: 5%;
     align-items: center;
     text-align: left;
+    margin-bottom: 3%;
+    border-bottom: 1px solid white;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .item1 {
@@ -37,6 +47,23 @@ body {
     position: absolute;
     left: 58.9%;
     color: black;
+}
+
+.bottone {
+    background-color: $coloreSfondoBottone;
+    color: $coloreTestoBottone;
+    width: 80%;
+    height: 50px;
+    margin-top: 10%;
+    margin-bottom: 7%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.inseriemnto {
+    background-color: inherit;
+    outline: none;
+    ;
 }
 
 //fine definizione stile
