@@ -27,20 +27,25 @@ body {
 .grid-container {
     background-image: linear-gradient(to right, $coloreInizioSfumaturaInserimento, $coloreFineSfumaturaInserimento);
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 11% auto;
     width: 90%;
     margin-left: 5%;
     align-items: center;
     text-align: left;
     margin-bottom: 3%;
     border-bottom: 1px solid white;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .item1 {
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 5;
+}
+
+.item2 {
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
 
 #circle {
@@ -61,9 +66,11 @@ body {
 }
 
 .inseriemnto {
-    background-color: inherit;
-    outline: none;
-    ;
+    border: none;
+}
+
+.icon {
+    font-size: 100px;
 }
 
 //fine definizione stile
