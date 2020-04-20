@@ -5,14 +5,17 @@ $coloreFineSfumaturaPagina: RGB(0, 194, 255);
 $coloreInizioSfumaturaInserimento: RGB(25, 128, 255);
 $coloreFineSfumaturaInserimento: RGB(25, 194, 255);
 $textColor: white;
+$coloreTastoPiu: RGB(0, 106, 255);
 //fine definizione variabili
 //inizio definizione stile
 body {
+    margin-top: 10%;
     background-image: linear-gradient(to right, $coloreInizioSfumaturaPagina, $coloreFineSfumaturaPagina);
     color: $textColor;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 40%;
+    margin-right: 40%;
     text-align: center;
+    height: 200%;
 }
 
 .grid-container {
@@ -28,6 +31,12 @@ body {
 .item1 {
     grid-row-start: 1;
     grid-row-end: 4;
+}
+
+#circle {
+    position: absolute;
+    left: 58.9%;
+    color: black;
 }
 
 //fine definizione stile
