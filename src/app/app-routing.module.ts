@@ -17,8 +17,8 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent, canActivate: [LoginRouteGuardService]},
     { path: 'modifica', component: ModificaComponent, canActivate: [LoginRouteGuardService, ModificaRouteGuardService]},
     { path: 'list', component: ListaComponent, canActivate: [LoginRouteGuardService]},
-    { path: '**', component:PageNotFoundComponent},
-    { path: '', redirectTo: '/login', pathMatch: 'full' }
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: '**', component:PageNotFoundComponent}
 ]
 
 @NgModule({
