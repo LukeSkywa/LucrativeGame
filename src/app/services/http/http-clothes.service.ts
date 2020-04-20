@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams, HttpResponse} from '@angular/common/http';
+import { HttpClient, HttpResponse, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ClothesItem } from 'src/models/clothes-item.interface';
-import { User } from 'src/models/user.interface';
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class HttpService {
+export class HttpClothesService {
 
   constructor(private httpClient: HttpClient) { }
 
@@ -28,16 +26,4 @@ export class HttpService {
     }
     return this.httpClient.get<ClothesItem[]>('http://localhost:3000/clothes', {observe: 'response', params: params})
   }
-
-
-  // USERS
-  getUsers():Observable<any>{
-    return this.httpClient.get('http://localhost:3000/users');
-  }
-
-  postUser(user: User){
-    return this.httpClient.post('http://localhost:3000/users', user);
-  }
-
-
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { Router } from '@angular/router';
-import { HttpService } from 'src/app/services/http/http.service';
+import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
 
 @Component({
   selector: 'app-lista',
@@ -12,10 +12,10 @@ export class ListaComponent implements OnInit {
   
   clothesList: ClothesItem[] = [];
 
-  constructor(private router: Router, private httpService: HttpService) { }
+  constructor(private router: Router, private httpClothesService: HttpClothesService) { }
 
   retrieveClothes(){
-    this.httpService.getClothes().subscribe(reponse => {
+    this.httpClothesService.getClothes().subscribe(reponse => {
       this.clothesList = reponse;
     }, err => {
       console.log('errore');

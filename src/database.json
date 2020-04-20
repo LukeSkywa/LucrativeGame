@@ -66,6 +66,7 @@
       "telefono": "00110022",
       "genere": "M",
       "admin": true
+<<<<<<< HEAD
     },
     {
       "id": "aCRo-ZG",
@@ -88,6 +89,8 @@
       "telefono": "we",
       "genere": "we",
       "admin": false
+=======
+>>>>>>> origin/master
     }
   ]
 }
