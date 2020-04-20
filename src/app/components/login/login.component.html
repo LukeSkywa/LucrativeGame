@@ -1,10 +1,10 @@
-<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" ngNativeValidate>
       <div>
           <p class="title">LOGIN</p>
-          <input id="username" placeholder="nome utente" formControlName="username">
+          <input id="username" placeholder="nome utente" formControlName="username" required>
       </div>
       <div>
-          <input id="password" placeholder="password" formControlName="password">
+          <input id="password" placeholder="password" formControlName="password" required>
       </div>
       <div>
           <button type="submit">Accedi</button>

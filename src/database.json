@@ -66,17 +66,6 @@
       "telefono": "00110022",
       "genere": "M",
       "admin": true
-    },
-    {
-      "id": "0YWqy39",
-      "nome": "we",
-      "cognome": "we",
-      "email": "we",
-      "username": "we",
-      "password": "we",
-      "telefono": "we",
-      "genere": "we",
-      "admin": false
     }
   ]
 }
