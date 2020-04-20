@@ -37,7 +37,7 @@ export class LoginSignupService {
     if(this.isPres(form)){
       sessionStorage.setItem('username',form.username);
       this.router.navigateByUrl('/home');
-      window.alert("LOGIN EFFETTUATTO");
+      window.alert("LOGIN EFFETTUATO");
     }
     else{
       window.alert("LOGIN ERRATO");

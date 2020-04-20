@@ -13,6 +13,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SignupComponent } from './components/signup/signup.component';
     ModificaComponent,
     PageNotFoundComponent,
     MenuComponent,
-    SignupComponent
+    SignupComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
