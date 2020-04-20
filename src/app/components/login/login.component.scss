@@ -48,12 +48,6 @@ body {
     grid-row-end: 1;
 }
 
-#circle {
-    position: absolute;
-    left: 58.9%;
-    color: black;
-}
-
 .bottone {
     background-color: $coloreSfondoBottone;
     color: $coloreTestoBottone;
@@ -67,10 +61,6 @@ body {
 
 .inseriemnto {
     border: none;
-}
-
-.icon {
-    font-size: 100px;
 }
 
 //fine definizione stile
