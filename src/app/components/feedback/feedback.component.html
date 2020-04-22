@@ -7,17 +7,17 @@
  
 
     <div class="box">
-      <form>
-        <!--<img class="icon" src="icon.utente.png" alt="">--><input type="text" id="iconaUtente" name="nome" class="form-control" placeholder=" Nome" required><br>
-        <!--<img class="icon" src="icon.utente.png" alt="">--><input type="text" id="iconaUtente" name="cognome" class="form-control" placeholder="Cognome" required><br>
-        <!--<img class="icon" src="icon.uomo.donna.png" alt="">--><select name="country" id="iconaUomoDonna" class="form-control">
+      <form [formGroup]="feedbackForm" (ngSubmit)="addFeedback(feedbackForm)" ngNativeValidate>
+        <input type="text" id="iconaUtente" name="nome" class="form-control" placeholder=" Nome" formControlName="nome" required><br>
+        <input type="text" id="iconaUtente" name="cognome" class="form-control" placeholder="Cognome" formControlName="cognome"required><br>
+        <select name="country" id="iconaUomoDonna" formControlName="genere"class="form-control">
           <option value="Uomo">Uomo</option>
           <option value="Donna">Donna</option>
           </select>
           <br>
-        <!--<img class="icon" src="icon-email.png" alt="">--><input type="Email" id="iconaEmail" name="Email" class="form-control" placeholder="Email" required><br>
-        <!--<img class="icon" src="icon.telefono.png" alt="">--><input type="text" id="iconaTelefono" name="telefono" class="form-control" placeholder="Telefono" required><br>
-        <textarea name="Commenti" class="form-control" placeholder="Commenti" rows="4" required></textarea>
+        <input type="Email" id="iconaEmail" name="Email" class="form-control" formControlName="email" placeholder="Email" required><br>
+        <input type="text" id="iconaTelefono" name="telefono" class="form-control" formControlName="telefono" placeholder="Telefono" required><br>
+        <textarea name="Commenti" class="form-control" placeholder="Commenti" rows="4" formControlName="messaggio"required></textarea>
         <br>
         <br>
         <input type="submit" name="" class="form-control submit" value="Invia">

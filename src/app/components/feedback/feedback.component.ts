@@ -28,13 +28,13 @@ export class FeedbackComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addFeedback(feedbackForm){
-    this.httpFeedbackService.postFeedback(feedbackForm).subscribe(()=>{});
+  addFeedback(contactForm){
+    this.httpFeedbackService.postFeedback(this.feedbackForm.value).subscribe(()=>{});
     
-    if (feedbackForm.valid) {
-      const email = feedbackForm.value;
+    if (contactForm.valid) {
+      const email = contactForm.value;
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-      this.httpFeedbackService.invia('https://formspree.io/xjvenkaa',
+      this.httpFeedbackService.invia('https://formspree.io/xeqlyodw',
         { name: email.name, replyto: email.email, message: email.messages },
         { 'headers': headers }).subscribe(
           response => {
@@ -44,7 +44,6 @@ export class FeedbackComponent implements OnInit {
         );
     }
 
-    // window.alert("FEEDBACK INVIATO CON SUCCESSO");
     this.router.navigateByUrl('/home'); //ritorna alla home dopo aver lasciato il feedback
   }
 }
