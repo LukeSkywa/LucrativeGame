@@ -27,6 +27,7 @@ export class SignupComponent implements OnInit {
       password: ['', Validators.required],
       // telefono:['', Validators.required],
       // genere:['', Validators.required],
+      path: '/assets/users/profile.jpg',
       admin: false
     });
   }

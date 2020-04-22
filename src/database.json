@@ -9,7 +9,6 @@
       "preferito": true,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto1.jpg"
-
     },
     {
       "id": 2,
@@ -51,7 +50,6 @@
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto5.jpg"
     }
-
   ],
   "users": [
     {
@@ -63,7 +61,8 @@
       "email": "davidecarizzoni@gmail.com",
       "telefono": "000000000",
       "genere": "M",
-      "admin": true
+      "admin": true,
+      "path":"/assets/users/profile.jpg"
     },
     {
       "id": 2,
@@ -74,7 +73,8 @@
       "email": "antoninopigolotti@gmail.com",
       "telefono": "456767889",
       "genere": "M",
-      "admin": true
+      "admin": true,
+      "path":"/assets/users/profile.jpg"
     },
     {
       "id": 3,
@@ -85,7 +85,8 @@
       "email": "matteosorti@gmail.com",
       "telefono": "34567788",
       "genere": "M",
-      "admin": true
+      "admin": true,
+      "path":"/assets/users/profile.jpg"
     },
     {
       "id": 4,
@@ -96,7 +97,8 @@
       "email": "andreabonardi@gmail.com",
       "telefono": "00110022",
       "genere": "M",
-      "admin": true
+      "admin": true,
+      "path":"/assets/users/profile.jpg"
     }
   ],
   "feedback": [
@@ -153,6 +155,15 @@
       "email": "davijde@gmaolcksjn",
       "telefono": "hgcjhg",
       "messaggio": ",zjdhvbljfhvbljhdfbv"
+    },
+    {
+      "id": 7,
+      "nome": "davide",
+      "cognome": "cariz",
+      "genere": "Donna",
+      "email": "sdv@gmail",
+      "telefono": "sdffds",
+      "messaggio": "sfdfs"
     }
   ]
 }
