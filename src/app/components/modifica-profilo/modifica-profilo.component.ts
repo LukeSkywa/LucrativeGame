@@ -13,7 +13,7 @@ export class ModificaProfiloComponent implements OnInit {
 
   modificaProfilo: FormGroup;
   user: User;
-  // generi = ['Uomo', 'Donna', 'Altro'];
+  generi = ['Uomo', 'Donna', 'Altro'];
 
   // COSTRUISCO IL FORM CON I DATI DELL'UTENTE PRESENTE IN SESSION  
   constructor(private fb: FormBuilder, private httpUserService: HttpUserService, private router: Router) {

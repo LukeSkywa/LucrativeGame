@@ -3,7 +3,7 @@
     <app-menu></app-menu>
     <div class="title">
         <h3>Benvenuto</h3>
-        <img class="icon" src="icon.profilo.png" alt="">
+        <img class="icon" src="/assets/users/profile.jpg" class="profilo" alt="profilo">
     </div>
     
     <label for="img"></label>
@@ -15,11 +15,13 @@
             <input type="text" name="nome" class="form-control" placeholder="Nome" formControlName="nome"><br>
             <input type="text" name="cognome" class="form-control" placeholder="Cognome" formControlName="cognome"><br>
             <select name="Sesso" class="form-control" formControlName="genere">
-                <!-- <option value={{item}} *ngFor="let item of sesso"> {{item}} </option> -->
-                <option value="Uomo">Uomo</option>
-                <option value="Donna">Donna</option>
+                <!-- NECESSARRIO STILE PER LA SELECT -->
+                <ng-container *ngFor="let item of generi">
+                    <option value={{item}} > {{item}} </option>
+                </ng-container>
             </select>
             <br>
+            <!-- SISTEMARE LE ICONE  -->
             <img class="icon" src="icon-email.png" alt="">  
                 <input type="text" name="Email" class="form-control" placeholder="Email" formControlName="email"><br>
             <img class="icon" src="icon.telefono.png" alt="">  

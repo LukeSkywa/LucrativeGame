@@ -99,18 +99,6 @@
       "genere": "M",
       "admin": true,
       "path": "/assets/users/profile.jpg"
-    },
-    {
-      "id": 5,
-      "nome": "davide",
-      "cognome": "carizzoni",
-      "username": "davide",
-      "password": "davide",
-      "email": "da@gmail.com",
-      "telefono": "223323232323",
-      "genere": "Uomo",
-      "admin": false,
-      "path": "/assets/users/profile.jpg"
     }
   ],
   "feedback": [
