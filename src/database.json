@@ -104,66 +104,12 @@
   "feedback": [
     {
       "id": 1,
-      "nome": "kjsfnskd",
-      "cognome": "kjdb",
-      "genere": "kjsdbd",
-      "email": "kjsdbf",
-      "telefono": "khsdbf",
-      "messaggio": "kdhfbks"
-    },
-    {
-      "id": 2,
-      "nome": "mhdskj",
-      "cognome": "kj",
-      "genere": "kj",
-      "email": "kh",
-      "telefono": "kj",
-      "messaggio": "kj"
-    },
-    {
-      "id": 3,
-      "nome": "",
-      "cognome": "",
-      "genere": "",
-      "email": "",
-      "telefono": "",
-      "messaggio": ""
-    },
-    {
-      "id": 4,
-      "nome": "",
-      "cognome": "",
-      "genere": "",
-      "email": "",
-      "telefono": "",
-      "messaggio": ""
-    },
-    {
-      "id": 5,
-      "nome": "czxz",
-      "cognome": "xczx",
+      "nome": "Davide",
+      "cognome": "Carizzoni",
       "genere": "Uomo",
-      "email": "xasd@gmail",
-      "telefono": "czxc",
-      "messaggio": "czcxzc"
-    },
-    {
-      "id": 6,
-      "nome": "mzxc n",
-      "cognome": "gjkvhgv",
-      "genere": "Donna",
-      "email": "davijde@gmaolcksjn",
-      "telefono": "hgcjhg",
-      "messaggio": ",zjdhvbljfhvbljhdfbv"
-    },
-    {
-      "id": 7,
-      "nome": "davide",
-      "cognome": "cariz",
-      "genere": "Donna",
-      "email": "sdv@gmail",
-      "telefono": "sdffds",
-      "messaggio": "sfdfs"
+      "email": "davide@gmail.com",
+      "telefono": "347859843",
+      "messaggio": "Prova feedback funzionante"
     }
   ]
 }

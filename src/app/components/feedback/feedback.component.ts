@@ -30,18 +30,13 @@ export class FeedbackComponent implements OnInit {
 
   addFeedback(contactForm){
     this.httpFeedbackService.postFeedback(this.feedbackForm.value).subscribe(()=>{});
-    
+    console.log(contactForm.value);
     if (contactForm.valid) {
-      const email = contactForm.value;
+      const feedback = contactForm.value;
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       this.httpFeedbackService.invia('https://formspree.io/xeqlyodw',
-        { name: email.name, replyto: email.email, message: email.messages },
-        { 'headers': headers }).subscribe(
-          response => {
-            window.alert("Feedback inviato con successo");
-            console.log(response);
-          }
-        );
+        { name: feedback.name, replyto: feedback.email, message: contactForm.value.messaggio },
+        { 'headers': headers }).subscribe(() => {});
     }
 
     this.router.navigateByUrl('/home'); //ritorna alla home dopo aver lasciato il feedback

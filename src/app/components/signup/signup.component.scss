@@ -75,12 +75,13 @@ text {
     color: white;
 }
 
- ::-webkit-input-placeholder {
+::-webkit-input-placeholder {
     /* WebKit browsers (Safari, Google Chrome, Opera 15+) */
     color: white;
+    opacity: 0.5;
 }
 
-input::focus {
+input:focus {
     background-color: inherit;
 }
 

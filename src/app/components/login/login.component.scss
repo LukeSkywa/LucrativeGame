@@ -79,11 +79,13 @@ text {
  ::-webkit-input-placeholder {
     /* WebKit browsers (Safari, Google Chrome, Opera 15+) */
     color: white;
+    opacity: 0.5;
 }
 
 input:focus {
     background-color: inherit;
 }
+
 
 .più {
     margin-left: 88%;
