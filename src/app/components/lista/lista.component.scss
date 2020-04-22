@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(to right, #006cff , #00bdff);
+  color: #008CFF;
+	height: 768px;
+	width: auto;
+}
+
+
+.prova{
+  background: rgb(183, 213, 223);
+  width: auto;
+  padding: 10px;
+  margin: 20px;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+}
+
+img{
+  width: 100px;
+}
+
+
+th {
+  text-align: left;
+ object-position: center;
+  margin: 20px;
+  width: 20%;
+}
+
+img.share{
+  width: 25px;
+}

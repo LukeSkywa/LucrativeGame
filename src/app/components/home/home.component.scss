@@ -4,7 +4,7 @@
         $coloreInizioSfumatura: RGB(0, 107, 255);
         $coloreFineSfumatura: RGB(0, 194, 255);
         /* Use the variables */
-        
+
         div {
             background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
             color: $textcolor;
@@ -13,14 +13,14 @@
             margin-top: -5%;
             padding-top: 3%;
         }
-        
+
         .titolo {
             font-size: 300%;
             color: white;
             padding-left: 1%;
             font-family: Vistol;
         }
-        
+
         .testo {
             color: white;
             padding-left: 1%;
