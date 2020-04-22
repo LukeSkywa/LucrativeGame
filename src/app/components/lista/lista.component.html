@@ -1,8 +1,42 @@
 <app-menu></app-menu>
-<ul>
-    <li *ngFor="let item of clothesList">
-        {{item.id}} 
-        {{item.name}}
-        <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
-    </li>
-</ul>
+<div>
+    <button  (click)="viewList1()">Tutti</button>
+    <button  (click)="viewList2()">Preferiti</button>
+    <button  (click)="viewList3()">Nascosti</button>
+</div>
+
+<!-- TUTTI -->
+<ng-container *ngIf="list1 === true">
+    <p>lista 1</p>
+    <ul>
+        <li *ngFor="let item of clothesList">
+            {{item.id}} 
+            {{item.name}}
+            <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
+        </li>
+    </ul>
+</ng-container>
+
+<!-- PREFERITI -->
+<ng-container *ngIf="list2 === true">
+    <p>lista 2</p>
+    <ul>
+        <li *ngFor="let item of clothesList">
+            {{item.id}} 
+            {{item.name}}
+            <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
+        </li>
+    </ul>
+</ng-container>
+
+<!-- NASCONSTI -->
+<ng-container *ngIf="list3 === true">
+    <p>lista 3</p>
+    <ul>
+        <li *ngFor="let item of clothesList">
+            {{item.id}} 
+            {{item.name}}
+            <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
+        </li>
+    </ul>
+</ng-container>
