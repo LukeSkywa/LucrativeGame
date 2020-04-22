@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/models/user.interface';
 
 
 @Component({
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfiloComponent implements OnInit {
 
+  user: User;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.user = JSON.parse(sessionStorage.getItem('user'));
+    console.log(this.user);
   }
 
 }
