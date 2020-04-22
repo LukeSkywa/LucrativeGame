@@ -5,6 +5,10 @@ $fontsize: 19px;
 
 /* Use the variables */
 
+div {
+    margin-left: 1%;
+}
+
 body {
     background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
     color: $textcolor;
