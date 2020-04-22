@@ -11,7 +11,20 @@
           <th>{{item.name}} <br>
             Info prodotto
           </th>
-          <th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button></th>
+
+          <!--<th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
+          </th>
+          -->
+          <th style="width:1%">
+            <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
+            <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
+          </th>
+
+          <th style="width:1%">
+            <a  routerLink="/detail/{{item.id}}">
+            <img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></a>
+          </th>
+
         </tr>
       </table>
        <!-- {{item.id}} -->
