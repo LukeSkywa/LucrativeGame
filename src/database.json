@@ -55,12 +55,12 @@
     {
       "id": 1,
       "nome": "David",
-      "cognome": "Carizz",
+      "cognome": "Carizzoni",
       "username": "davidecarizzoni",
       "password": "12345",
       "email": "davidecarizzoni@gmail.com",
       "telefono": "3487190654",
-      "genere": "M",
+      "genere": "Uomo",
       "admin": true,
       "path": "/assets/users/profile.jpg"
     },
