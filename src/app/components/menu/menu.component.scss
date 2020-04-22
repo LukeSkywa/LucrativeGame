@@ -1,13 +1,9 @@
-$bgcolor: lightblue;
-$textcolor: darkblue;
-$fontsize: 19px;
-
 /* Use the variables */
 
 body {
-    background-color: $bgcolor;
-    color: $textcolor;
-    font-size: $fontsize;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(to right, #006cff , #00bdff);
+  color: #008CFF;
     height: 20%;
 }
 
@@ -17,15 +13,17 @@ body {
 ul {
     /*Impostazioni Barra */
     list-style-type: none;
+    color: white;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: lightblue;
+    background-image: linear-gradient(to right, #006cff , #00bdff);
 }
 
 li {
     /*Allineamento testo */
     float: left;
+
 }
 
 li a {
@@ -43,7 +41,8 @@ li a:hover {
 }
 
 img {
-    padding-left: 40%;
+  width: 100px;
+  padding-left: 40%;
 }
 
 
