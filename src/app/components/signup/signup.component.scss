@@ -1,0 +1,89 @@
+//definizione variabili
+$sfondoInserimento: RGB(25, 184, 255);
+$coloreInizioSfumaturaPagina: RGB(0, 194, 255);
+$coloreFineSfumaturaPagina: RGB(0, 107, 255);
+$coloreInizioSfumaturaInserimento: RGB(0, 193, 255);
+$coloreFineSfumaturaInserimento: RGB(0, 106, 255);
+$textColor: white;
+$coloreTastoPiu: RGB(0, 106, 255);
+$coloreSfondoBottone: rgb(242, 242, 242);
+$coloreTestoBottone: rgb(81, 152, 251);
+$sfumaturaCorpoPagina: RGB(127, 181, 255);
+//fine definizione variabili
+//inizio definizione stile
+body {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    background-image: linear-gradient(to right, $coloreInizioSfumaturaPagina, $coloreFineSfumaturaPagina);
+    color: $textColor;
+    margin-left: 37%;
+    margin-right: 37%;
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -10px -10px 5px $sfumaturaCorpoPagina;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+    background-image: linear-gradient(to right, $coloreInizioSfumaturaInserimento, $coloreFineSfumaturaInserimento);
+    display: grid;
+    grid-template-columns: 11% auto;
+    width: 90%;
+    margin-left: 5%;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 3%;
+    border-bottom: 1px solid white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.item1 {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.item2 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.bottone {
+    background-color: $coloreSfondoBottone;
+    color: $coloreTestoBottone;
+    width: 80%;
+    height: 50px;
+    margin-top: 10%;
+    margin-bottom: 7%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+input,
+text {
+    background-color: inherit;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+ ::-webkit-input-placeholder {
+    /* WebKit browsers (Safari, Google Chrome, Opera 15+) */
+    color: white;
+}
+
+input::focus {
+    background-color: inherit;
+}
+
+.tastoX {
+    margin-left: 98%;
+    margin-top: 5%;
+}
+
+.logo {
+    margin-top: 5%;
+}
+
+//fine definizione stile
