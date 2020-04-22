@@ -11,12 +11,14 @@ import { ModificaRouteGuardService } from './services/route-guard/modifica-route
 import { SignupComponent } from './components/signup/signup.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
+import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'signup', component: SignupComponent},
     { path: 'detail/:id', component: DettaglioComponent, canActivate: [LoginRouteGuardService]},
     { path: 'profilo', component: ProfiloComponent, canActivate: [LoginRouteGuardService]},
+    { path: 'modifica-profilo', component: ModificaProfiloComponent, canActivate: [LoginRouteGuardService]},
     { path: 'home', component: HomeComponent},
     { path: 'feedback', component: FeedbackComponent, canActivate: [LoginRouteGuardService]}, //Non può accedere al feedback se non è loggato
     { path: 'modifica', component: ModificaComponent, canActivate: [LoginRouteGuardService, ModificaRouteGuardService]},
