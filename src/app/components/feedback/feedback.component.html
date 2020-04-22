@@ -1,33 +1,33 @@
-<div>
-    <form (ngSubmit)="addFeedback()"  [formGroup]="feedbackForm" ngNativeValidate>
-        <div>
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" formControlName="nome" required>
-        </div>
-        <div>
-            <label for="cognome">Cognome</label>
-            <input type="text" id="cognome" formControlName="cognome" required>
-        </div>
-        <div>
-            <label for="genere">Genere</label>
-            <input type="text" id="genere" formControlName="genere" required>
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="text" id="email" formControlName="email" required>
-        </div>
-        <div>
-            <label for="telefono">Telefono</label>
-            <input type="text" id="telefono" formControlName="telefono" required>
-        </div>
-        <div>
-            <label for="messaggio">Messaggio</label>
-            <textarea type="text" id="messaggio" formControlName="messaggio" required>
-                Messaggio
-            </textarea>
-        </div>
-        
-        <button type="submit">Invia</button>
-    </form>
-</div>
+<body>
+    <app-menu></app-menu>
+    <div class="title">
+      <h3>Inviaci un tuo Feedback </h3>
+    </div>
+
+ 
+
+    <div class="box">
+      <form>
+        <!--<img class="icon" src="icon.utente.png" alt="">--><input type="text" id="iconaUtente" name="nome" class="form-control" placeholder=" Nome" required><br>
+        <!--<img class="icon" src="icon.utente.png" alt="">--><input type="text" id="iconaUtente" name="cognome" class="form-control" placeholder="Cognome" required><br>
+        <!--<img class="icon" src="icon.uomo.donna.png" alt="">--><select name="country" id="iconaUomoDonna" class="form-control">
+          <option value="Uomo">Uomo</option>
+          <option value="Donna">Donna</option>
+          </select>
+          <br>
+        <!--<img class="icon" src="icon-email.png" alt="">--><input type="Email" id="iconaEmail" name="Email" class="form-control" placeholder="Email" required><br>
+        <!--<img class="icon" src="icon.telefono.png" alt="">--><input type="text" id="iconaTelefono" name="telefono" class="form-control" placeholder="Telefono" required><br>
+        <textarea name="Commenti" class="form-control" placeholder="Commenti" rows="4" required></textarea>
+        <br>
+        <br>
+        <input type="submit" name="" class="form-control submit" value="Invia">
+
+ 
+
+        </form>
+    </div>
+
+ 
+
+  </body>
 
