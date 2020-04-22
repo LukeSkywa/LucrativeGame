@@ -1,0 +1,126 @@
+/*Icon image*/
+/*
+.inner-addon {
+    position: relative;
+    margin: 10px;
+}
+
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+*/
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: $bgcolor;
+	background-image: linear-gradient(to right, #006cff , #00bdff);
+	height: 768px;
+	width: auto;
+}
+.title {
+	margin-top: 100px;
+	color: blue;
+	h1 {
+		font-size: 32px;
+		line-height: 10px;
+	}
+	h3 {
+		font-size: 16px;
+		color: white;
+	}
+}
+form {
+	margin-top: 50px;
+	.submit {
+		background-color: white;
+		color: #006cff;
+		border-radius: 30px 30px 30px 30px;
+		font-size: 20px;
+		height: 50px;
+		margin-top: 20px;
+		transition: 0.4s ease;
+	}
+}
+.form-control {
+	width: 500px;
+	color: white;
+	background: transparent;
+	border: none;
+	outline: none;
+	border: 1px solid white;
+	font-size: 15px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+input {
+	height: 45px;
+	background-color: white;
+}
+form.submit {
+	&:hover {
+		background-color: red;
+		cursor: pointer;
+	}
+}
+&::placeholder {
+	color: white;
+	opacity: 1;
+}
+&:-ms-input-placeholder {
+	color: white;
+}
+&::-ms-input-placeholder {
+	color: white;
+}
+.icon {
+	width: 18px;
+}
+#iconaUtente {
+	background: transparent;
+	background-image: url("icon.utente.png");
+	background-position: left;
+	background-position: calc(5% - 10px) center;
+	padding-left: 40px;
+	background-size: 15px;
+	background-repeat: no-repeat;
+}
+#iconaTelefono {
+	background: transparent;
+	background-image: url("icon.utente.png");
+	background-position: left;
+	background-position: calc(5% - 10px) center;
+	padding-left: 40px;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	background: transparent;
+	background-image: url("icon.telefono.png");
+	background-position: left;
+	background-position: calc(5% - 10px) center;
+	padding-left: 40px;
+	background-size: 15px;
+	background-repeat: no-repeat;
+}
+#iconaUomoDonna {
+	background: transparent;
+	background-image: url("icon.uomo.donna.png");
+	background-position: left;
+	background-position: calc(5% - 10px) center;
+	padding-left: 40px;
+	background-size: 15px;
+	background-repeat: no-repeat;
+}
+#iconaEmail {
+	background: transparent;
+	background-image: url("icon-email.png");
+	background-position: left;
+	background-position: calc(5% - 10px) center;
+	padding-left: 40px;
+	background-size: 15px;
+	background-repeat: no-repeat;
+}
