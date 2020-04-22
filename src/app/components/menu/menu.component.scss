@@ -1,36 +1,50 @@
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 19px;
+
+/* Use the variables */
+
+body {
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+    height: 20%;
+}
+
 
 /* Barra di Navigazione */
-ul { /*Impostazioni Barra */
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #058dfb; /*Compare se motore di ricerca non carica sfumatura*/
-  background-image: linear-gradient(to right, #006cff , #00bdff);
+
+ul {
+    /*Impostazioni Barra */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightblue;
 }
 
-li {  /*Allineamento testo */
-  float: left;
+li {
+    /*Allineamento testo */
+    float: left;
 }
 
-li a { /*Impostazioni testo */
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+li a {
+    /*Impostazioni testo */
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-li a:hover { /* Colore ppassaggio mouse */
-  background-color: rgb(29, 102, 126);
+li a:hover {
+    /* Colore ppassaggio mouse */
+    background-color: rgb(29, 102, 126);
 }
-/* Fine Barra di Navigazione */
 
 img {
-  width: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
+    padding-left: 40%;
 }
 
+
+/* Fine Barra di Navigazione */

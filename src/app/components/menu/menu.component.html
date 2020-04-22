@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
 </head>
+
 <body>
     <div>
         <ul>
-            <li><a class="active" routerLink="home">Homepage</a></li>
-            <li><a class="active" routerLink="lista">Lista</a></li>
-            <li><a class="active" routerLink="card">Cards</a></li>
-            <li><a class="active" routerLink="feedback">Feedback</a></li>
-            <li><a class="active" routerLink="Profilo">Profilo</a></li>
-            <li><a class="active" routerLink="esci">Esci</a></li>
-            <li><img src="assets/borse.jpg"></li>
-          </ul>
+            <li> Benvenuto {{username}} </li>
+            <li> <a class="active" routerLink="/home">home</a></li>
+            <li> <a routerLink="/list"> Lista </a>  </li>
+            <li> <a href="">Cards</a></li>
+            <li> <a href="">Feedback</a></li>
+            <li> <a (click)="logout()">Logout</a></li>
+            <img src="/assets/lucrative-logo.png" alt="Il logo del nostro blog" />
+        </ul>
     </div>
 
 </body>
+
 </html>

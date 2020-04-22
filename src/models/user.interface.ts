@@ -1,5 +1,11 @@
-export interface UserItem{
-    username:string;
-    password:string;
-    ruolo:string;
+export interface User{
+    id:string;
+    nome: string;
+    cognome: string;
+    username: string;
+    password: string;
+    email: string;
+    telefono: string
+    genere: string;
+    admin: boolean;
 }
