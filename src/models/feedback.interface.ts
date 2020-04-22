@@ -1,5 +1,5 @@
 export interface Feedback{
-    id: string;
+    id: number;
     nome: string;
     cognome: string;
     genere: string;

@@ -7,6 +7,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpFeedbackService {
+  
+  invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
+    headers: import("@angular/common/http").HttpHeaders;
+  }) {
+
+    return this.httpClient.post(url,body,arg2); 
+  }
 
   constructor(private httpClient: HttpClient) { }
 

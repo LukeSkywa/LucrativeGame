@@ -1,5 +1,5 @@
 <div>
-    <form (ngSubmit)="addFeedback()"  [formGroup]="feedbackForm" ngNativeValidate>
+    <form (ngSubmit)="addFeedback(feedbackForm)"  [formGroup]="feedbackForm" ngNativeValidate>
         <div>
             <label for="nome">Nome</label>
             <input type="text" id="nome" formControlName="nome" required>
