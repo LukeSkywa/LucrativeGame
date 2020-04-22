@@ -20,9 +20,14 @@ body {
     margin-right: 37%;
     text-align: center;
     height: 100%;
+    width: 290px;
     border-radius: 10px;
     box-shadow: -10px -10px 5px $sfumaturaCorpoPagina;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+    font-size: 25px;
 }
 
 .grid-container {
@@ -78,12 +83,34 @@ input::focus {
 }
 
 .tastoX {
-    margin-left: 98%;
-    margin-top: 5%;
+    margin-left: 85%;
+    margin-top: -150px;
+    cursor: pointer;
+    outline: none;
 }
 
 .logo {
     margin-top: 5%;
+    width: 60%;
 }
 
 //fine definizione stile
+//media query
+@media screen and (max-width: 992px) {
+    body {
+        margin-left: 1%;
+        width: 70%;
+        height: 100%;
+    }
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (max-width: 600px) {
+    body {
+        margin-left: 1%;
+        width: 70%;
+        height: 100%;
+    }
+}
