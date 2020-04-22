@@ -1,0 +1,33 @@
+<div>
+    <form (ngSubmit)="signup()"  [formGroup]="signupForm" ngNativeValidate>
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" formControlName="nome" required>
+        </div>
+        <div>
+            <label for="cognome">Cognome</label>
+            <input type="text" id="cognome" formControlName="cognome" required>
+        </div>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" formControlName="username" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" formControlName="email" required>
+        </div>
+        <div>
+            <label for="telefono">Telefono</label>
+            <input type="text" id="telefono" formControlName="telefono" required>
+        </div>
+        <div>
+            <label for="genere">Genere</label>
+            <input type="text" id="genere" formControlName="genere" required>
+        </div>
+        <button type="submit">Sign in</button>
+    </form>
+</div>

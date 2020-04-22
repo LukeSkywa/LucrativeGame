@@ -1,55 +1,13 @@
-<html>
-
-<head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
-    <img ng-src="../../../asset/lucrative-logo.png" alt="Il logo del nostro blog" />
-    <img src="''../../../asset/più.png'" alt="piu" class="tastoPiu">
-    <H1>Accedi</H1>
-    <form [formGroup]="loginForm" (ngSubmit)="login()">
-        <div class="grid-container">
-            <div class="item1">
-                <span class="material-icons">
-                            account_box
-                        </span>
-            </div>
-            <div class="item2">
-                <label for="nomeUtente">
-                            Nome utente
-                </label>
-            </div>
-            <div class="item3">
-                <input type="text" id="username" formControlName="username" placeholder="Username" class="inserimento">
-                <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
-            </div>
-        </div>
-
-        <div class="grid-container">
-            <div class="item1">
-                <span class="material-icons">
-                    lock
-                </span>
-            </div>
-            <div class="item2">
-                <label for="password">Password</label>
-            </div>
-            <div class="item3">
-                <input type="password" id="password" formControlName="password" placeholder="Password" class="inserimento">
-                <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
-            </div>
-        </div>
-
-        <!-- <div>
-        <label for="ruolo">Ruolo</label>
-        <select id="ruolo" formControlName="ruolo">
-                    <option *ngFor="let ruolo of rules" [value]="ruolo">{{ruolo}}</option>
-                </select>
-    </div> -->
-
-        <input type="submit" value="Accedi" class="bottone">
-    </form>
-</body>
-
-</html>
+<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" ngNativeValidate>
+    <div>
+        <p class="title">LOGIN</p>
+        <input id="username" placeholder="nome utente" formControlName="username" required>
+    </div>
+    <div>
+        <input id="password" placeholder="password" formControlName="password" required>
+    </div>
+    <div>
+        <button type="submit">Accedi</button>
+        <button routerLink="/signup">Sign up</button>
+    </div>
+</form>
