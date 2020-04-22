@@ -1,69 +1,82 @@
 {
-    "clothes": [{
-            "id": 1,
-            "name": "vestito1",
-            "prezzo": 200,
-            "description": "Descrizione vistito 1",
-            "genere": "abito"
-        },
-        {
-            "id": 2,
-            "name": "vestito2",
-            "prezzo": 75,
-            "description": "Descrizione vistito 2",
-            "genere": "intimo"
-        },
-        {
-            "id": 3,
-            "name": "vestito3",
-            "prezzo": 64,
-            "description": "Descrizione vistito 3",
-            "genere": "sportivo"
-        }
-    ],
-    "users": [{
-            "id": "1",
-            "nome": "Davide",
-            "cognome": "Carizzoni",
-            "username": "davidecarizzoni",
-            "password": "12345",
-            "email": "davidecarizzoni@gmail.com",
-            "telefono": "000000000",
-            "genere": "M",
-            "admin": true
-        },
-        {
-            "id": "2",
-            "nome": "Antonino",
-            "cognome": "Pigolotti",
-            "username": "antoninopigolotti",
-            "password": "ciao",
-            "email": "antoninopigolotti@gmail.com",
-            "telefono": "456767889",
-            "genere": "M",
-            "admin": true
-        },
-        {
-            "id": "3",
-            "nome": "Matteo",
-            "cognome": "Sorti",
-            "username": "matteosorti",
-            "password": "1234",
-            "email": "matteosorti@gmail.com",
-            "telefono": "34567788",
-            "genere": "M",
-            "admin": true
-        },
-        {
-            "id": "4",
-            "nome": "Andrea",
-            "cognome": "Bonardi",
-            "username": "andreabonardi",
-            "password": "123456",
-            "email": "andreabonardi@gmail.com",
-            "telefono": "00110022",
-            "genere": "M",
-            "admin": true
-        }
-    ]
+  "clothes": [
+    {
+      "id": 1,
+      "name": "vestito1",
+      "prezzo": 200,
+      "description": "Descrizione vistito 1",
+      "genere": "abito"
+    },
+    {
+      "id": 2,
+      "name": "vestito2",
+      "prezzo": 75,
+      "description": "Descrizione vistito 2",
+      "genere": "intimo"
+    },
+    {
+      "id": 3,
+      "name": "vestito3",
+      "prezzo": 64,
+      "description": "Descrizione vistito 3",
+      "genere": "sportivo"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "nome": "Davide",
+      "cognome": "Carizzoni",
+      "username": "davidecarizzoni",
+      "password": "12345",
+      "email": "davidecarizzoni@gmail.com",
+      "telefono": "000000000",
+      "genere": "M",
+      "admin": true
+    },
+    {
+      "id": "2",
+      "nome": "Antonino",
+      "cognome": "Pigolotti",
+      "username": "antoninopigolotti",
+      "password": "ciao",
+      "email": "antoninopigolotti@gmail.com",
+      "telefono": "456767889",
+      "genere": "M",
+      "admin": true
+    },
+    {
+      "id": "3",
+      "nome": "Matteo",
+      "cognome": "Sorti",
+      "username": "matteosorti",
+      "password": "1234",
+      "email": "matteosorti@gmail.com",
+      "telefono": "34567788",
+      "genere": "M",
+      "admin": true
+    },
+    {
+      "id": "4",
+      "nome": "Andrea",
+      "cognome": "Bonardi",
+      "username": "andreabonardi",
+      "password": "123456",
+      "email": "andreabonardi@gmail.com",
+      "telefono": "00110022",
+      "genere": "M",
+      "admin": true
+    },
+    {
+      "id": "l7-7HBB",
+      "nome": "",
+      "cognome": "",
+      "email": "",
+      "username": "andrea",
+      "password": "ciao",
+      "telefono": "",
+      "genere": "",
+      "admin": false
+    }
+  ]
 }

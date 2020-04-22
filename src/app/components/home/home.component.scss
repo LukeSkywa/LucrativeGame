@@ -54,3 +54,28 @@ i {
 img {
     width: 20px;
 }
+
+//carousel
+.slider {
+    /* CURRENT way. */
+    scroll-snap-type: x mandatory;
+    /* OLD WAY. Probably not worth including at all.
+  
+    -webkit-scroll-snap-points-x: repeat(300px);
+        -ms-scroll-snap-points-x: repeat(300px);
+            scroll-snap-points-x: repeat(300px);
+    -webkit-scroll-snap-type: mandatory;
+        -ms-scroll-snap-type: mandatory;
+            scroll-snap-type: mandatory;
+  
+     */
+}
+
+.slides>div {
+    /* CURRENT way. */
+    scroll-snap-align: start;
+}
+
+.slides {
+    scroll-behavior: smooth;
+}
