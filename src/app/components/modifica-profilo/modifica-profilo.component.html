@@ -1,0 +1,32 @@
+
+<body>
+    <div class="title">
+        <h3>Benvenuto</h3>
+        <img class="icon" src="icon.profilo.png" alt="">
+    </div>
+
+ 
+
+     <label for="img"></label>
+    <input type="file" id="img" name="img" accept="image/*">
+     <input type="submit">
+    
+    <div class="box">
+        <form [formGroup]="profilo" (ngSubmit)="sendModify()">
+            <input type="text" name="nome" class="form-control" placeholder="Nome" required><br>
+            <input type="text" name="cognome" class="form-control" placeholder="Cognome" required><br>
+            <select name="Sesso" class="form-control">
+              <option value="Uomo">Uomo</option>
+              <option value="Donna">Donna</option>
+            </select>
+            <br>
+            <img class="icon" src="icon-email.png" alt="">  <input type="text" name="Email" class="form-control" placeholder="Email" required><br>
+            <img class="icon" src="icon.telefono.png" alt="">  <input type="text" name="telefono" class="form-control" placeholder="Telefono" required><br>
+            <br>
+            <br>
+            <input type="submit" class="form-control submit" value="annulla">   
+            <input type="submit" class="form-control submit" value="conferma">
+        </form>
+    </div>
+</body>
+

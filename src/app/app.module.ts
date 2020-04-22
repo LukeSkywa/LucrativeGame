@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
+import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
     MenuComponent,
     SignupComponent,
     FeedbackComponent,
-    ProfiloComponent
+    ProfiloComponent,
+    ModificaProfiloComponent
   ],
   imports: [
     BrowserModule,
