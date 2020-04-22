@@ -20,6 +20,7 @@
         margin-right: 37%;
         text-align: center;
         height: 100%;
+        width: 300px;
         border-radius: 10px;
         box-shadow: -10px -10px 5px $sfumaturaCorpoPagina;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -77,13 +78,15 @@
         background-color: inherit;
     }
     
-    .tastoPiu {
-        margin-left: 98%;
-        margin-top: 5%;
+    .più {
+        margin-left: 88%;
+        margin-top: -150px;
+        cursor: pointer;
     }
     
     .logo {
         margin-top: 5%;
+        width: 60%;
     }
     
     //fine definizione stile
