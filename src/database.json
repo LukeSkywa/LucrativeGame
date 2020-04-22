@@ -53,13 +53,16 @@
   ],
   "users": [
     {
-      "nome": "Dav",
-      "cognome": "Carizzoni",
+      "id": 1,
+      "nome": "David",
+      "cognome": "Carizz",
+      "username": "davidecarizzoni",
+      "password": "12345",
       "email": "davidecarizzoni@gmail.com",
-      "sesso": "M",
-      "telefono": "000000000",
-      "path": "/assets/users/profile.jpg",
-      "id": 1
+      "telefono": "3487190654",
+      "genere": "M",
+      "admin": true,
+      "path": "/assets/users/profile.jpg"
     },
     {
       "id": 2,

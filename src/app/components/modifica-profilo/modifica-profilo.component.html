@@ -14,7 +14,7 @@
         <form [formGroup]="modificaProfilo" (ngSubmit)="sendModify()">
             <input type="text" name="nome" class="form-control" placeholder="Nome" formControlName="nome"><br>
             <input type="text" name="cognome" class="form-control" placeholder="Cognome" formControlName="cognome"><br>
-            <select name="Sesso" class="form-control" formControlName="sesso">
+            <select name="Sesso" class="form-control" formControlName="genere">
                 <!-- <option value={{item}} *ngFor="let item of sesso"> {{item}} </option> -->
                 <option value="Uomo">Uomo</option>
                 <option value="Donna">Donna</option>
