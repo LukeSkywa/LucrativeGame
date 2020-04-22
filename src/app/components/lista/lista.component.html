@@ -12,6 +12,7 @@
         <li *ngFor="let item of clothesList">
             {{item.id}} 
             {{item.name}}
+
             <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
         </li>
     </ul>
@@ -20,10 +21,11 @@
 <!-- PREFERITI -->
 <ng-container *ngIf="list2 === true">
     <p>lista 2</p>
-    <ul>
+    <ul *ngIf="{{item.preferito}} == true">
         <li *ngFor="let item of clothesList">
             {{item.id}} 
             {{item.name}}
+
             <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
         </li>
     </ul>
@@ -32,10 +34,11 @@
 <!-- NASCONSTI -->
 <ng-container *ngIf="list3 === true">
     <p>lista 3</p>
-    <ul>
+    <ul *ngIf="{{item.nascosto}} == true">
         <li *ngFor="let item of clothesList">
             {{item.id}} 
             {{item.name}}
+
             <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
         </li>
     </ul>

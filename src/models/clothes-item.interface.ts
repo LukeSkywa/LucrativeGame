@@ -4,4 +4,6 @@ export interface ClothesItem {
   prezzo: number;
   description:string;
   genere: string;
+  preferito: boolean;
+  nascosto: boolean;
 }
