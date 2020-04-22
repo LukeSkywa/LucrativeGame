@@ -8,4 +8,5 @@ export interface User{
     telefono: string
     genere: string;
     admin: boolean;
+    path: string;
 }
