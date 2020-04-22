@@ -9,15 +9,14 @@
 
   <!-- LISTA TUTTI -->
   <ng-container *ngIf="list1 === true">
-  <p>lista 1</p>
   <ul>
     <li class= "prova" *ngFor="let item of clothesList">
       <table style="width:100%">
         <tr>
           <th style="width:1%">
-            <img src="/assets/lucrative-logo.png" alt="Il logo del nostro blog" /></th>
+            <img src="{{item.path}}" alt="{{item.path}}" /></th>
           <th>{{item.name}} <br>
-            {{item.descrizione}}
+            {{item.description}}
           </th>
 
           <!--<th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
@@ -42,16 +41,15 @@
 
 
   <!-- LISTA PREFERITI -->
-  <ng-container *ngIf="list1 === true">
-    <p>lista 1</p>
+  <ng-container *ngIf="list2 === true">
     <ul>
       <li class= "prova" *ngFor="let item of clothesList">
         <table style="width:100%">
           <tr>
             <th style="width:1%">
-              <img src="/assets/lucrative-logo.png" alt="Il logo del nostro blog" /></th>
+              <img src="/assets/imgClothes/{{item.path}}" alt="{{item.path}}" /></th>
             <th>{{item.name}} <br>
-              {{item.descrizione}}
+              {{item.description}}
             </th>
   
             <!--<th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
@@ -76,16 +74,15 @@
 
 
     <!-- LISTA NASCOSTI -->
-  <ng-container *ngIf="list1 === true">
-    <p>lista 1</p>
+  <ng-container *ngIf="list3 === true">
     <ul>
       <li class= "prova" *ngFor="let item of clothesList">
         <table style="width:100%">
           <tr>
             <th style="width:1%">
-              <img src="/assets/lucrative-logo.png" alt="Il logo del nostro blog" /></th>
+              <img src="/assets/imgClothes/{{item.path}}" alt="{{item.path}}" /></th>
             <th>{{item.name}} <br>
-              {{item.descrizione}}
+              {{item.description}}
             </th>
   
             <!--<th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
