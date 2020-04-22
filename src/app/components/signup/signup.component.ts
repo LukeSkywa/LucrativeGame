@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit {
       nome:' -- ',
       cognome: ' -- ',
       email:' -- ',
-      username: ' -- ',
+      username:['', Validators.required],
       password: ['', Validators.required],
       telefono:' -- ',
       genere:' -- ',
