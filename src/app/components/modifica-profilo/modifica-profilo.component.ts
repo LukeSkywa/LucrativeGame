@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { User } from 'src/models/user.interface';
+import { HttpUserService } from 'src/app/services/http/http-user.service';
 
 @Component({
   selector: 'app-modifica-profilo',
@@ -13,14 +14,8 @@ export class ModificaProfiloComponent implements OnInit {
   user: User;
   // sesso = ['Uomo', 'Donna', 'Altro'];
 
-  get nome(): FormControl{return this.modificaProfilo.get('nome') as FormControl;} 
-  get cognome(): FormControl{return this.modificaProfilo.get('cognome') as FormControl;} 
-  get email(): FormControl{return this.modificaProfilo.get('email') as FormControl;}
-  get sesso(): FormControl{return this.modificaProfilo.get('sesso') as FormControl;} 
-  get telefono(): FormControl{return this.modificaProfilo.get('telefono') as FormControl;}
-
-
-  constructor(private fb: FormBuilder) {
+  // COSTRUISCO IL FORM CON I DATI DELL'UTENTE PRESENTE IN SESSION  
+  constructor(private fb: FormBuilder, private httpUserService: HttpUserService) {
     this.user = JSON.parse(sessionStorage.getItem('user'));
     this.modificaProfilo = this.fb.group({
       nome: this.user.nome,
@@ -35,7 +30,14 @@ export class ModificaProfiloComponent implements OnInit {
   }
 
   sendModify(){
-    
+    let userModified: User;
+    userModified = this.modificaProfilo.value;
+    userModified.path = '/assets/users/profile.jpg'
+    userModified.id = this.user.id;
+    console.log(this.modificaProfilo.value)
+    console.log(userModified);
+
+    this.httpUserService.updateUser(userModified).subscribe(()=>{});
   }
 
 }
