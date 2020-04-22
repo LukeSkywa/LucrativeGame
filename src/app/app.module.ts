@@ -14,6 +14,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     PageNotFoundComponent,
     MenuComponent,
     SignupComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    ProfiloComponent
   ],
   imports: [
     BrowserModule,
