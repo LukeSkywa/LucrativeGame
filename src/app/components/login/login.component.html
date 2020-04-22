@@ -5,8 +5,8 @@
 </head>
 
 <body>
-    <img src="../../../asset/lucrative-logo.png" alt="logo" class="logo">
-    <img src="../../../asset/più.png" alt="piu" class="tastoPiu">
+    <img ng-src="../../../asset/lucrative-logo.png" alt="Il logo del nostro blog" />
+    <img src="''../../../asset/più.png'" alt="piu" class="tastoPiu">
     <H1>Accedi</H1>
     <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="grid-container">
@@ -18,7 +18,7 @@
             <div class="item2">
                 <label for="nomeUtente">
                             Nome utente
-                        </label>
+                </label>
             </div>
             <div class="item3">
                 <input type="text" id="username" formControlName="username" placeholder="Username" class="inserimento">
