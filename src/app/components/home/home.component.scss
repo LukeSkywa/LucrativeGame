@@ -79,3 +79,7 @@ img {
 .slides {
     scroll-behavior: smooth;
 }
+
+.slides>div:target {
+    transform: scale(0.8);
+}
