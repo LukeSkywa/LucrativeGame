@@ -4,10 +4,22 @@
           <input id="username" placeholder="nome utente" formControlName="username" required>
       </div>
       <div>
-          <input id="password" placeholder="password" formControlName="password" required>
+          <input type="password" id="password" placeholder="password" formControlName="password" required>
+          <input type="button" onclick="showPwd()" value="mostra/nascondi">
       </div>
       <div>
           <button type="submit">Accedi</button>
           <button routerLink="/signup">Sign up</button>
       </div>
-  </form>
+</form>
+<script>
+    function showPwd() {
+        var input = document.getElementById('pwd');
+        if (input.type === "password") {
+          input.type = "text";
+        } else {
+          input.type = "password";
+        }
+      }
+</script>
+

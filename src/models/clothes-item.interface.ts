@@ -6,4 +6,6 @@ export interface ClothesItem {
   genere: string;
   preferito: boolean;
   nascosto: boolean;
+  path: string;
+  //taglia: string;
 }

@@ -3,6 +3,18 @@
 
 <!-- CHIDERE AL PROFE COME MAI FUNZIONA MA MI DA ERRORE IN CONSOLE -->
 <p> ID: {{clothes.id}} </p>
-<p> Nome: {{clothes.name}} </p>
+<h1> Nome: {{clothes.name}} </h1>
 <p> Description: {{clothes.description}} </p>
-<p> Generre: {{clothes.genere}} </p>
+<p> Genere: {{clothes.genere}} </p>
+<img src="{{clothes.path}}">
+<p> Prezzo: {{clothes.prezzo}} </p>
+<form action="">
+    <fieldset>
+    <legend>Taglia</legend><br>
+    <input type="checkbox" name="S" value="S"/> S
+    <br />
+    <input type="checkbox" name="M" value="M"/> M
+    <br />
+    <input type="checkbox" name="L" value="L"/> L
+    </fieldset>
+</form>
