@@ -1,7 +1,15 @@
 <body>
 
   <app-menu></app-menu>
+  <div>
+    <button  (click)="viewList1()">Tutti</button>
+    <button  (click)="viewList2()">Preferiti</button>
+    <button  (click)="viewList3()">Nascosti</button>
+  </div>
 
+  <!-- LISTA TUTTI -->
+  <ng-container *ngIf="list1 === true">
+  <p>lista 1</p>
   <ul>
     <li class= "prova" *ngFor="let item of clothesList">
       <table style="width:100%">
@@ -9,7 +17,7 @@
           <th style="width:1%">
             <img src="/assets/lucrative-logo.png" alt="Il logo del nostro blog" /></th>
           <th>{{item.name}} <br>
-            Info prodotto
+            {{item.descrizione}}
           </th>
 
           <!--<th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
@@ -30,4 +38,73 @@
        <!-- {{item.id}} -->
     </li>
   </ul>
+  </ng-container>
+
+
+  <!-- LISTA PREFERITI -->
+  <ng-container *ngIf="list1 === true">
+    <p>lista 1</p>
+    <ul>
+      <li class= "prova" *ngFor="let item of clothesList">
+        <table style="width:100%">
+          <tr>
+            <th style="width:1%">
+              <img src="/assets/lucrative-logo.png" alt="Il logo del nostro blog" /></th>
+            <th>{{item.name}} <br>
+              {{item.descrizione}}
+            </th>
+  
+            <!--<th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
+            </th>
+            -->
+            <th style="width:1%">
+              <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
+              <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
+            </th>
+  
+            <th style="width:1%">
+              <a  routerLink="/detail/{{item.id}}">
+              <img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></a>
+            </th>
+  
+          </tr>
+        </table>
+         <!-- {{item.id}} -->
+      </li>
+    </ul>
+    </ng-container>
+
+
+    <!-- LISTA NASCOSTI -->
+  <ng-container *ngIf="list1 === true">
+    <p>lista 1</p>
+    <ul>
+      <li class= "prova" *ngFor="let item of clothesList">
+        <table style="width:100%">
+          <tr>
+            <th style="width:1%">
+              <img src="/assets/lucrative-logo.png" alt="Il logo del nostro blog" /></th>
+            <th>{{item.name}} <br>
+              {{item.descrizione}}
+            </th>
+  
+            <!--<th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
+            </th>
+            -->
+            <th style="width:1%">
+              <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
+              <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
+            </th>
+  
+            <th style="width:1%">
+              <a  routerLink="/detail/{{item.id}}">
+              <img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></a>
+            </th>
+  
+          </tr>
+        </table>
+         <!-- {{item.id}} -->
+      </li>
+    </ul>
+    </ng-container>
 </body>
