@@ -1,28 +1,85 @@
-        $bgcolor: lightblue;
-        $textcolor: darkblue;
-        $fontsize: 19px;
-        $coloreInizioSfumatura: RGB(0, 107, 255);
-        $coloreFineSfumatura: RGB(0, 194, 255);
-        /* Use the variables */
+$textcolor: white;
+$fontsize: 19px;
+$coloreInizioSfumatura: RGB(0, 107, 255);
+$coloreFineSfumatura: RGB(0, 194, 255);
+$coloreCopy: RGB(89, 167, 255);
+$coloreIcona: white;
 
-        div {
-            background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
-            color: $textcolor;
-            font-size: $fontsize;
-            height: 100%;
-            margin-top: -5%;
-            padding-top: 3%;
-        }
+/* Use the variables */
 
-        .titolo {
-            font-size: 300%;
-            color: white;
-            padding-left: 1%;
-            font-family: Vistol;
-        }
+body {
+    background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 200%;
+}
 
-        .testo {
-            color: white;
-            padding-left: 1%;
-            font-size: 200%;
-        }
+div {
+    color: $textcolor;
+    font-size: $fontsize;
+    height: 100%;
+    margin-top: -5%;
+    padding-top: 3%;
+}
+
+.titolo {
+    font-size: 300%;
+    padding-left: 1%;
+}
+
+.testo {
+    color: white;
+    padding-left: 1%;
+    margin-top: -2%;
+    font-size: 200%;
+}
+
+.copy {
+    text-decoration: none;
+    font-size: 9px;
+    padding-left: 2%;
+    color: $coloreCopy;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
+}
+
+i {
+    color: $coloreIcona;
+}
+
+img {
+    width: 20px;
+}
+
+//carousel
+.slider {
+    /* CURRENT way. */
+    scroll-snap-type: x mandatory;
+    /* OLD WAY. Probably not worth including at all.
+  
+    -webkit-scroll-snap-points-x: repeat(300px);
+        -ms-scroll-snap-points-x: repeat(300px);
+            scroll-snap-points-x: repeat(300px);
+    -webkit-scroll-snap-type: mandatory;
+        -ms-scroll-snap-type: mandatory;
+            scroll-snap-type: mandatory;
+  
+     */
+}
+
+.slides>div {
+    /* CURRENT way. */
+    scroll-snap-align: start;
+}
+
+.slides {
+    scroll-behavior: smooth;
+}
+
+.slides>div:target {
+    transform: scale(0.8);
+}
