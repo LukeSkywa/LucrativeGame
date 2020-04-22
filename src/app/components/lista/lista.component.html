@@ -21,7 +21,7 @@
 <!-- PREFERITI -->
 <ng-container *ngIf="list2 === true">
     <p>lista 2</p>
-    <ul *ngIf="{{item.preferito}} == true">
+    <ul>
         <li *ngFor="let item of clothesList">
             {{item.id}} 
             {{item.name}}
@@ -34,7 +34,7 @@
 <!-- NASCONSTI -->
 <ng-container *ngIf="list3 === true">
     <p>lista 3</p>
-    <ul *ngIf="{{item.nascosto}} == true">
+    <ul>
         <li *ngFor="let item of clothesList">
             {{item.id}} 
             {{item.name}}
