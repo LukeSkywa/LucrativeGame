@@ -24,8 +24,6 @@ div {
 .titolo {
     font-size: 300%;
     padding-left: 1%;
-    font-family: Vistol;
-    padding-top: 4%;
 }
 
 .testo {
@@ -45,8 +43,8 @@ div {
 footer {
     position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
+    background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
 }
 
 i {
