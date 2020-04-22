@@ -1,11 +1,12 @@
-$bgcolor: lightblue;
-$textcolor: darkblue;
+$coloreInizioSfumatura: RGB(0, 107, 255);
+$coloreFineSfumatura: RGB(0, 194, 255);
+$textcolor: white;
 $fontsize: 19px;
 
 /* Use the variables */
 
 body {
-    background-color: $bgcolor;
+    background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
     color: $textcolor;
     font-size: $fontsize;
     height: 20%;
@@ -19,8 +20,8 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-top: 2%;
     overflow: hidden;
-    background-color: lightblue;
 }
 
 li {
@@ -33,17 +34,19 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 25px;
     text-decoration: none;
+    margin-left: 5%;
 }
 
 li a:hover {
     /* Colore ppassaggio mouse */
-    background-color: rgb(29, 102, 126);
+    border-bottom: 1px solid white;
 }
 
-img {
-    padding-left: 40%;
+.logo {
+    padding-left: 420px;
+    width: 15%;
 }
 
 
