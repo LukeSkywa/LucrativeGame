@@ -62,7 +62,7 @@
       "telefono": "000000000",
       "genere": "M",
       "admin": true,
-      "path":"/assets/users/profile.jpg"
+      "path": "/assets/users/profile.jpg"
     },
     {
       "id": 2,
@@ -74,7 +74,7 @@
       "telefono": "456767889",
       "genere": "M",
       "admin": true,
-      "path":"/assets/users/profile.jpg"
+      "path": "/assets/users/profile.jpg"
     },
     {
       "id": 3,
@@ -86,7 +86,7 @@
       "telefono": "34567788",
       "genere": "M",
       "admin": true,
-      "path":"/assets/users/profile.jpg"
+      "path": "/assets/users/profile.jpg"
     },
     {
       "id": 4,
@@ -98,7 +98,19 @@
       "telefono": "00110022",
       "genere": "M",
       "admin": true,
-      "path":"/assets/users/profile.jpg"
+      "path": "/assets/users/profile.jpg"
+    },
+    {
+      "id": 5,
+      "nome": " -- ",
+      "cognome": " -- ",
+      "email": " -- ",
+      "username": "ciaone",
+      "password": "olacico",
+      "telefono": " -- ",
+      "genere": " -- ",
+      "path": "/assets/users/profile.jpg",
+      "admin": false
     }
   ],
   "feedback": [
