@@ -7,5 +7,4 @@ export interface ClothesItem {
   preferito: boolean;
   nascosto: boolean;
   path: string;
-  //taglia: string;
 }

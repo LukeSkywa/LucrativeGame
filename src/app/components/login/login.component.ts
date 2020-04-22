@@ -12,6 +12,7 @@ import { LoginSignupService } from 'src/app/services/login-signup.service';
 export class LoginComponent implements OnInit {
   
   loginForm: FormGroup;
+  elementRef: any;
   
   constructor(private loginSignUp:LoginSignupService, private router:Router, private fb:FormBuilder){
     this.loginForm = this.fb.group({
@@ -25,6 +26,5 @@ export class LoginComponent implements OnInit {
   login(form) {
     this.loginSignUp.eseguiLogin(form);
   }
- 
 }
 
