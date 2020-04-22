@@ -1,14 +1,17 @@
 body {
-	margin: 0;
+	margin: -5px;
 	padding: 0;
 	text-align: center;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: linear-gradient(to right, #006cff , #00bdff);
   color: #008CFF;
-	height: 200%;
+	height: 100%;
 	width: auto;
 }
 
+ul {
+  list-style-type: none;
+}
 
 .prova{
   background: rgb(183, 213, 223);
@@ -16,6 +19,12 @@ body {
   padding: 10px;
   margin: 20px;
   background-repeat: no-repeat;
+  border-radius: 25px;
+}
+
+#prod{
+  width: 100px;
+  height: 120px;
   border-radius: 25px;
 }
 
