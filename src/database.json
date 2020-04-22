@@ -77,6 +77,12 @@
       "telefono": "asas",
       "genere": "asas",
       "admin": false
+    },
+    {
+      "id": 6,
+      "username": "asas",
+      "password": "asas",
+      "admin": false
     }
   ],
   "feedback": [
