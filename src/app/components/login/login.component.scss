@@ -63,6 +63,8 @@ body {
     margin-bottom: 7%;
     border-radius: 20px;
     cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 input,
@@ -87,6 +89,7 @@ input::focus {
     margin-top: -150px;
     cursor: pointer;
     outline: none;
+    border: none;
 }
 
 .logo {
