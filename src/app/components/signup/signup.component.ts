@@ -20,13 +20,13 @@ export class SignupComponent implements OnInit {
   constructor(private loginSignUp:LoginSignupService, private fb: FormBuilder, private router:Router, private httpUserService:HttpUserService) { 
     this.signupForm = this.fb.group({
       id:['', Validators.required],
-      nome:' -- ',
-      cognome: ' -- ',
-      email:' -- ',
+      nome:'',
+      cognome: '',
+      email:'',
       username:['', Validators.required],
       password: ['', Validators.required],
-      telefono:' -- ',
-      genere:' -- ',
+      telefono:'',
+      genere:'',
       path: '/assets/users/profile.jpg',
       admin: false
     });

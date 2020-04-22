@@ -102,15 +102,15 @@
     },
     {
       "id": 5,
-      "nome": " -- ",
-      "cognome": " -- ",
-      "email": " -- ",
-      "username": "ciaone",
-      "password": "olacico",
-      "telefono": " -- ",
-      "genere": " -- ",
-      "path": "/assets/users/profile.jpg",
-      "admin": false
+      "nome": "davide",
+      "cognome": "carizzoni",
+      "username": "davide",
+      "password": "davide",
+      "email": "da@gmail.com",
+      "telefono": "223323232323",
+      "genere": "Uomo",
+      "admin": false,
+      "path": "/assets/users/profile.jpg"
     }
   ],
   "feedback": [

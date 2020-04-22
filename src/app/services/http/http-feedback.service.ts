@@ -11,7 +11,6 @@ export class HttpFeedbackService {
   invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
     headers: import("@angular/common/http").HttpHeaders;
   }) {
-
     return this.httpClient.post(url,body,arg2); 
   }
 
@@ -19,9 +18,5 @@ export class HttpFeedbackService {
 
   postFeedback(feedback:Feedback){
     return this.httpClient.post('http://localhost:3000/feedback', feedback);
-  }
-
-  getFeedback():Observable<any>{
-    return this.httpClient.get('http://localhost:3000/feedback');
   }
 }
