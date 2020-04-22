@@ -1,27 +1,6 @@
 {
   "clothes": [
     {
-<<<<<<< HEAD
-      "id": "1",
-      "name": "vestito1",
-      "prezzo": 200,
-      "description": "Descrizione vistito 1",
-      "genere": "abito"
-    },
-    {
-      "id": "2",
-      "name": "vestito2",
-      "prezzo": 75,
-      "description": "Descrizione vistito 2",
-      "genere": "intimo"
-    },
-    {
-      "id": "3",
-      "name": "vestito3",
-      "prezzo": 64,
-      "description": "Descrizione vistito 3",
-      "genere": "sportivo"
-=======
       "id": 1,
       "name": "jeans skinny",
       "prezzo": 1.972,
@@ -71,7 +50,6 @@
       "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto5.jpg"
->>>>>>> origin/lista
     }
 
   ],
@@ -119,26 +97,6 @@
       "telefono": "00110022",
       "genere": "M",
       "admin": true
-<<<<<<< HEAD
-    },
-    {
-      "id": 5,
-      "nome": "asas",
-      "cognome": "assa",
-      "email": "asass",
-      "username": "sassa",
-      "password": "asas",
-      "telefono": "asas",
-      "genere": "asas",
-      "admin": false
-    },
-    {
-      "id": 6,
-      "username": "asas",
-      "password": "asas",
-      "admin": false
-=======
->>>>>>> origin/lista
     }
   ],
   "feedback": [
