@@ -1,8 +1,20 @@
-<app-menu></app-menu>
-<ul>
-    <li *ngFor="let item of clothesList">
-        {{item.id}} 
-        {{item.name}}
-        <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
+<body>
+
+  <app-menu></app-menu>
+
+  <ul>
+    <li class= "prova" *ngFor="let item of clothesList">
+      <table style="width:100%">
+        <tr>
+          <th style="width:1%">
+            <img src="/assets/lucrative-logo.png" alt="Il logo del nostro blog" /></th>
+          <th>{{item.name}} <br>
+            Info prodotto
+          </th>
+          <th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button></th>
+        </tr>
+      </table>
+       <!-- {{item.id}} -->
     </li>
-</ul>
+  </ul>
+</body>
