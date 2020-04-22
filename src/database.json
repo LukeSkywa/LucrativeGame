@@ -1,21 +1,21 @@
 {
   "clothes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "vestito1",
       "prezzo": 200,
       "description": "Descrizione vistito 1",
       "genere": "abito"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "vestito2",
       "prezzo": 75,
       "description": "Descrizione vistito 2",
       "genere": "intimo"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "vestito3",
       "prezzo": 64,
       "description": "Descrizione vistito 3",
