@@ -4,38 +4,40 @@
 
 <body>
     <div>
-        <img src="../../../assets/img/lucrative-logo.png" alt="logo" class="logo">
-        <img src="../../../asset/img/x.png" alt="piu" class="tastoX">
+        <img src="../../../assets/logo.png" class="logo">
+        <img src="../../../asset/x.png" routerLink="/login" class="tastoX"></a>
         <H1>Registrati</H1>
         <form (ngSubmit)="signup()" [formGroup]="signupForm" ngNativeValidate>
-            <div>
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" formControlName="nome" required>
+
+            <div class="grid-container">
+                <div class="item1">
+                    <span class="material-icons">
+                                account_box
+                    </span>
+                </div>
+                <div class="item2">
+                    <label for="nomeUtente">
+                                Email
+                            </label>
+                </div>
+                <div class="item3">
+                    <input type="text" id="username" formControlName="username" required>
+                </div>
             </div>
-            <div>
-                <label for="cognome">Cognome</label>
-                <input type="text" id="cognome" formControlName="cognome" required>
-            </div>
-            <div>
-                <label for="username">Username</label>
-                <input type="text" id="username" formControlName="username" required>
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" formControlName="password" required>
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="text" id="email" formControlName="email" required>
-            </div>
-            <div>
-                <label for="telefono">Telefono</label>
-                <input type="text" id="telefono" formControlName="telefono" required>
-            </div>
-            <div>
-                <label for="genere">Genere</label>
-                <input type="text" id="genere" formControlName="genere" required>
-            </div>
-            <button type="submit" class="bottone">Sign in</button>
+            <div class="grid-container">
+                <div class="item1">
+                    <span class="material-icons">
+                        lock
+                    </span>
+                </div>
+                <div class="item2">
+                    <label for="password">Password</label>
+                </div>
+                <div class="item3">
+                    <input type="password" id="password" formControlName="password" required>
+                </div>
+
+                <button type="submit" class="bottone">Registrati</button>
         </form>
-    </div>
+        </div>
+</body>
