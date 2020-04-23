@@ -1,6 +1,8 @@
 <body>
 
   <app-menu></app-menu>
+  <!-- SISTEMARE I BOTTONI -->
+
   <div>
     <button  (click)="viewList(1)"> Tutti </button>
     <button  (click)="viewList(2)"> Preferiti </button>
@@ -20,6 +22,7 @@
             {{item.id}}
           </th>
           <!-- GESTIONE DEI PREFERITI -->
+          <!-- SISTEMARE STILE -->
           <ng-container *ngIf="item.preferito">
             <span (click)="switchPreferito(item.id)" class="preferito">&#10084;</span>
           </ng-container>
@@ -32,6 +35,7 @@
             <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
           </th>
 
+          <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
           <th style="width:1%">
             <a  routerLink="/detail/{{item.id}}">
             <img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></a>
