@@ -2,11 +2,10 @@
 
 <app-menu></app-menu>
 
-
 <br>
 <div class="row">
   <div class="column left">
-    <h1>{{clothes.name}} </h1>
+    <h1> {{clothes.name}} </h1>
     <h3>DESCRIZIONE DEL PRODOTTO:</h3>
     <p>{{clothes.description}}</p>
   </div>
@@ -16,22 +15,61 @@
   </div>
 
   <div class="column right">
-    <h2>$150</h2>
-    <p>selezionare la taglia da lei desiderata:</p>
-    <button class="button button5">S</button>  <button class="button button5">M</button>  <button class="button button5">L</button>
+      <button class="btnRosso"></button>  <button class="btnGiallo"></button>  <button class="btnBlu"></button>
+    <h2>$ 150</h2>
+    <p>{{clothes.description}}</p>
+    <p>SELEZIONARE LA TAGLIA DESIDERATA:</p>
+    <button class="btn">S</button>  <button class="btn">M</button>  <button class="btn">L</button>
 
   </div>
 </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<footer>
+  <table style="width:100%">
+    <tr>
+     <th class="testo" align="left">&copy; 2023 by UcripiMarket. All rights reserved.</th>
+
+   <th class="iconFacebook">
+     <a href="https://www.facebook.com/" id="facebook">
+       <img src="/assets/icon-footer-dettaglio/icon-facebook.png" alt="">
+     </a>
+  </th>
+  <th class="iconInstagram">
+    <a href="https://www.instagram.com/" id="instagram">
+      <img src="/assets/icon-footer-dettaglio/icon-instagram.png" alt="">
+    </a>
+ </th>
+ <th class="iconTelegram">
+   <a href="https://web.telegram.org/" id="telegram">
+     <img src="/assets/icon-footer-dettaglio/icon-telegram.png" alt="">
+   </a>
+</th>
+<th class="iconSnapchat">
+  <a href="https://www.snapchat.com/l/it-it/" id="snapchat">
+    <img src="/assets/icon-footer-dettaglio/icon-snapchat.png" alt="">
+  </a>
+</th>
+<th class="iconPinterest">
+ <a href="https://www.pinterest.it/" id="pinterest">
+   <img src="/assets/icon-footer-dettaglio/icon-pinterest.png" alt="">
+ </a>
+</th>
+<br>
+  </table>
+</footer>
 
 
 
 
 
-<!-- CHIDERE AL PROFE COME MAI FUNZIONA MA MI DA ERRORE IN CONSOLE -->
+<!-- CHIDERE AL PROFE COME MAI FUNZIONA MA MI DA ERRORE IN CONSOLE
 <p> ID: {{clothes.id}} </p>
 <p> Nome: {{clothes.name}} </p>
 <p> Description: {{clothes.description}} </p>
 <p> Generre: {{clothes.genere}} </p>
+-->
 
 
 </body>
