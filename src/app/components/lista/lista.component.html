@@ -17,13 +17,14 @@
             <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
           <th>{{item.name}} <br>
             {{item.description}}
+            {{item.id}}
           </th>
           <!-- GESTIONE DEI PREFERITI -->
-          <ng-container *ngIf="!item.preferito">
-            <span (click)="switchPreferito(item.id)" class="preferito">&#9825;</span>
-          </ng-container>
           <ng-container *ngIf="item.preferito">
-            <span (click)="switchPreferito(item.id)" class="nonPreferito">&#10084;</span>
+            <span (click)="switchPreferito(item.id)" class="preferito">&#10084;</span>
+          </ng-container>
+          <ng-container *ngIf="!item.preferito">
+            <span (click)="switchPreferito(item.id)" class="nonPreferito">&#9825;</span>
           </ng-container>
           
           <th style="width:1%">
@@ -38,8 +39,6 @@
 
         </tr>
       </table>
-      <!--<th style="width:1%"><button routerLink="/detail/{{item.id}}">Vai al dettaglio</button></th>-->
-       <!-- {{item.id}} -->
     </li>
   </ul>
   </ng-container>

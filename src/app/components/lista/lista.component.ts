@@ -26,7 +26,7 @@ export class ListaComponent implements OnInit {
   viewList(list: number){
     this.clothesListFiltered = this.clothesList.filter( item => {
       switch(list){
-        case 1: return !item.nascosto;
+        case 1: return !item.nascosto; //SE E' NASCOSTO NON LO FACCIO VEDERE. 
         case 2: return item.preferito;
         case 3: return item.nascosto;
       }
@@ -34,13 +34,9 @@ export class ListaComponent implements OnInit {
   }
 
   switchPreferito(id:number){
-    console.log(id);
-    let clothes: ClothesItem = this.clothesList.find( item => {
-      console.log(item.preferito);
-      item.preferito = !item.preferito;
-      return item;
-    })
-    console.log(clothes);
+    let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
+    clothes.preferito = !clothes.preferito;
+    this.httpClothesService.updateClothes(clothes).subscribe(() => {});
   }
 
   ngOnInit(): void {
