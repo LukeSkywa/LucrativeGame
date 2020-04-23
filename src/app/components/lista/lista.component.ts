@@ -42,13 +42,15 @@ export class ListaComponent implements OnInit {
     this.httpClothesService.updateClothes(clothes).subscribe(() => {});
   }
 
-  mostraDiPiu(){
-    this.mostraPiu = true;
+  switchNascondi(id:number){
+    let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
+    clothes.nascosto = !clothes.nascosto;
+    this.httpClothesService.updateClothes(clothes).subscribe(() => {});
   }
 
-  mostraDiMeno(){
-    this.mostraPiu = false;
-  }
+  mostraDiPiu(){ this.mostraPiu = true; }
+
+  mostraDiMeno(){ this.mostraPiu = false; }
 
   ngOnInit(): void {
     this.retrieveClothes();
