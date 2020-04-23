@@ -10,11 +10,8 @@ import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
 })
 export class ListaComponent implements OnInit {
   
-  clothesList: ClothesItem[] = [];
-  list1 = true;
-  list2 = false;
-  list3 = false;
-
+  clothesList: ClothesItem [] = [];
+  clothesListFiltered: ClothesItem [] = [];
 
   constructor(private router: Router, private httpClothesService: HttpClothesService) { }
 
@@ -26,22 +23,14 @@ export class ListaComponent implements OnInit {
     });
   }
 
-  viewList1(){
-    this.list1 = true;
-    this.list2 = false;
-    this.list3 = false;
-  }
-
-  viewList2(){
-    this.list1 = false;
-    this.list2 = true;
-    this.list3 = false;
-  }
-
-  viewList3(){
-    this.list1 = false;
-    this.list2 = false;
-    this.list3 = true;
+  viewList(list: number){
+    this.clothesListFiltered = this.clothesList.filter( item => {
+      switch(list){
+        case 1: return !item.nascosto;
+        case 2: return item.preferito;
+        case 3: return item.nascosto;
+      }
+    })
   }
 
   ngOnInit(): void {
