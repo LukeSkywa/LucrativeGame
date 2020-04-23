@@ -15,6 +15,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ModificaProfiloComponent } from './components/modifica-profilo/modifica
     HomeComponent,
     LoginComponent,
     ListaComponent,
+    CardsComponent,
     DettaglioComponent,
     PageNotFoundComponent,
     MenuComponent,
