@@ -7,13 +7,14 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ListaComponent } from './components/lista/lista.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
-import { ModificaComponent } from './components/modifica/modifica.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
-import { CardsComponent } from './components/cards/cards.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
+import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,12 @@ import { CardsComponent } from './components/cards/cards.component';
     LoginComponent,
     ListaComponent,
     DettaglioComponent,
-    ModificaComponent,
     PageNotFoundComponent,
     MenuComponent,
     SignupComponent,
-    CardsComponent
+    FeedbackComponent,
+    ProfiloComponent,
+    ModificaProfiloComponent
   ],
   imports: [
     BrowserModule,

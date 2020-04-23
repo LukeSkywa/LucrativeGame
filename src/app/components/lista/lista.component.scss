@@ -1,0 +1,56 @@
+body {
+	margin: -5px;
+	padding: 0;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(to right, #006cff , #00bdff);
+  color: #008CFF;
+	height: 100%;
+	width: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.prova{
+  background: rgb(183, 213, 223);
+  width: auto;
+  padding: 10px;
+  margin: 20px;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+}
+
+#prod{
+  width: 100px;
+  height: 120px;
+  border-radius: 25px;
+}
+
+img{
+  width: 100px;
+}
+
+
+th {
+  text-align: left;
+  object-position: center;
+  margin: 20px;
+  width: 20%;
+}
+
+img.share{
+  width: 25px;
+}
+
+.dropdown-content {
+  display: block;
+  background-color: rgb(204, 227, 235);
+  right: 5%;
+  position: absolute;
+  height: 80px;
+  margin-top: -35px;
+  border-radius: 20px;
+  line-height: 31px;
+}

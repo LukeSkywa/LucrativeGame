@@ -18,6 +18,7 @@ export class DettaglioComponent implements OnInit {
   catchId(){
     this.activatedRoute.paramMap.subscribe( params => {
       console.log(params);
+      console.log(this.clothes);
       this.id = Number(params.get('id'));
       console.log("CATCH ID: "+ this.id)
     })
