@@ -20,10 +20,10 @@
           </th>
           <!-- GESTIONE DEI PREFERITI -->
           <ng-container *ngIf="!item.preferito">
-            <span class="preferito">&#9825;</span>
+            <span (click)="switchPreferito(item.id)" class="preferito">&#9825;</span>
           </ng-container>
           <ng-container *ngIf="item.preferito">
-            <span class="nonPreferito">&#10084;</span>
+            <span (click)="switchPreferito(item.id)" class="nonPreferito">&#10084;</span>
           </ng-container>
           
           <th style="width:1%">

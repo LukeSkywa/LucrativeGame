@@ -33,6 +33,16 @@ export class ListaComponent implements OnInit {
     })
   }
 
+  switchPreferito(id:number){
+    console.log(id);
+    let clothes: ClothesItem = this.clothesList.find( item => {
+      console.log(item.preferito);
+      item.preferito = !item.preferito;
+      return item;
+    })
+    console.log(clothes);
+  }
+
   ngOnInit(): void {
     this.retrieveClothes();
   }
