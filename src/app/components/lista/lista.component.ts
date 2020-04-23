@@ -10,10 +10,13 @@ import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
 })
 export class ListaComponent implements OnInit {
   
+  mostraPiu: Boolean;
   clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
 
-  constructor(private router: Router, private httpClothesService: HttpClothesService) { }
+  constructor(private router: Router, private httpClothesService: HttpClothesService) { 
+    this.mostraPiu = false;
+  }
 
   retrieveClothes(){
     this.httpClothesService.getClothes().subscribe(reponse => {
@@ -37,6 +40,14 @@ export class ListaComponent implements OnInit {
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.preferito = !clothes.preferito;
     this.httpClothesService.updateClothes(clothes).subscribe(() => {});
+  }
+
+  mostraDiPiu(){
+    this.mostraPiu = true;
+  }
+
+  mostraDiMeno(){
+    this.mostraPiu = false;
   }
 
   ngOnInit(): void {

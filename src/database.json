@@ -6,7 +6,7 @@
       "prezzo": 1.972,
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
-      "preferito": true,
+      "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
@@ -26,7 +26,7 @@
       "prezzo": 49,
       "description": "paura x rosa chemical tee -  limited edition",
       "genere": "t-shirt",
-      "preferito": true,
+      "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto3.jpg"
     },
@@ -36,7 +36,7 @@
       "prezzo": 25,
       "description": "t shirt con stampa death metal, colore rosa",
       "genere": "t-shirt",
-      "preferito": true,
+      "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto4.jpg"
     },

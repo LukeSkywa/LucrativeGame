@@ -10,17 +10,18 @@
   </div>
 
   <!-- LISTA TUTTI -->
-  <ng-container>
+  <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
   <ul>
-    <li class= "prova" *ngFor="let item of clothesListFiltered">
+    <li class= "prova" *ngIf="i < 2 && !mostraPiu" >
       <table style="width:100%">
-        <tr>
+        <tr >
           <th style="width:1%">
             <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
           <th>{{item.name}} <br>
             {{item.description}}
             {{item.id}}
           </th>
+
           <!-- GESTIONE DEI PREFERITI -->
           <!-- SISTEMARE STILE -->
           <ng-container *ngIf="item.preferito">
@@ -40,10 +41,60 @@
             <a  routerLink="/detail/{{item.id}}">
             <img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></a>
           </th>
-
         </tr>
       </table>
     </li>
+
+    
   </ul>
+  
+  <!-- BOTTONI MOSTRA DI PIU' E MOSTRA DI MENO -->
+    <div>
+      <button *ngIf="i==2 && !mostraPiu;" (click)="mostraDiPiu()">Mostra di più</button>
+    </div>
   </ng-container>
+
+  <ng-container *ngIf="mostraPiu">
+    <ul>
+      <li class= "prova"*ngFor="let item of clothesListFiltered" >
+        <table style="width:100%">
+          <tr >
+            <th style="width:1%">
+              <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
+            <th>{{item.name}} <br>
+              {{item.description}}
+              {{item.id}}
+            </th>
+            
+            <!-- GESTIONE DEI PREFERITI -->
+            <!-- SISTEMARE STILE -->
+            <ng-container *ngIf="item.preferito">
+              <span (click)="switchPreferito(item.id)" class="preferito">&#10084;</span>
+            </ng-container>
+            <ng-container *ngIf="!item.preferito">
+              <span (click)="switchPreferito(item.id)" class="nonPreferito">&#9825;</span>
+            </ng-container>
+            
+            <th style="width:1%">
+              <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
+              <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
+            </th>
+  
+            <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
+            <th style="width:1%">
+              <a  routerLink="/detail/{{item.id}}">
+              <img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></a>
+            </th>
+          </tr>
+        </table>
+      </li>
+  
+      
+    </ul>
+      <div>
+        <button *ngIf="clothesListFiltered.length > 2" (click)="mostraDiMeno()">Mostra di meno</button>
+      </div>
+  
+    </ng-container>
+  
 </body>
