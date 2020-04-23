@@ -18,7 +18,13 @@
           <th>{{item.name}} <br>
             {{item.description}}
           </th>
-          <span class="cuoreRosso">&#10084;</span>
+          <!-- GESTIONE DEI PREFERITI -->
+          <ng-container *ngIf="!item.preferito">
+            <span class="preferito">&#9825;</span>
+          </ng-container>
+          <ng-container *ngIf="item.preferito">
+            <span class="nonPreferito">&#10084;</span>
+          </ng-container>
           
           <th style="width:1%">
             <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
