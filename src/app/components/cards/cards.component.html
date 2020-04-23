@@ -1,14 +1,13 @@
 <app-menu></app-menu>
-<!-- <ul>
-    <li *ngFor="let item of clothesList">
-        {{item.id}} 
-        {{item.name}}
-        <button routerLink="/detail/{{item.id}}">Vai al dettaglio</button>
-    </li>
-</ul> -->
-<table>
-    <tr *ngFor="let item of clothesList">
-      <td>{{item.id}}
-          {{item.name}}</td>
-    </tr>
-  </table>
+<div>
+    <div *ngFor="let item of clothesList;">
+        <img src="{{item.path}}" alt="path item">
+        <div >
+            <h1> {{item.nome}} </h1>
+            <p> {{item.descrizione}} </p>
+        </div>
+    </div>
+    <div >
+        <button>Mostra di più</button>
+    </div>
+</div>
