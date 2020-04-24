@@ -77,3 +77,16 @@ img.share{
 .btnAllineamento{
   text-align: left;
 }
+
+.dropdown-content {
+  display: block;
+  background-color: rgb(204, 227, 235);
+  right: 7%;
+  position: absolute;
+  height: 80px;
+  width: fit-content;
+  margin-top: -35px;
+  border-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+}

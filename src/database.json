@@ -7,7 +7,7 @@
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
       "preferito": false,
-      "nascosto": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
@@ -17,7 +17,7 @@
       "description": "nike af1 bianca, modello donna",
       "genere": "calzatura",
       "preferito": false,
-      "nascosto": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto2.jpg"
     },
     {
@@ -27,7 +27,11 @@
       "description": "paura x rosa chemical tee -  limited edition",
       "genere": "t-shirt",
       "preferito": true,
+<<<<<<< HEAD
       "nascosto": true,
+=======
+      "nascosto": false,
+>>>>>>> origin/modifica
       "path": "/assets/imgClothes/prodotto3.jpg"
     },
     {
@@ -47,7 +51,11 @@
       "description": "sneakers in pelle, colori vari",
       "genere": "calzatura",
       "preferito": true,
+<<<<<<< HEAD
       "nascosto": true,
+=======
+      "nascosto": false,
+>>>>>>> origin/modifica
       "path": "/assets/imgClothes/prodotto5.jpg"
     }
   ],
@@ -84,7 +92,7 @@
       "password": "1234",
       "email": "matteosorti@gmail.com",
       "telefono": "34567788",
-      "genere": "M",
+      "genere": "Uomo",
       "admin": true,
       "path": "/assets/users/profile.jpg"
     },

@@ -50,11 +50,11 @@
           
           <th style="width:1%">
             <!-- <a  routerLink="/detail/{{item.id}}"> -->
-            <button (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
-            <ng-container *ngIf="daMostrare==i">
+            <button (click)="show()"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+            <ng-container *ngIf="daMostrare">
               <div class="dropdown-content">
                   <a [routerLink]="['/detail', item.id]" class="items">mostra di più</a>
-                  <hr width=100% size=1 color=#011D28>
+                  <hr width=98% size=1 color=#011D28>
                   <ng-container *ngIf="!item.nascosto">
                       <a (click)="switchNascondi(item.id)" class="items">nascondi</a>
                   </ng-container>
@@ -105,8 +105,20 @@
   
             <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
             <th style="width:1%">
-              <a  routerLink="/detail/{{item.id}}">
-              <img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></a>
+              <!-- <a  routerLink="/detail/{{item.id}}"> -->
+                <button (click)="show()"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+                <ng-container *ngIf="daMostrare">
+                  <div class="dropdown-content">
+                      <a [routerLink]="['/detail', item.id]" class="items">mostra di più</a>
+                      <hr width=98% size=1 color=#011D28>
+                      <ng-container *ngIf="!item.nascosto">
+                          <a (click)="switchNascondi(item.id)" class="items">nascondi</a>
+                      </ng-container>
+                      <ng-container *ngIf="item.nascosto">
+                          <a (click)="switchNascondi(item.id)" class="items">mostra</a>
+                      </ng-container>
+                  </div>
+                </ng-container>
             </th>
           </tr>
         </table>
