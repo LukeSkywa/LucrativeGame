@@ -1,10 +1,11 @@
 $textcolor: white;
 $fontsize: 19px;
-
+$coloreCopy: RGB(89, 167, 255);
+ 
 * {
   box-sizing: border-box;
 }
-
+ 
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
@@ -12,14 +13,14 @@ $fontsize: 19px;
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
-
+ 
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
+ 
 /*Btn Taglia*/
 .btn{
   display: inline-block;
@@ -38,7 +39,7 @@ $fontsize: 19px;
   transition: .4s;
   margin-right: 10px;
 }
-
+ 
 .btn:focus {
   width: 43px;
   height: 43px;
@@ -47,9 +48,9 @@ $fontsize: 19px;
   line-height: 40px;
   border: solid 2px #00bdff;
 }
-
+ 
 /*FINE Btn Taglia*/
-
+ 
 /*Btn Colore ROSSO*/
 .btnRosso{
   display: inline-block;
@@ -67,13 +68,13 @@ $fontsize: 19px;
   transition: .4s;
   margin-right: 6px;
 }
-
+ 
 .btnRosso:focus {
     background: red;
     border: solid 2px white;
 }
 /*FINE Btn Colore ROSSO*/
-
+ 
 /*Btn Colore GIALLO*/
 .btnGiallo{
   display: inline-block;
@@ -91,14 +92,14 @@ $fontsize: 19px;
   transition: .4s;
   margin-right: 6px;
 }
-
+ 
 .btnGiallo:focus {
     background: yellow;
     border: solid 2px white;
 }
-
+ 
 /*FINE Btn Colore GIALLO*/
-
+ 
 /*Btn Colore BLUE*/
 .btnBlu{
   display: inline-block;
@@ -115,12 +116,12 @@ $fontsize: 19px;
   font-weight: bold;
   transition: .4s;
 }
-
+ 
 .btnBlu:focus {
     background: blue;
     border: solid 2px white;
 }
-
+ 
 footer {
   color: $textcolor;
   font-size: $fontsize;
@@ -128,13 +129,16 @@ footer {
   grid-row: 3;
 }
 
-
+.copy {
+  text-decoration: none;
+  font-size: 9px;
+  padding-left: 2%;
+  color: $coloreCopy;
+}
+ 
 .main-container{
   display: grid;
   grid-template-rows: 100px 1fr 50px;
   height: 100vh;
   color: white;
 }
-
-
-

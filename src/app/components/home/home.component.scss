@@ -86,7 +86,7 @@ $fontsize: 19px;
     .slider-controls {
         position: absolute;
         bottom: 0px;
-        top: 85%;
+        top: 90%;
         left: 5.5%;
         width: 220px;
         text-align: center;
@@ -234,6 +234,7 @@ $fontsize: 19px;
     footer {
         color: $textcolor;
         font-size: $fontsize;
+        bottom:0;
         width:100%;
         grid-row: 3;
     }
