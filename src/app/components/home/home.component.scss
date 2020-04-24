@@ -5,7 +5,7 @@ $coloreFineSfumatura: RGB(0, 194, 255);
 $coloreCopy: RGB(89, 167, 255);
 $coloreIcona: white;
 
-/* Use the variables */
+/* Use the variables  */
 
 body {
     background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
@@ -61,14 +61,14 @@ img {
     /* CURRENT way. */
     scroll-snap-type: x mandatory;
     /* OLD WAY. Probably not worth including at all.
-  
+
     -webkit-scroll-snap-points-x: repeat(300px);
         -ms-scroll-snap-points-x: repeat(300px);
             scroll-snap-points-x: repeat(300px);
     -webkit-scroll-snap-type: mandatory;
         -ms-scroll-snap-type: mandatory;
             scroll-snap-type: mandatory;
-  
+
      */
 }
 
