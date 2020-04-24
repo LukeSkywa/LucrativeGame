@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { Router } from '@angular/router';
 import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
-
+ 
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
@@ -14,11 +14,12 @@ export class ListaComponent implements OnInit {
   mostraPiu: Boolean;
   clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
-
+ 
   constructor(private router: Router, private httpClothesService: HttpClothesService) { 
     this.mostraPiu = false;
+    this.viewList(1);
   }
-
+ 
   retrieveClothes(){
     this.httpClothesService.getClothes().subscribe(reponse => {
       this.clothesList = reponse;
@@ -27,7 +28,7 @@ export class ListaComponent implements OnInit {
       console.log('errore');
     });
   }
-
+ 
   viewList(list: number){
     this.clothesListFiltered = this.clothesList.filter( item => {
       switch(list){
@@ -37,13 +38,13 @@ export class ListaComponent implements OnInit {
       }
     })
   }
-
+ 
   switchPreferito(id:number){
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.preferito = !clothes.preferito;
     this.httpClothesService.updateClothes(clothes).subscribe(() => {});
   }
-
+ 
   switchNascondi(id:number){
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.nascosto = !clothes.nascosto;
@@ -53,14 +54,13 @@ export class ListaComponent implements OnInit {
   show(index: number) {
     this.viewBtn === index ? this.viewBtn = null : this.viewBtn = index;
   }
-
+ 
   mostraDiPiu(){ this.mostraPiu = true; }
-
+ 
   mostraDiMeno(){ this.mostraPiu = false; }
-
+ 
   ngOnInit(): void {
     this.retrieveClothes();
   }
-
-
+ 
 }
