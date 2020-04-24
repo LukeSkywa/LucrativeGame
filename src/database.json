@@ -6,8 +6,8 @@
       "prezzo": 1.972,
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
-      "preferito": false,
-      "nascosto": true,
+      "preferito": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
@@ -17,7 +17,7 @@
       "description": "nike af1 bianca, modello donna",
       "genere": "calzatura",
       "preferito": false,
-      "nascosto": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto2.jpg"
     },
     {
@@ -27,7 +27,7 @@
       "description": "paura x rosa chemical tee -  limited edition",
       "genere": "t-shirt",
       "preferito": false,
-      "nascosto": false,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto3.jpg"
     },
     {

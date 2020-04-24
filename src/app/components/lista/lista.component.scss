@@ -1,5 +1,5 @@
 
-body {
+.container {
 	margin: -5px;
 	padding: 0;
 	text-align: center;
@@ -16,7 +16,8 @@ ul {
 }
 
 .prova{
-  background: rgb(183, 213, 223);
+  background: white;
+  opacity: 0.9;
   width: auto;
   padding: 10px;
   margin: 20px;
@@ -46,15 +47,21 @@ img.share{
   width: 25px;
 }
 
+img.preferito{
+  width: 25px;
+  //border: blue;
+}
+
 /*BOTTONI Tutti-Preferiti-Nascondi*/
 .btn{
   display: inline-block;
   text-decoration: none;
-  background: rgb(183, 213, 223);
+  // background: rgb(183, 213, 223);
+  background: white;
   color: #00bdff;
   padding: 7px 20px;
 	border-radius: 25px;
-  border: solid 2px rgb(183, 213, 223);
+  border: solid 2px white;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
@@ -68,10 +75,47 @@ img.share{
   border-radius: 25px;
   background: white;
   color: #00bdff;
-border: solid 2px rgb(183, 213, 223);
+  border: solid 2px white;
+  outline: transparent;
 }
 /* FINE BOTTONI Tutti-Preferiti-Nascondi*/
 
 .btnAllineamento{
   text-align: left;
 }
+
+.dropdown-content {
+  display: block;
+  background-color: white;
+  right: 6%;
+  position: absolute;
+  height: 80px;
+  width: fit-content;
+  margin-top: -40px;
+  border-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid grey;
+}
+
+//Dimensione riquadro magg. info prodotto
+.dropdown-content{
+  width: 250px;
+  text-align: left;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited {
+  color : #008CFF;
+  text-decoration: none
+ }
+
+ #info{
+   cursor: pointer;
+ }
+ #info:hover{
+  cursor: pointer;
+ }

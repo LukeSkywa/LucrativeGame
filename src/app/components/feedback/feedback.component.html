@@ -1,4 +1,4 @@
-<body>
+<div class="container">
     <app-menu></app-menu>
     <div class="title">
       <h3>Inviaci un tuo Feedback </h3>
@@ -8,10 +8,11 @@
       <form [formGroup]="feedbackForm" (ngSubmit)="addFeedback(feedbackForm)" ngNativeValidate>
         <input type="text" id="iconaUtente" name="nome" class="form-control" placeholder=" Nome" formControlName="nome" required><br>
         <input type="text" id="iconaUtente" name="cognome" class="form-control" placeholder="Cognome" formControlName="cognome"required><br>
-        <select name="country" id="iconaUomoDonna" formControlName="genere"class="form-control">
-          <option value="Uomo">Uomo</option>
-          <option value="Donna">Donna</option>
-          </select>
+        <select #genere type="text" id="iconaUomoDonna" formControlName="genere" class="form-control" placeholder="Genere">
+          <ng-container *ngFor="let item of generi">
+            <option class="colorUomoDonna" value={{item}}> {{item}} </option>
+          </ng-container>
+        </select>
           <br>
         <input type="Email" id="iconaEmail" name="Email" class="form-control" formControlName="email" placeholder="Email" required><br>
         <input type="text" id="iconaTelefono" name="telefono" class="form-control" formControlName="telefono" placeholder="Telefono" required><br>
@@ -21,6 +22,6 @@
         <input type="submit" name="" class="form-control submit" value="Invia">
       </form>
     </div>
+</div>
 
-</body>
 

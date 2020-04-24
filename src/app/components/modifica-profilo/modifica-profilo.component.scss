@@ -1,13 +1,5 @@
-body{
-    margin: 0;
-    padding: 0;
+.main-container{
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    // MODIFICA DELL'ALTEZZA DELLA PAGINA NECESSARIA
-    // background-color: $bgcolor; /*Compare se motore di ricerca non carica sfumatura*/
-    background-image: linear-gradient(to right, #006cff , #00bdff);
-    height: 110vh;
-    width: auto;
   }
   
 .title {
@@ -55,6 +47,8 @@ form .submit{
     width: 250px;
     margin-top: 20px;
     transition: 0.4s ease;
+    text-align: center;
+    cursor: pointer;
 }
   
 form.submit:hover{
@@ -87,4 +81,8 @@ form.submit:hover{
 /*Icon image*/
 .icon{
     width: 90px;
+}
+
+.colorUomoDonna{
+	background-color: #006cff;
 }

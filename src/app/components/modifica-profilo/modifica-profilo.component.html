@@ -1,5 +1,4 @@
-
-<body>
+<div class="main-container">
     <app-menu></app-menu>
     <div class="title">
         <h3>Benvenuto</h3>
@@ -9,29 +8,25 @@
     <label for="img"></label>
     <input style="display: none;" type="file"  (change)="onFileChanged($event)" #fileInput > 
     <input type="submit" (click)="fileInput.click()" value="Select file">
-    <button (click)="onUpload()"> Upload! </button>
+    <!-- <button (click)="onUpload()"> Upload! </button> -->
     
     <div class="box">
         <form [formGroup]="modificaProfilo" (ngSubmit)="sendModify()">
             <input type="text" name="nome" class="form-control" placeholder="Nome" formControlName="nome"><br>
             <input type="text" name="cognome" class="form-control" placeholder="Cognome" formControlName="cognome"><br>
             <select name="Sesso" class="form-control" formControlName="genere">
-                <!-- NECESSARRIO STILE PER LA SELECT -->
                 <ng-container *ngFor="let item of generi">
-                    <option value={{item}} > {{item}} </option>
+                    <option class="colorUomoDonna" value={{item}} > {{item}} </option>
                 </ng-container>
             </select>
             <br>
-            <!-- SISTEMARE LE ICONE  -->
-            <!-- <img class="icon" src="assets/feedback/icon-email.png" alt="">   -->
                 <input type="text" name="Email" class="form-control" placeholder="Email" formControlName="email"><br>
-            <!-- <img class="icon" src="assets/feedback/icon-telefono.png" alt="">   -->
                 <input type="text" name="telefono" class="form-control" placeholder="Telefono" formControlName="telefono"><br>
             <br>
             <br>
-            <input routerLink="/profilo"  class="form-control submit" value="annulla">   
-            <input type="submit" class="form-control submit" value="conferma">
+            <input routerLink="/profilo"  class="form-control submit" value="Annulla">   
+            <input type="submit" class="form-control submit" value="Conferma">
         </form>
     </div>
-</body>
+</div>
 
