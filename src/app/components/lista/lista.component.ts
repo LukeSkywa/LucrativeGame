@@ -10,7 +10,7 @@ import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
 })
 export class ListaComponent implements OnInit {
   
-  daMostrare:Boolean;
+  viewBtn: number;
   mostraPiu: Boolean;
   clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
@@ -50,24 +50,8 @@ export class ListaComponent implements OnInit {
     this.httpClothesService.updateClothes(clothes).subscribe(() => {});
   }
 
-<<<<<<< HEAD
-  show(i: number) {
-    this.daMostrare === i ? this.daMostrare = null : this.daMostrare = i;
-    // if (this.daMostrare == i) {
-    //   this.daMostrare = null;
-    // }
-    // else {
-    //   this.daMostrare = i;
-    // }
-=======
-  show() {
-    if (this.daMostrare == true) {
-      this.daMostrare = false;
-    }
-    else {
-      this.daMostrare = true;
-    }
->>>>>>> origin/modifica
+  show(index: number) {
+    this.viewBtn === index ? this.viewBtn = null : this.viewBtn = index;
   }
 
   mostraDiPiu(){ this.mostraPiu = true; }

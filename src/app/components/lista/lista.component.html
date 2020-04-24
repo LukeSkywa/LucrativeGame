@@ -13,7 +13,7 @@
   <!-- LISTA TUTTI -->
   <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
   <ul>
-    <li class= "prova" *ngIf="i < 2 && !mostraPiu" >
+    <li class= "prova" *ngIf="i < 5 && !mostraPiu" >
       <table style="width:100%">
         <tr >
           <th style="width:1%">
@@ -50,8 +50,8 @@
           
           <th style="width:1%">
             <!-- <a  routerLink="/detail/{{item.id}}"> -->
-            <button (click)="show()"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
-            <ng-container *ngIf="daMostrare">
+            <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+            <ng-container *ngIf="viewBtn==i">
               <div class="dropdown-content">
                   <a [routerLink]="['/detail', item.id]" class="items">mostra di più</a>
                   <hr width=98% size=1 color=#011D28>
@@ -73,13 +73,13 @@
   
   <!-- BOTTONI MOSTRA DI PIU' E MOSTRA DI MENO -->
     <div>
-      <button *ngIf="i==2 && !mostraPiu;" (click)="mostraDiPiu()" class="btn">Mostra di più</button>
+      <button *ngIf="i==5 && !mostraPiu;" (click)="mostraDiPiu()" class="btn">Mostra di più</button>
     </div>
   </ng-container>
 
   <ng-container *ngIf="mostraPiu">
     <ul>
-      <li class= "prova"*ngFor="let item of clothesListFiltered" >
+      <li class= "prova"*ngFor="let item of clothesListFiltered; let i = index" >
         <table style="width:100%">
           <tr >
             <th style="width:1%">
@@ -106,8 +106,8 @@
             <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
             <th style="width:1%">
               <!-- <a  routerLink="/detail/{{item.id}}"> -->
-                <button (click)="show()"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
-                <ng-container *ngIf="daMostrare">
+                <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+                <ng-container *ngIf="viewBtn==i">
                   <div class="dropdown-content">
                       <a [routerLink]="['/detail', item.id]" class="items">mostra di più</a>
                       <hr width=98% size=1 color=#011D28>
@@ -127,7 +127,7 @@
       
     </ul>
       <div>
-        <button *ngIf="clothesListFiltered.length > 2" (click)="mostraDiMeno()" class="btn">Mostra di meno</button>
+        <button *ngIf="clothesListFiltered.length > 5" (click)="mostraDiMeno()" class="btn">Mostra di meno</button>
       </div>
   
     </ng-container>
