@@ -26,22 +26,24 @@
           </th>
 
           <!-- GESTIONE DEI PREFERITI -->
-          <!-- SISTEMARE STILE -->
-          <ng-container *ngIf="item.preferito">
-            <span class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
-          </ng-container>
-          <ng-container *ngIf="!item.preferito">
-            <span class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
-          </ng-container>
+          <th style="width:1%">
+            <ng-container *ngIf="item.preferito">
+              <span class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
+            </ng-container>
+            <ng-container *ngIf="!item.preferito">
+              <span class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
+            </ng-container>
+          </th>
 
           <th style="width:1%">
             <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
-            <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
+              <span class="material-icons">share</span>
+            </a>
           </th>
         
           <th style="width:1%">
-            <!-- <a  routerLink="/detail/{{item.id}}"> -->
-            <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+            <!-- <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button> -->
+            <span (click)="show(i)" class="material-icons">add_circle_outline </span>
             <ng-container *ngIf="viewBtn==i">
               <div class="dropdown-content">
                   <a [routerLink]="['/detail', item.id]" class="items">Scopri di più</a>

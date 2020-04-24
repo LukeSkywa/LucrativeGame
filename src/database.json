@@ -7,7 +7,7 @@
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
       "preferito": true,
-      "nascosto": false,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
