@@ -11,22 +11,21 @@ $coloreTestoBottone: rgb(81, 152, 251);
 $sfumaturaCorpoPagina: RGB(127, 181, 255);
 //fine definizione variabili
 //inizio definizione stile
-body {
+.main-container {
     margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 10%;
     background-image: linear-gradient(to right, $coloreInizioSfumaturaPagina, $coloreFineSfumaturaPagina);
     color: $textColor;
-    margin-left: 37%;
-    margin-right: 37%;
+    margin-left: 43%;
+    margin-right: 31%;
     text-align: center;
-    height: 100%;
     width: 290px;
     border-radius: 10px;
     box-shadow: -10px -10px 5px $sfumaturaCorpoPagina;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .title {
+    margin-top: -20px;
     font-size: 25px;
 }
 

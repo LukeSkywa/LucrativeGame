@@ -1,5 +1,5 @@
 
-body {
+.container {
 	margin: -5px;
 	padding: 0;
 	text-align: center;
@@ -47,6 +47,11 @@ img.share{
   width: 25px;
 }
 
+img.preferito{
+  width: 25px;
+  //border: blue;
+}
+
 /*BOTTONI Tutti-Preferiti-Nascondi*/
 .btn{
   display: inline-block;
@@ -92,6 +97,12 @@ img.share{
   border: 1px solid grey;
 }
 
+//Dimensione riquadro magg. info prodotto
+.dropdown-content{
+  width: 250px;
+  text-align: left;
+}
+
 a{
   text-decoration: none;
 }
@@ -101,27 +112,9 @@ a:visited {
   text-decoration: none
  }
 
- .dtl{
-  display: inline-block;
-  text-decoration: none;
-  background: white;
-  color: #00bdff;
-  padding: 7px 20px;
-	border-radius: 25px;
-  border: solid 2px white;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
-  margin-left: 8px;
-}
-
-.dtl:focus {
-  padding: 7px 20px;
-  border-radius: 25px;
-  background: transparent;
-  color: #00bdff;
-  border: solid 2px white;
-  outline: transparent;
-}
+ #info{
+   cursor: pointer;
+ }
+ #info:hover{
+  cursor: pointer;
+ }

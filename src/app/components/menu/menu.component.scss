@@ -3,16 +3,6 @@
 div {
     margin-left: 1%;
 }
-
-body {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(to right, #006cff , #00bdff);
-  color: #008CFF;
-	height: 100%;
-  width: auto;
-}
-
-
 /* Barra di Navigazione */
 
 ul {
@@ -57,6 +47,10 @@ img {
   //padding-left: 20%;
   float: right;
   padding-right: 20px;
+}
+
+#cursor{
+  cursor: pointer;
 }
 
 

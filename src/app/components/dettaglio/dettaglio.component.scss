@@ -1,16 +1,6 @@
-body{
-  margin: 0;
-  padding: 0;
-  /*text-align: center;*/
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(to right, #006cff , #00bdff);
-  color: white;
-  background-repeat: no-repeat;
-  background-size: auto;
-  display:flex;
-  flex-direction:column;
-
-}
+$textcolor: white;
+$fontsize: 19px;
+$coloreCopy: RGB(89, 167, 255);
 
 * {
   box-sizing: border-box;
@@ -24,19 +14,12 @@ body{
   height: 300px; /* Should be removed. Only for demonstration */
 }
 
-/* Superfluo
+/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-*/
-
-img {
-  width: 100%;
-  height: auto;
-}
-
 
 /*Btn Taglia*/
 .btn{
@@ -139,54 +122,23 @@ img {
     border: solid 2px white;
 }
 
-/*FINE Btn Colore BLU*/
-
-
-
-footer{
-  margin-top:auto;
-}
-
-.testo {
-  font-size: 12px;
-}
-
-.iconPinterest{
-  position: absolute;
-  right: 10px;
-
-}
-
-.iconSnapchat{
-  position: absolute;
-  right: 50px;
-
-}
-
-.iconTelegram{
-  position: absolute;
-  right: 90px;
-
-}
-
-.iconInstagram{
-  position: absolute;
-  right: 120px;
-}
-
-.iconFacebook{
-  position: absolute;
-  right: 160px;
-}
-
-
-
-/*
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-image: linear-gradient(to right, #006cff , #00bdff);
+  color: $textcolor;
+  font-size: $fontsize;
+  width:100%;
+  grid-row: 3;
 }
-*/
 
+.copy {
+  text-decoration: none;
+  font-size: 9px;
+  padding-left: 2%;
+  color: $coloreCopy;
+}
+
+.main-container{
+  display: grid;
+  grid-template-rows: 100px 1fr 50px;
+  height: 100vh;
+  color: white;
+}

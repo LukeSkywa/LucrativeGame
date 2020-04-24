@@ -12,8 +12,8 @@
   pointer-events: none;
 }
 */
-body {
-	margin:0; /*-5px;*/
+.container {
+	margin: -5px;
 	padding: 0;
 	text-align: center;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -126,5 +126,6 @@ form.submit {
 }
 
 .colorUomoDonna{
-  background-color: #00bdff;
+	background-color: #006cff;
 }
+

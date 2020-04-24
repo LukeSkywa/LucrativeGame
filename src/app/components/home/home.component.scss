@@ -1,5 +1,5 @@
-    $textcolor: white;
-    $fontsize: 19px;
+$textcolor: white;
+$fontsize: 19px;
     $coloreInizioSfumatura: RGB(0, 107, 255);
     $coloreFineSfumatura: RGB(0, 194, 255);
     $coloreCopy: RGB(89, 167, 255);
@@ -7,18 +7,11 @@
     $coloreTestoLingua: rgb(97, 163, 255);
     /* Use the variables */
 
-    body {
-        background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        height: 200%;
-    }
+
 
     div {
         color: $textcolor;
         font-size: $fontsize;
-        height: 100%;
-        margin-top: -5%;
-        padding-top: 3%;
     }
 
     .titolo {
@@ -29,7 +22,6 @@
     .testo {
         color: white;
         padding-left: 1%;
-        margin-top: -2%;
         font-size: 200%;
     }
 
@@ -94,7 +86,7 @@
     .slider-controls {
         position: absolute;
         bottom: 0px;
-        top: 85%;
+        top: 90%;
         left: 5.5%;
         width: 220px;
         text-align: center;
@@ -237,4 +229,19 @@
         100% {
             transform: translatex(100%);
         }
+    }
+
+    footer {
+        color: $textcolor;
+        font-size: $fontsize;
+        bottom:0;
+        width:100%;
+        grid-row: 3;
+    }
+
+
+    .main-container{
+        display: grid;
+        grid-template-rows: 100px 1fr 50px;
+        height: 100vh;
     }
