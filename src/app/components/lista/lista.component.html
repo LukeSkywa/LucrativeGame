@@ -50,7 +50,7 @@
           
           <th style="width:1%">
             <!-- <a  routerLink="/detail/{{item.id}}"> -->
-            <button (click)="show()"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+            <button class="dtl" (click)="show()"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
             <ng-container *ngIf="daMostrare">
               <div class="dropdown-content">
                   <a [routerLink]="['/detail', item.id]" class="items">mostra di più</a>
@@ -106,7 +106,7 @@
             <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
             <th style="width:1%">
               <!-- <a  routerLink="/detail/{{item.id}}"> -->
-                <button (click)="show()"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+                <button class="dtl" (click)="show()"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
                 <ng-container *ngIf="daMostrare">
                   <div class="dropdown-content">
                       <a [routerLink]="['/detail', item.id]" class="items">mostra di più</a>
