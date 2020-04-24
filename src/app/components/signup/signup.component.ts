@@ -14,10 +14,12 @@ import { HttpUserService } from 'src/app/services/http/http-user.service';
 export class SignupComponent implements OnInit {
 
   signupForm: FormGroup;
+  showPw: boolean;
   userListStored: User[];
 
 
   constructor(private loginSignUp:LoginSignupService, private fb: FormBuilder, private router:Router, private httpUserService:HttpUserService) { 
+    this.showPw = false;
     this.signupForm = this.fb.group({
       id:['', Validators.required],
       nome:'',
@@ -33,6 +35,10 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  showPassword(){
+    this.showPw = !this.showPw;
+  }
 
   signup(){
     this.loginSignUp.addUser(this.signupForm.value);

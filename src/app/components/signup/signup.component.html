@@ -4,7 +4,7 @@
  
 <body>
     <div>
-        <img src="../../../assets/img/logo.png" class="logo">
+        <img src="/assets/logo-prova.png" class="logo">
         <img src="../../../assets/img/x.png" routerLink="/login" class="tastoX">
         <p class="title">Registrati</p>
         <form (ngSubmit)="signup()" [formGroup]="signupForm" ngNativeValidate>
@@ -19,7 +19,7 @@
                     <label for="username">Username</label>
                 </div>
                 <div class="item3">
-                    <input type="text" id="username" formControlName="username" autocomple te="off" required>
+                    <input type="text" placeholder="username" id="username" formControlName="username" autocomplete="off" required minlength="5">
                 </div>
             </div>
             <div class="grid-container">
@@ -32,8 +32,8 @@
                     <label for="password">Password</label>
                 </div>
                 <div class="item3">
-                    <input type="password" id="password" formControlName="password" autocomplete="off" required>
-                    <span class="material-icons" style="margin-left: 30px;"> 
+                    <input id="password" placeholder="password" formControlName="password" autocomplete="off" [type]= "showPw ? 'text' : 'password'" required minlength="5">
+                    <span (click)="showPassword()" class="material-icons" style="margin-left: 30px;"> 
                         visibility
                     </span>
                 </div>
