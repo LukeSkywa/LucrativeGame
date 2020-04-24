@@ -8,9 +8,9 @@
       <form [formGroup]="feedbackForm" (ngSubmit)="addFeedback(feedbackForm)" ngNativeValidate>
         <input type="text" id="iconaUtente" name="nome" class="form-control" placeholder=" Nome" formControlName="nome" required><br>
         <input type="text" id="iconaUtente" name="cognome" class="form-control" placeholder="Cognome" formControlName="cognome"required><br>
-        <select name="country" id="iconaUomoDonna" formControlName="genere"class="form-control">
+        <select #genere type="text" id="iconaUomoDonna" formControlName="genere" class="form-control" placeholder="Genere">
           <ng-container *ngFor="let item of generi">
-            <option value={{item}} > {{item}} </option>
+            <option class="colorUomoDonna" value={{item}}> {{item}} </option>
           </ng-container>
         </select>
           <br>

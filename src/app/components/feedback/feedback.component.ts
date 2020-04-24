@@ -19,7 +19,7 @@ export class FeedbackComponent implements OnInit {
       id: '',
       nome: '',
       cognome: '',
-      genere: '',
+      genere: 'Uomo',
       email: '',
       telefono: '',
       messaggio: ''

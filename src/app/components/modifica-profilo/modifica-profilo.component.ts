@@ -39,7 +39,6 @@ export class ModificaProfiloComponent implements OnInit {
   ngOnInit(): void {}
 
   sendModify(){
-    //sessionStorage.setItem('user', JSON.stringify(this.modificaProfilo.value));
     this.httpUserService.updateUser(this.modificaProfilo.value).subscribe(()=>{});
     this.router.navigateByUrl('/home');
     window.alert('Modifica effettuata con sucesso');
@@ -48,23 +47,6 @@ export class ModificaProfiloComponent implements OnInit {
   onFileChanged(event){
     this.selectedFile = event.target.files[0];
     console.log(this.selectedFile);
-  }
-
-  // onUpload(){
-  //   const fd = new FormData();
-  //   fd.append('image', this.selectedFile, this.selectedFile.name);
-  //   this.http.post('http://localhost:4200/assets', fd)
-  //     .subscribe(res => {
-  //       console.log(res);
-  //     });
-
-  
-  onUpload(){
-    const fb = new FormData();
-    fb.append('image', this.selectedFile, this.selectedFile.name)
-    this.httpClient.post('http://localhost:4200/assets/', fb).subscribe(res => {
-      console.log(res);
-    })
   }
 
 }
