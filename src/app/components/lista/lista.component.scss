@@ -16,7 +16,8 @@ ul {
 }
 
 .prova{
-  background: rgb(183, 213, 223);
+  background: white;
+  opacity: 0.9;
   width: auto;
   padding: 10px;
   margin: 20px;
@@ -50,11 +51,12 @@ img.share{
 .btn{
   display: inline-block;
   text-decoration: none;
-  background: rgb(183, 213, 223);
+  // background: rgb(183, 213, 223);
+  background: white;
   color: #00bdff;
   padding: 7px 20px;
 	border-radius: 25px;
-  border: solid 2px rgb(183, 213, 223);
+  border: solid 2px white;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
@@ -68,7 +70,7 @@ img.share{
   border-radius: 25px;
   background: white;
   color: #00bdff;
-border: solid 2px rgb(183, 213, 223);
+  border: solid 2px white;
 }
 /* FINE BOTTONI Tutti-Preferiti-Nascondi*/
 

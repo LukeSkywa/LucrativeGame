@@ -26,8 +26,8 @@
       "prezzo": 49,
       "description": "paura x rosa chemical tee -  limited edition",
       "genere": "t-shirt",
-      "preferito": false,
-      "nascosto": false,
+      "preferito": true,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto3.jpg"
     },
     {
@@ -36,7 +36,7 @@
       "prezzo": 25,
       "description": "t shirt con stampa death metal, colore rosa",
       "genere": "t-shirt",
-      "preferito": false,
+      "preferito": true,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto4.jpg"
     },
@@ -46,8 +46,8 @@
       "prezzo": 500,
       "description": "sneakers in pelle, colori vari",
       "genere": "calzatura",
-      "preferito": false,
-      "nascosto": false,
+      "preferito": true,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto5.jpg"
     }
   ],

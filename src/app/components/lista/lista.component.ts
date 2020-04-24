@@ -22,6 +22,7 @@ export class ListaComponent implements OnInit {
   retrieveClothes(){
     this.httpClothesService.getClothes().subscribe(reponse => {
       this.clothesList = reponse;
+      this.clothesListFiltered = reponse;
     }, err => {
       console.log('errore');
     });
@@ -50,12 +51,13 @@ export class ListaComponent implements OnInit {
   }
 
   show(i: number) {
-    if (this.daMostrare == i) {
-      this.daMostrare = null;
-    }
-    else {
-      this.daMostrare = i;
-    }
+    this.daMostrare === i ? this.daMostrare = null : this.daMostrare = i;
+    // if (this.daMostrare == i) {
+    //   this.daMostrare = null;
+    // }
+    // else {
+    //   this.daMostrare = i;
+    // }
   }
 
   mostraDiPiu(){ this.mostraPiu = true; }
@@ -64,8 +66,6 @@ export class ListaComponent implements OnInit {
 
   ngOnInit(): void {
     this.retrieveClothes();
-    this.viewList(1);
-
   }
 
 
