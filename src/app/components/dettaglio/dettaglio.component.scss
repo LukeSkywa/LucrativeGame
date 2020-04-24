@@ -1,16 +1,5 @@
-body{
-  margin: 0;
-  padding: 0;
-  /*text-align: center;*/
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(to right, #006cff , #00bdff);
-  color: white;
-  background-repeat: no-repeat;
-  background-size: auto;
-  display:flex;
-flex-direction:column;
-
-}
+$textcolor: white;
+$fontsize: 19px;
 
 * {
   box-sizing: border-box;
@@ -132,42 +121,20 @@ flex-direction:column;
     border: solid 2px white;
 }
 
-/*FINE Btn Colore BLU*/
-
-footer{
-  margin-top:auto;
+footer {
+  color: $textcolor;
+  font-size: $fontsize;
+  width:100%;
+  grid-row: 3;
 }
 
-.testo {
-  font-size: 12px;
+
+.main-container{
+  display: grid;
+  grid-template-rows: 100px 1fr 50px;
+  height: 100vh;
+  color: white;
 }
 
-.iconPinterest{
-  position: absolute;
-  right: 10px;
-  /*margin-right: 15px;*/
-}
-
-.iconSnapchat{
-  position: absolute;
-  right: 50px;
-  /*margin-right:25px;*/
-}
-
-.iconTelegram{
-  position: absolute;
-  right: 90px;
-  /*margin-right: 25px;*/
-}
-
-.iconInstagram{
-  position: absolute;
-  right: 120px;
-}
-
-.iconFacebook{
-  position: absolute;
-  right: 160px;
-}
 
 

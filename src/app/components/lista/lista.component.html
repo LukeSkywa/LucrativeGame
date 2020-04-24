@@ -1,7 +1,4 @@
-<head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
+<div class="container">
   <app-menu></app-menu>
 
   <head>
@@ -25,16 +22,16 @@
             <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
           <th>{{item.name}} <br>
             {{item.description}}
-            {{item.id}}
+            <!-- {{item.id}} -->
           </th>
 
           <!-- GESTIONE DEI PREFERITI -->
           <th style="width:1%">
             <ng-container *ngIf="item.preferito">
-              <span class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
+              <span id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
             </ng-container>
             <ng-container *ngIf="!item.preferito">
-              <span class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
+              <span id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
             </ng-container>
           </th>
 
@@ -47,16 +44,17 @@
         
           <!-- MOSTRA NASCONDI -->
           <th style="width:1%">
-            <span (click)="show(i)" class="material-icons">add_circle_outline </span>
+            <!-- <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button> -->
+            <span id="info" (click)="show(i)" class="material-icons">add_circle_outline </span>
             <ng-container *ngIf="viewBtn==i">
               <div class="dropdown-content">
-                  <a [routerLink]="['/detail', item.id]" class="items" id="iconaLink">Scopri di più</a>
+                  <a [routerLink]="['/detail', item.id]" id="info" class="items">Scopri di più</a>
                   <hr width=98% size=1 color=#011D28>
                   <ng-container *ngIf="!item.nascosto">
-                      <a (click)="switchNascondi(item.id)" class="items" id="iconaX">Nascondi</a>
+                      <a (click)="switchNascondi(item.id)" id="info" class="items">Nascondi</a>
                   </ng-container>
                   <ng-container *ngIf="item.nascosto">
-                      <a (click)="switchNascondi(item.id)" class="items">Mostra</a>
+                      <a (click)="switchNascondi(item.id)" id="info" class="items">Mostra</a>
                   </ng-container>
               </div>
             </ng-container>
@@ -81,7 +79,7 @@
             <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
             <th>{{item.name}} <br>
               {{item.description}}
-              {{item.id}}
+              <!-- {{item.id}} -->
             </th>
 
             <!-- GESTIONE DEI PREFERITI -->
@@ -129,6 +127,4 @@
       </div>
 
     </ng-container>
-
-</body>
-
+  </div>
