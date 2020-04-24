@@ -15,12 +15,16 @@ body {
 
 .card {
     display: inline-block;
-    text-align: center;
     background-color: rgb(204, 226, 255);
     border-radius: 25px;
     width: 20%;
     margin-top: 15px;
     margin-left: 30px;
+    padding: 10px;
+}
+
+.title {
+    font-size: 10px;
 }
 
 .card:hover {
@@ -29,7 +33,7 @@ body {
 }
 
 img {
-    width: 100px;
+    width: 100%;
 }
 
 img.share {
