@@ -57,6 +57,9 @@ export class ListaComponent implements OnInit {
     if(this.listSel === 3){
       this.viewList(3);
     }
+    if(this.listSel === 1){
+      this.viewList(1);
+    }
   }
 
   show(index: number) {

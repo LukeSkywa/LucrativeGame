@@ -26,12 +26,19 @@
             <div class="item2">
                 <label for="password">Password</label>
             </div>
-            <div class="item3">
+            <div>
                 <input id="password" formControlName="password" placeholder="password" autocomplete="off" [type]= "showPw ? 'text' : 'password'" required>
-                <span (click)="showPassword()" class="material-icons" style="margin-left: 30px;"> 
-                    visibility
-                </span>
+                <ng-container *ngIf="showPw">
+                    <span (click)="showPassword()" class="material-icons" style="margin-left: 30px;"> visibility </span>
+                </ng-container>
+                <ng-container *ngIf="!showPw">
+                    <span (click)="showPassword()" class="material-icons" style="margin-left: 30px;"> visibility_off </span>
+                </ng-container>
             </div>
+        </div>
+        <div>
+            <span class="password">memorizza password</span>
+            <mat-slide-toggle></mat-slide-toggle>
         </div>
         <div>
             <button type="submit" class="bottone">Accedi</button>

@@ -17,6 +17,11 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 import { CardsComponent } from './components/cards/cards.component';
 
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +42,10 @@ import { CardsComponent } from './components/cards/cards.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
