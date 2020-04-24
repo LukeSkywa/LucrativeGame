@@ -59,7 +59,7 @@
       "username": "davidecarizzoni",
       "password": "12345",
       "email": "davidecarizzoni@gmail.com",
-      "telefono": "3487190654",
+      "telefono": "3487190652",
       "genere": "Uomo",
       "admin": true,
       "path": "/assets/users/profile.jpg"
@@ -110,6 +110,15 @@
       "email": "davide@gmail.com",
       "telefono": "347859843",
       "messaggio": "Prova feedback funzionante"
+    },
+    {
+      "id": 2,
+      "nome": "Davide",
+      "cognome": "Carizzoni",
+      "genere": "Uomo",
+      "email": "davide@gmail",
+      "telefono": "233434",
+      "messaggio": "Prova feedback su branch cards"
     }
   ]
 }

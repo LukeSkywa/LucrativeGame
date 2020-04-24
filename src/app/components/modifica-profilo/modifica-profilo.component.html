@@ -7,8 +7,9 @@
     </div>
     
     <label for="img"></label>
-    <input type="file" id="img" name="img" accept="image/*">
-    <input type="submit">
+    <input style="display: none;" type="file"  (change)="onFileChanged($event)" #fileInput > 
+    <input type="submit" (click)="fileInput.click()" value="Select file">
+    <button (click)="onUpload()"> Upload! </button>
     
     <div class="box">
         <form [formGroup]="modificaProfilo" (ngSubmit)="sendModify()">
@@ -22,9 +23,9 @@
             </select>
             <br>
             <!-- SISTEMARE LE ICONE  -->
-            <img class="icon" src="icon-email.png" alt="">  
+            <!-- <img class="icon" src="assets/feedback/icon-email.png" alt="">   -->
                 <input type="text" name="Email" class="form-control" placeholder="Email" formControlName="email"><br>
-            <img class="icon" src="icon.telefono.png" alt="">  
+            <!-- <img class="icon" src="assets/feedback/icon-telefono.png" alt="">   -->
                 <input type="text" name="telefono" class="form-control" placeholder="Telefono" formControlName="telefono"><br>
             <br>
             <br>
