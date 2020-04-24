@@ -1,5 +1,9 @@
 <app-menu></app-menu>
 
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
 <body>
     <div class="btnAllineamento">
         <button (click)="viewList(1)" class="btn"> Tutti </button>
@@ -13,6 +17,9 @@
                 <h1 class="title"> {{item.name}} </h1>
                 <p class="description"> {{item.description}} </p>
             </div>
+            <span class="material-icons align">
+                more_horiz
+            </span>
 
         </div>
     </div>
