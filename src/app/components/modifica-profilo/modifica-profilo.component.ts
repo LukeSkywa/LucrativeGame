@@ -31,7 +31,6 @@ export class ModificaProfiloComponent implements OnInit {
       genere: this.user.genere,
       admin: this.user.admin,
       path: this.user.path
-      
     })
   }
 

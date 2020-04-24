@@ -12,6 +12,7 @@ import { HttpHeaders } from '@angular/common/http';
 export class FeedbackComponent implements OnInit {
 
   feedbackForm: FormGroup;
+  generi = ['Uomo', 'Donna', 'Altro'];
 
   constructor(private fb: FormBuilder, private httpFeedbackService: HttpFeedbackService, private router:Router) { 
     this.feedbackForm = this.fb.group({
