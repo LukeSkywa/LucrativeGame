@@ -56,7 +56,6 @@ img.preferito{
 .btn{
   display: inline-block;
   text-decoration: none;
-  // background: rgb(183, 213, 223);
   background: white;
   color: #00bdff;
   padding: 7px 20px;
@@ -77,6 +76,10 @@ img.preferito{
   color: #00bdff;
   border: solid 2px white;
   outline: transparent;
+}
+
+#btntutti{
+  margin-left: 3.2%;
 }
 /* FINE BOTTONI Tutti-Preferiti-Nascondi*/
 
