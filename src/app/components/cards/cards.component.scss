@@ -73,16 +73,13 @@ img.share {
 }
 
 .showMore {
-    margin: auto;
     text-decoration: none;
     background: white;
     color: rgb(0, 106, 255);
-    padding: 11px 50px;
+    padding: 15px 60px;
     border-radius: 25px;
     text-align: center;
-    vertical-align: middle;
-    overflow: hidden;
-    font-weight: bold;
+    font-weight: lighter;
     transition: .4s;
     margin-left: 8px;
     outline: none;
@@ -90,7 +87,9 @@ img.share {
     font-weight: lighter;
     cursor: pointer;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    margin-left: 43%;
 }
 
 
