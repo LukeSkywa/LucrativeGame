@@ -3,35 +3,35 @@
 <div class="all">
     <p class="title">Benvenuto <br>
         <!-- <p class="nome">{{user.nome}} {{user.cognome}}</p> -->
-        <p class="nome">{{user.?username}}</p>
+        <p class="nome">{{user.username}}</p>
         <!-- LOGO DA INSERIRE -->
         <img src="{{user.path}}" alt="profilo" class="profilo">
         <table>
             <tr>
                 <td class="sx">Nome</td>
                 <ng-container *ngIf="user.nome === ''"> <td class="dx"> -- </td> </ng-container>
-                <ng-container *ngIf="user.nome != ''"> <td class="dx">{{user.?nome}}</td> </ng-container>
+                <ng-container *ngIf="user.nome != ''"> <td class="dx">{{user.nome}}</td> </ng-container>
                 
             </tr>
             <tr>
                 <td class="sx">Cognome</td>
                 <ng-container *ngIf="user.cognome === ''"> <td class="dx"> -- </td> </ng-container>
-                <ng-container *ngIf="user.cognome != ''"> <td class="dx">{{user.?cognome}}</td> </ng-container>
+                <ng-container *ngIf="user.cognome != ''"> <td class="dx">{{user.cognome}}</td> </ng-container>
             </tr>
             <tr>
                 <td class="sx">Sesso</td>
                 <ng-container *ngIf="user.genere === ''"> <td class="dx"> -- </td> </ng-container>
-                <ng-container *ngIf="user.genere != ''"><td class="dx">{{user.?genere}}</td> </ng-container>
+                <ng-container *ngIf="user.genere != ''"><td class="dx">{{user.genere}}</td> </ng-container>
             </tr>
             <tr>
                 <td class="sx">Email</td>
                 <ng-container *ngIf="user.email === ''"> <td class="dx"> -- </td> </ng-container>
-                <ng-container *ngIf="user.email != ''"><td class="dx">{{user.?email}}</td> </ng-container>
+                <ng-container *ngIf="user.email != ''"><td class="dx">{{user.email}}</td> </ng-container>
             </tr>
             <tr>
                 <td class="sx">Telefono</td>
                 <ng-container *ngIf="user.telefono === ''"> <td class="dx"> -- </td> </ng-container>
-                <ng-container *ngIf="user.telefono != ''"><td class="dx">{{user.?telefono}}</td> </ng-container>
+                <ng-container *ngIf="user.telefono != ''"><td class="dx">{{user.telefono}}</td> </ng-container>
             </tr>
         </table>
         <button routerLink="/modifica-profilo">
