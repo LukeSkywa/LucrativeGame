@@ -1,41 +1,71 @@
 {
   "clothes": [
     {
-      "id": "1",
-      "name": "vestito1",
-      "prezzo": 200,
-      "description": "Descrizione vistito 1",
-      "genere": "abito"
+      "id": 1,
+      "name": "jeans skinny",
+      "prezzo": 1.972,
+      "description": "jeans skinny con borchie. Colore nero, strappati",
+      "genere": "jeans",
+      "preferito": true,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
-      "id": "2",
-      "name": "vestito2",
-      "prezzo": 75,
-      "description": "Descrizione vistito 2",
-      "genere": "intimo"
+      "id": 2,
+      "name": "nike af1",
+      "prezzo": 110,
+      "description": "nike af1 bianca, modello donna",
+      "genere": "calzatura",
+      "preferito": false,
+      "nascosto": true,
+      "path": "/assets/imgClothes/prodotto2.jpg"
     },
     {
-      "id": "3",
-      "name": "vestito3",
-      "prezzo": 64,
-      "description": "Descrizione vistito 3",
-      "genere": "sportivo"
+      "id": 3,
+      "name": "paura x rosa tee",
+      "prezzo": 49,
+      "description": "paura x rosa chemical tee -  limited edition",
+      "genere": "t-shirt",
+      "preferito": true,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "death metal tee",
+      "prezzo": 25,
+      "description": "t shirt con stampa death metal, colore rosa",
+      "genere": "t-shirt",
+      "preferito": true,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "sneakers dsquared2",
+      "prezzo": 500,
+      "description": "sneakers in pelle, colori vari",
+      "genere": "calzatura",
+      "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto5.jpg"
     }
   ],
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "nome": "Davide",
       "cognome": "Carizzoni",
       "username": "davidecarizzoni",
       "password": "12345",
       "email": "davidecarizzoni@gmail.com",
-      "telefono": "000000000",
-      "genere": "M",
-      "admin": true
+      "telefono": "3487190654",
+      "genere": "Uomo",
+      "admin": true,
+      "path": "/assets/users/profile.jpg"
     },
     {
-      "id": "2",
+      "id": 2,
       "nome": "Antonino",
       "cognome": "Pigolotti",
       "username": "antoninopigolotti",
@@ -43,10 +73,11 @@
       "email": "antoninopigolotti@gmail.com",
       "telefono": "456767889",
       "genere": "M",
-      "admin": true
+      "admin": true,
+      "path": "/assets/users/profile.jpg"
     },
     {
-      "id": "3",
+      "id": 3,
       "nome": "Matteo",
       "cognome": "Sorti",
       "username": "matteosorti",
@@ -54,10 +85,11 @@
       "email": "matteosorti@gmail.com",
       "telefono": "34567788",
       "genere": "M",
-      "admin": true
+      "admin": true,
+      "path": "/assets/users/profile.jpg"
     },
     {
-      "id": "4",
+      "id": 4,
       "nome": "Andrea",
       "cognome": "Bonardi",
       "username": "andreabonardi",
@@ -65,7 +97,19 @@
       "email": "andreabonardi@gmail.com",
       "telefono": "00110022",
       "genere": "M",
-      "admin": true
+      "admin": true,
+      "path": "/assets/users/profile.jpg"
+    }
+  ],
+  "feedback": [
+    {
+      "id": 1,
+      "nome": "Davide",
+      "cognome": "Carizzoni",
+      "genere": "Uomo",
+      "email": "davide@gmail.com",
+      "telefono": "347859843",
+      "messaggio": "Prova feedback funzionante"
     }
   ]
 }

@@ -27,6 +27,7 @@ export class LoginSignupService {
     this.userListStored.forEach(element => {
       if(element.username === form.username && element.password === form.password){
         element.admin === true ? sessionStorage.setItem('privilege','admin') : sessionStorage.setItem('privilege','user')
+        sessionStorage.setItem('user', JSON.stringify(element));
         controllo = true;
       } 
     });
@@ -37,7 +38,7 @@ export class LoginSignupService {
     if(this.isPres(form)){
       sessionStorage.setItem('username',form.username);
       this.router.navigateByUrl('/home');
-      window.alert("LOGIN EFFETTUATTO");
+      window.alert("LOGIN EFFETTUATO");
     }
     else{
       window.alert("LOGIN ERRATO");

@@ -13,13 +13,13 @@
 }
 */
 body {
-	margin: 0;
+	margin: -5px;
 	padding: 0;
 	text-align: center;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: $bgcolor;
+	//background-color: $bgcolor;
 	background-image: linear-gradient(to right, #006cff , #00bdff);
-	height: 768px;
+	height: 105vh;//768px;
 	width: auto;
 }
 .title {
@@ -68,14 +68,14 @@ form.submit {
 		cursor: pointer;
 	}
 }
-&::placeholder {
+::placeholder { //&
 	color: white;
 	opacity: 1;
 }
-&:-ms-input-placeholder {
+:-ms-input-placeholder { //&
 	color: white;
 }
-&::-ms-input-placeholder {
+::-ms-input-placeholder { //&
 	color: white;
 }
 .icon {
@@ -83,7 +83,7 @@ form.submit {
 }
 #iconaUtente {
 	background: transparent;
-	background-image: url("icon.utente.png");
+	background-image: url("/assets/feedback/icon-utente.png");
 	background-position: left;
 	background-position: calc(5% - 10px) center;
 	padding-left: 40px;
@@ -92,14 +92,14 @@ form.submit {
 }
 #iconaTelefono {
 	background: transparent;
-	background-image: url("icon.utente.png");
+	background-image: url("/assets/feedback/icon-utente.png");
 	background-position: left;
 	background-position: calc(5% - 10px) center;
 	padding-left: 40px;
 	background-size: 15px;
 	background-repeat: no-repeat;
 	background: transparent;
-	background-image: url("icon.telefono.png");
+	background-image: url("/assets/feedback/icon-telefono.png");
 	background-position: left;
 	background-position: calc(5% - 10px) center;
 	padding-left: 40px;
@@ -108,7 +108,7 @@ form.submit {
 }
 #iconaUomoDonna {
 	background: transparent;
-	background-image: url("icon.uomo.donna.png");
+	background-image: url("/assets/feedback/icon-uomoDonna.png");
 	background-position: left;
 	background-position: calc(5% - 10px) center;
 	padding-left: 40px;
@@ -117,7 +117,7 @@ form.submit {
 }
 #iconaEmail {
 	background: transparent;
-	background-image: url("icon-email.png");
+	background-image: url("/assets/feedback/icon-email.png");
 	background-position: left;
 	background-position: calc(5% - 10px) center;
 	padding-left: 40px;

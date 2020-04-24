@@ -1,5 +1,5 @@
 export interface User{
-    id:string;
+    id:number;
     nome: string;
     cognome: string;
     username: string;
@@ -8,4 +8,5 @@ export interface User{
     telefono: string
     genere: string;
     admin: boolean;
+    path: string;
 }

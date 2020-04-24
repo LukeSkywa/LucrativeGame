@@ -26,4 +26,8 @@ export class HttpClothesService {
     }
     return this.httpClient.get<ClothesItem[]>('http://localhost:3000/clothes', {observe: 'response', params: params})
   }
+
+  updateClothes(clothes:ClothesItem){
+    return this.httpClient.put('http://localhost:3000/clothes/' + clothes.id, clothes)
+  }
 }

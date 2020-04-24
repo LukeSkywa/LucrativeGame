@@ -1,7 +1,10 @@
 export interface ClothesItem {
-  id: string;
+  id: number;
   name: string;
   prezzo: number;
   description:string;
   genere: string;
+  preferito: boolean;
+  nascosto: boolean;
+  path: string;
 }
