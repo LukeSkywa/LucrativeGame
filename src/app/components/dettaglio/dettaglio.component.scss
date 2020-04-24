@@ -161,7 +161,7 @@ footer {
 }
 
 .main-container {
-    display: grid;
+    display: inline-block;
     grid-template-rows: 100px 1fr 50px;
     height: 100vh;
     color: white;
@@ -169,4 +169,93 @@ footer {
 
 .immagine-centrale {
     width: 80%;
+}
+
+//carousel
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+//è la parte che contiene il testo
+.slider {
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    margin: 20px auto;
+    overflow: hidden;
+    outline: none;
+    margin-left: -1.5px;
+    background-color: rgb(127, 193, 255);
+    ;
+}
+
+//bottoni (posizione)
+.slider-controls {
+    position: absolute;
+    bottom: 0px;
+    top: 85%;
+    left: 85%;
+    width: 220px;
+    text-align: center;
+    transform: translatex(-50%);
+    z-index: 1000;
+    list-style: none;
+    text-align: center;
+}
+
+.slider input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+// etichetta dei bottoni, larghezza ed altezza bottoni, distanza tra uno e l'altro, colore
+.slider-controls label {
+    display: inline-block;
+    border: 1px solid white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: inherit;
+    transition: background-color 0.2s linear;
+    margin-left: 5px;
+}
+
+//colore bottoni quando vengono premuti
+#btn-1:checked~.slider-controls label[for="btn-1"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-2:checked~.slider-controls label[for="btn-2"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-3:checked~.slider-controls label[for="btn-3"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-4:checked~.slider-controls label[for="btn-4"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+.immagineCarousel {
+    height: 20%;
+    float: left;
+    margin-left: 0%;
+}
+
+.columb-right {
+    float: right;
 }
