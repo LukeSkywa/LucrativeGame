@@ -5,11 +5,11 @@ div {
 }
 
 body {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(to right, #006cff , #00bdff);
-  color: #008CFF;
-	height: 100%;
-  width: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right, #006cff, #00bdff);
+    color: #008CFF;
+    height: 100%;
+    width: auto;
 }
 
 
@@ -23,13 +23,12 @@ ul {
     padding: 0;
     // padding-top: 2%;
     overflow: hidden;
-    background-image: linear-gradient(to right, #006cff , #00bdff);
+    background-image: linear-gradient(to right, #006cff, #00bdff);
 }
 
 li {
     /*Allineamento testo */
     float: left;
-
 }
 
 li a {
@@ -47,16 +46,20 @@ li a:hover {
     border-bottom: 1px solid white;
 }
 
+li a:focus {
+    /* Colore ppassaggio mouse */
+    border-bottom: 1px solid white;
+}
+
 // .active, .btn:hover {
 //     background-color: red;
 //     color: white;
 // }
-
 img {
-  width: 100px;
-  //padding-left: 20%;
-  float: right;
-  padding-right: 20px;
+    width: 100px;
+    //padding-left: 20%;
+    float: right;
+    padding-right: 20px;
 }
 
 
