@@ -1,3 +1,4 @@
+
 body {
 	margin: -5px;
 	padding: 0;
@@ -6,7 +7,8 @@ body {
   background-image: linear-gradient(to right, #006cff , #00bdff);
   color: #008CFF;
 	height: 100%;
-	width: auto;
+  width: auto;
+
 }
 
 ul {
@@ -44,13 +46,32 @@ img.share{
   width: 25px;
 }
 
-.dropdown-content {
-  display: block;
-  background-color: rgb(204, 227, 235);
-  right: 5%;
-  position: absolute;
-  height: 80px;
-  margin-top: -35px;
-  border-radius: 20px;
-  line-height: 31px;
+/*BOTTONI Tutti-Preferiti-Nascondi*/
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  background: rgb(183, 213, 223);
+  color: #00bdff;
+  padding: 7px 20px;
+	border-radius: 25px;
+  border: solid 2px rgb(183, 213, 223);
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+  margin-left: 5px;
+}
+
+.btn:focus {
+  padding: 7px 20px;
+  border-radius: 25px;
+  background: white;
+  color: #00bdff;
+border: solid 2px rgb(183, 213, 223);
+}
+/* FINE BOTTONI Tutti-Preferiti-Nascondi*/
+
+.btnAllineamento{
+  text-align: left;
 }
