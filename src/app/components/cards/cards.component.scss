@@ -4,9 +4,8 @@ $coloreFineSfumatura: RGB(0, 194, 255);
 //fine definizione variabili
 //definizione css
 body {
-    margin: -5px;
+    margin-top: -1%;
     padding: 0;
-    text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to right, #006cff, #00bdff);
     color: #008CFF;
@@ -15,12 +14,13 @@ body {
 }
 
 .card {
+    display: inline-block;
+    text-align: center;
     background-color: rgb(204, 226, 255);
     border-radius: 25px;
     width: 20%;
     margin-top: 15px;
-    padding: 10px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .card:hover {
@@ -73,7 +73,7 @@ img.share {
 }
 
 .showMore {
-    display: inline-block;
+    margin: auto;
     text-decoration: none;
     background: white;
     color: rgb(0, 106, 255);
@@ -89,6 +89,8 @@ img.share {
     border: none;
     font-weight: lighter;
     cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 
@@ -96,4 +98,5 @@ img.share {
 
 .btnAllineamento {
     text-align: left;
+    margin-left: 2%;
 }
