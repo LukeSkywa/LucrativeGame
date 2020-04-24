@@ -1,5 +1,99 @@
+//definizioni variabili scss
+$coloreInizioSfumatura: RGB(0, 107, 255);
+$coloreFineSfumatura: RGB(0, 194, 255);
+//fine definizione variabili
+//definizione css
+body {
+    margin: -5px;
+    padding: 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right, #006cff, #00bdff);
+    color: #008CFF;
+    height: 100%;
+    width: auto;
+}
+
+.card {
+    background-color: rgb(204, 226, 255);
+    border-radius: 25px;
+    width: 20%;
+    margin-top: 15px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.card:hover {
+    background-color: rgb(163, 191, 214);
+    cursor: pointer;
+}
+
+img {
+    width: 100px;
+}
+
+img.share {
+    width: 25px;
+}
+
+
+/*BOTTONI Tutti-Preferiti-Nascondi*/
+
 .btn {
-    background-color: grey;
-    opacity: 0.5;
+    display: inline-block;
+    text-decoration: none;
+    background: rgb(183, 213, 223);
+    color: rgb(0, 106, 255);
+    padding: 7px 20px;
+    border-radius: 25px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin-left: 8px;
+    outline: none;
     border: none;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.btn:focus {
+    padding: 7px 20px;
+    border-radius: 25px;
+    background: white;
+    color: rgb(0, 106, 255);
+}
+
+.btn:hover {
+    padding: 7px 20px;
+    border-radius: 25px;
+    background: white;
+    color: rgb(0, 106, 255);
+}
+
+.showMore {
+    display: inline-block;
+    text-decoration: none;
+    background: white;
+    color: rgb(0, 106, 255);
+    padding: 11px 50px;
+    border-radius: 25px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin-left: 8px;
+    outline: none;
+    border: none;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+
+/* FINE BOTTONI Tutti-Preferiti-Nascondi*/
+
+.btnAllineamento {
+    text-align: left;
 }
