@@ -53,13 +53,13 @@
             <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
             <ng-container *ngIf="viewBtn==i">
               <div class="dropdown-content">
-                  <a [routerLink]="['/detail', item.id]" class="items">mostra di più</a>
+                  <a [routerLink]="['/detail', item.id]" class="items">Scopri di più</a>
                   <hr width=98% size=1 color=#011D28>
                   <ng-container *ngIf="!item.nascosto">
-                      <a (click)="switchNascondi(item.id)" class="items">nascondi</a>
+                      <a (click)="switchNascondi(item.id)" class="items">Nascondi</a>
                   </ng-container>
                   <ng-container *ngIf="item.nascosto">
-                      <a (click)="switchNascondi(item.id)" class="items">mostra</a>
+                      <a (click)="switchNascondi(item.id)" class="items">Mostra</a>
                   </ng-container>
               </div>
             </ng-container>
@@ -109,13 +109,13 @@
                 <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
                 <ng-container *ngIf="viewBtn==i">
                   <div class="dropdown-content">
-                      <a [routerLink]="['/detail', item.id]" class="items">mostra di più</a>
+                      <a [routerLink]="['/detail', item.id]" class="items">Scopri di più</a>
                       <hr width=98% size=1 color=#011D28>
                       <ng-container *ngIf="!item.nascosto">
-                          <a (click)="switchNascondi(item.id)" class="items">nascondi</a>
+                          <a (click)="switchNascondi(item.id)" class="items">Nascondi</a>
                       </ng-container>
                       <ng-container *ngIf="item.nascosto">
-                          <a (click)="switchNascondi(item.id)" class="items">mostra</a>
+                          <a (click)="switchNascondi(item.id)" class="items">Mostra</a>
                       </ng-container>
                   </div>
                 </ng-container>
