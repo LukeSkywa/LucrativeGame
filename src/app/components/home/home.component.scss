@@ -57,20 +57,24 @@ img {
     margin: 0;
 }
 
+//è la parte che contiene il testo
 .slider {
     position: relative;
-    width: 960px;
-    height: 300px;
+    width: 950px;
+    height: 250px;
     margin: 50px auto;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    outline: none;
+    margin-left: -0px;
 }
 
+//bottoni (posizione)
 .slider-controls {
     position: absolute;
     bottom: 0px;
-    left: 50%;
-    width: 200px;
+    top: 97%;
+    left: 7%;
+    width: 220px;
     text-align: center;
     transform: translatex(-50%);
     z-index: 1000;
@@ -87,29 +91,37 @@ img {
     height: 0;
 }
 
+// etichetta dei bottoni, larghezza ed altezza bottoni, distanza tra uno e l'altro, colore
 .slider-controls label {
     display: inline-block;
-    border: none;
-    height: 20px;
-    width: 20px;
+    border: 1px solid white;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: #212121;
+    background-color: inherit;
     transition: background-color 0.2s linear;
+    margin-left: 5px;
 }
 
+//colore bottoni quando vengono premuti
 #btn-1:checked~.slider-controls label[for="btn-1"] {
-    background-color: inherit;
+    background-color: white;
     border: 1px solid white;
 }
 
 #btn-2:checked~.slider-controls label[for="btn-2"] {
-    background-color: inherit;
+    background-color: white;
     border: 1px solid white;
 }
 
 #btn-3:checked~.slider-controls label[for="btn-3"] {
-    background-color: inherit;
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-4:checked~.slider-controls label[for="btn-4"] {
+    background-color: white;
     border: 1px solid white;
 }
 
@@ -126,46 +138,31 @@ img {
 .slide {
     position: absolute;
     top: 0;
-    left: 0;
     display: flex;
     justify-content: space-between;
     padding: 20px;
     width: 100%;
-    height: 100%;
+    height: 600px;
     opacity: 0;
     transform: translatex(-100%);
     transition: transform 250ms linear;
 }
 
 .slide-content {
-    width: 400px;
+    height: 600px;
+    width: 100%;
 }
 
-.slide-title {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
+//formattazione testo slide
 .slide-text {
     margin-bottom: 20px;
-}
-
-.slide-link {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 3px;
-    text-decoration: none;
-    background-color: #ff4081;
-}
-
-.slide-image img {
-    max-width: 100%;
+    font-size: 40px;
 }
 
 
 /* Slide animations */
 
+//animazioni dei bottoni
 #btn-1:checked~.slides .slide:nth-child(1) {
     transform: translatex(0);
     opacity: 1;
@@ -177,6 +174,11 @@ img {
 }
 
 #btn-3:checked~.slides .slide:nth-child(3) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-4:checked~.slides .slide:nth-child(4) {
     transform: translatex(0);
     opacity: 1;
 }
@@ -194,6 +196,12 @@ img {
 }
 
 #btn-3:not(:checked)~.slides .slide:nth-child(3) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+#btn-4:not(:checked)~.slides .slide:nth-child(4) {
     animation-name: swap-out;
     animation-duration: 300ms;
     animation-timing-function: linear;
