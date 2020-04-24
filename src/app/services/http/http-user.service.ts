@@ -15,12 +15,16 @@ export class HttpUserService {
     return this.httpClient.get('http://localhost:3000/users');
   }
 
+  getUserLogged():Observable<any>{
+    return this.httpClient.get('http://localhost:3000/users/' + Number.parseInt(JSON.parse(sessionStorage.getItem('user'))));
+  }
+
   postUser(user: User){
     return this.httpClient.post('http://localhost:3000/users', user);
   }
 
   updateUser(user: User){
-    return this.httpClient.put('http://localhost:3000/users/'+user.id, user);
+    return this.httpClient.put('http://localhost:3000/users/' + user.id, user);
   }
 
 }

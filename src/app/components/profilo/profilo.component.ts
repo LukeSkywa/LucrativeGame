@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/models/user.interface';
+import { HttpUserService } from 'src/app/services/http/http-user.service';
 
 
 @Component({
@@ -11,10 +12,12 @@ export class ProfiloComponent implements OnInit {
 
   user: User;
 
-  constructor() { }
+  constructor(private httpUserService: HttpUserService ) { }
 
   ngOnInit(): void {
-    this.user = JSON.parse(sessionStorage.getItem('user'));
+    this.httpUserService.getUserLogged().subscribe(response => {
+      this.user = response;
+    });
     console.log(this.user);
   }
 
