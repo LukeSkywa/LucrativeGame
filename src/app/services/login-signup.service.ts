@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from 'src/models/user.interface';
-import { HttpUserService } from './http/http-user.service';
 import { Router } from '@angular/router';
+import { HttpService } from './http/http.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +10,12 @@ export class LoginSignupService {
 
   private userListStored: User [];
 
-  constructor(private router: Router, private httpUserService:HttpUserService) { 
+  constructor(private router: Router, private httpService:HttpService) { 
     this.retrieveUsers() 
   }
 
   retrieveUsers(){
-    this.httpUserService.getUsers().subscribe(reponse => {
+    this.httpService.getUsers().subscribe(reponse => {
       this.userListStored = reponse;
     }, err => {
       console.log('error');
@@ -48,7 +48,7 @@ export class LoginSignupService {
   }
 
   addUser(form){
-    this.httpUserService.postUser(form).subscribe(()=>{
+    this.httpService.postUser(form).subscribe(()=>{
       this.retrieveUsers();
       this.router.navigateByUrl('/login');
     });

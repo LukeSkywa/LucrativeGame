@@ -7,7 +7,7 @@
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
       "preferito": true,
-      "nascosto": false,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
@@ -47,6 +47,36 @@
       "description": "sneakers in pelle, colori vari",
       "genere": "calzatura",
       "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Vestito 6",
+      "prezzo": 123,
+      "description": "sneakers in pelle, colori vari",
+      "genere": "calzatura",
+      "preferito": true,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto5.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Vestito 7",
+      "prezzo": 250,
+      "description": "sneakers in pelle, colori vari",
+      "genere": "calzatura",
+      "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto5.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Vestito 8",
+      "prezzo": 200,
+      "description": "sneakers in pelle, colori vari",
+      "genere": "calzatura",
+      "preferito": true,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto5.jpg"
     }
@@ -99,26 +129,6 @@
       "genere": "M",
       "admin": true,
       "path": "/assets/users/profile.jpg"
-    }
-  ],
-  "feedback": [
-    {
-      "id": 1,
-      "nome": "Davide",
-      "cognome": "Carizzoni",
-      "genere": "Uomo",
-      "email": "davide@gmail.com",
-      "telefono": "347859843",
-      "messaggio": "Prova feedback funzionante"
-    },
-    {
-      "id": 2,
-      "nome": "Davide",
-      "cognome": "Carizzoni",
-      "genere": "Uomo",
-      "email": "davide@gmail",
-      "telefono": "233434",
-      "messaggio": "Prova feedback su branch cards"
     }
   ]
 }

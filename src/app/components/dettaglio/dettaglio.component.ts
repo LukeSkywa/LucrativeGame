@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { Router, ActivatedRoute } from '@angular/router';
-import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
+import { HttpService } from 'src/app/services/http/http.service';
 
 @Component({
   selector: 'app-dettaglio',
@@ -13,7 +13,7 @@ export class DettaglioComponent implements OnInit {
   clothes: ClothesItem;
   id:number;
 
-  constructor(private router: Router, private httpClothesService: HttpClothesService, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private httpService: HttpService, private activatedRoute: ActivatedRoute) { }
 
   catchId(){
     this.activatedRoute.paramMap.subscribe( params => {
@@ -25,7 +25,7 @@ export class DettaglioComponent implements OnInit {
   }
 
   retrieveSingleClothes(id:number){
-    this.httpClothesService.getClothesId(id).subscribe(reponse => {
+    this.httpService.getClothesId(id).subscribe(reponse => {
       this.clothes = reponse;
       console.log(this.clothes);
     }, err => {

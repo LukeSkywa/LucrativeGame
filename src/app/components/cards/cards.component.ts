@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
 import { Router } from '@angular/router';
 import { ClothesItem } from 'src/models/clothes-item.interface';
+import { HttpService } from 'src/app/services/http/http.service';
 
 @Component({
   selector: 'app-cards',
@@ -14,12 +14,12 @@ export class CardsComponent implements OnInit {
   clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
 
-  constructor(private router: Router, private httpClothesService: HttpClothesService) { 
+  constructor(private router: Router, private httpService: HttpService) { 
     this.mostraPiu = false;
   }
 
   retrieveClothes(){
-    this.httpClothesService.getClothes().subscribe(reponse => {
+    this.httpService.getClothes().subscribe(reponse => {
       this.clothesList = reponse;
     }, err => {
       console.log('errore');
@@ -39,13 +39,13 @@ export class CardsComponent implements OnInit {
   switchPreferito(id:number){
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.preferito = !clothes.preferito;
-    this.httpClothesService.updateClothes(clothes).subscribe(() => {});
+    this.httpService.updateClothes(clothes).subscribe(() => {});
   }
 
   switchNascondi(id:number){
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.nascosto = !clothes.nascosto;
-    this.httpClothesService.updateClothes(clothes).subscribe(() => {});
+    this.httpService.updateClothes(clothes).subscribe(() => {});
   }
 
   mostraDiPiu(){ this.mostraPiu = true; }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { Router } from '@angular/router';
-import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
+import { HttpService } from 'src/app/services/http/http.service';
  
 @Component({
   selector: 'app-lista',
@@ -15,13 +15,13 @@ export class ListaComponent implements OnInit {
   clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
  
-  constructor(private router: Router, private httpClothesService: HttpClothesService) { 
+  constructor(private router: Router, private httpService: HttpService) { 
     this.mostraPiu = false;
     this.viewList(1);
   }
  
   retrieveClothes(){
-    this.httpClothesService.getClothes().subscribe(reponse => {
+    this.httpService.getClothes().subscribe(reponse => {
       this.clothesList = reponse;
       this.clothesListFiltered = reponse;
     }, err => {
@@ -42,13 +42,13 @@ export class ListaComponent implements OnInit {
   switchPreferito(id:number){
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.preferito = !clothes.preferito;
-    this.httpClothesService.updateClothes(clothes).subscribe(() => {});
+    this.httpService.updateClothes(clothes).subscribe(() => {});
   }
  
   switchNascondi(id:number){
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.nascosto = !clothes.nascosto;
-    this.httpClothesService.updateClothes(clothes).subscribe(() => {});
+    this.httpService.updateClothes(clothes).subscribe(() => {});
   }
 
   show(index: number) {

@@ -1,15 +1,12 @@
-<app-menu></app-menu>
+<div class="container">
+    <app-menu></app-menu>
 
-<head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
     <div class="btnAllineamento">
         <button (click)="viewList(1)" class="btn"> Tutti </button>
         <button (click)="viewList(2)" class="btn"> Preferiti </button>
         <button (click)="viewList(3)" class="btn"> Nascosti </button>
     </div>
+    
     <div>
         <div *ngFor="let item of clothesList;" class="card">
             <img src="{{item.path}}" alt="path item">
@@ -26,4 +23,5 @@
     <div>
         <button class="showMore">Mostra di più</button>
     </div>
-</body>
+
+</div>

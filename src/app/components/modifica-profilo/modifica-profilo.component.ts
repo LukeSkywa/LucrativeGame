@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { User } from 'src/models/user.interface';
-import { HttpUserService } from 'src/app/services/http/http-user.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { HttpService } from 'src/app/services/http/http.service';
 
 @Component({
   selector: 'app-modifica-profilo',
@@ -18,8 +18,8 @@ export class ModificaProfiloComponent implements OnInit {
   generi = ['Uomo', 'Donna', 'Altro'];
 
   // COSTRUISCO IL FORM CON I DATI DELL'UTENTE PRESENTE IN SESSION  
-  constructor(private fb: FormBuilder, private httpUserService: HttpUserService, private router: Router, private httpClient: HttpClient) {
-    this.httpUserService.getUserLogged().subscribe( response =>{
+  constructor(private fb: FormBuilder, private httpService: HttpService, private router: Router, private httpClient: HttpClient) {
+    this.httpService.getUserLogged().subscribe( response =>{
       this.user = response;
       this.modificaProfilo = this.fb.group({
         id: this.user.id,
@@ -39,7 +39,7 @@ export class ModificaProfiloComponent implements OnInit {
   ngOnInit(): void {}
 
   sendModify(){
-    this.httpUserService.updateUser(this.modificaProfilo.value).subscribe(()=>{});
+    this.httpService.updateUser(this.modificaProfilo.value).subscribe(()=>{});
     this.router.navigateByUrl('/home');
     window.alert('Modifica effettuata con sucesso');
   }

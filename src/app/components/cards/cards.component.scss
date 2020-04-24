@@ -3,14 +3,16 @@ $coloreInizioSfumatura: RGB(0, 107, 255);
 $coloreFineSfumatura: RGB(0, 194, 255);
 //fine definizione variabili
 //definizione css
-body {
-    margin-top: -1%;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to right, #006cff, #00bdff);
-    color: #008CFF;
-    height: 100%;
-    width: auto;
+.container {
+	margin: -5px;
+	padding: 0;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(to right, #006cff , #00bdff);
+  color: #008CFF;
+	height: 100%;
+  width: auto;
+
 }
 
 .card {
@@ -47,24 +49,22 @@ img.share {
 
 /*BOTTONI Tutti-Preferiti-Nascondi*/
 
-.btn {
+.btn{
     display: inline-block;
     text-decoration: none;
-    background: rgb(183, 213, 223);
-    color: rgb(0, 106, 255);
+    // background: rgb(183, 213, 223);
+    background: white;
+    color: #00bdff;
     padding: 7px 20px;
-    border-radius: 25px;
+      border-radius: 25px;
+    border: solid 2px white;
     text-align: center;
     vertical-align: middle;
     overflow: hidden;
     font-weight: bold;
     transition: .4s;
     margin-left: 8px;
-    outline: none;
-    border: none;
-    font-weight: lighter;
-    cursor: pointer;
-}
+  }
 
 .btn:focus {
     padding: 7px 20px;
