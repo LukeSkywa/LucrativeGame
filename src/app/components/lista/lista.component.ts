@@ -54,6 +54,8 @@ export class ListaComponent implements OnInit {
 
   ngOnInit(): void {
     this.retrieveClothes();
+    this.viewList(1);
+
   }
 
 

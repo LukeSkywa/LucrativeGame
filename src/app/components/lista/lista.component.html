@@ -5,7 +5,7 @@
   <!-- SISTEMARE I BOTTONI -->
 
   <div class="btnAllineamento">
-    <button  (click)="viewList(1)" class="btn"> Tutti </button>
+    <button  (click)="viewList(1)"  class="btn"> Tutti </button>
     <button  (click)="viewList(2)"  class="btn"> Preferiti </button>
     <button  (click)="viewList(3)"  class="btn"> Nascosti </button>
   </div>
@@ -61,7 +61,7 @@
   
   <!-- BOTTONI MOSTRA DI PIU' E MOSTRA DI MENO -->
     <div>
-      <button *ngIf="i==2 && !mostraPiu;" (click)="mostraDiPiu()">Mostra di più</button>
+      <button *ngIf="i==2 && !mostraPiu;" (click)="mostraDiPiu()" class="btn">Mostra di più</button>
     </div>
   </ng-container>
 
@@ -103,7 +103,7 @@
       
     </ul>
       <div>
-        <button *ngIf="clothesListFiltered.length > 2" (click)="mostraDiMeno()">Mostra di meno</button>
+        <button *ngIf="clothesListFiltered.length > 2" (click)="mostraDiMeno()" class="btn">Mostra di meno</button>
       </div>
   
     </ng-container>
