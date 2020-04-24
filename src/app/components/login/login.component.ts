@@ -11,10 +11,12 @@ import { LoginSignupService } from 'src/app/services/login-signup.service';
 
 export class LoginComponent implements OnInit {
   
+  showPw: boolean;
   loginForm: FormGroup;
   elementRef: any;
   
   constructor(private loginSignUp:LoginSignupService, private router:Router, private fb:FormBuilder){
+    this.showPw = false;
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -22,6 +24,10 @@ export class LoginComponent implements OnInit {
   }
   
   ngOnInit(): void {}
+
+  showPassword(){
+    this.showPw = !this.showPw;
+  }
 
   login(form) {
     this.loginSignUp.eseguiLogin(form);

@@ -3,21 +3,21 @@
 </head>
 
 <body>
-    <img src="../../../assets/img/logo.png" alt="logo" class="logo">
+    <img src="/assets/logo-prova.png" alt="logo" class="logo">
     <img src="../../../assets/img/più.png" routerLink="/signup" alt="logo" class="più">
     <p class="title">Accedi</p>
     <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" ngNativeValidate>
         <div class="grid-container">
             <div class="item1">
                 <span class="material-icons">
-                            account_box
-                        </span>
+                     account_box
+                </span>
             </div>
             <div class="item2">
                 <label for="username"> Username </label>
             </div>
             <div class="item3">
-                <input id="username" placeholder="username" formControlName="username" required>
+                <input id="username" placeholder="username" formControlName="username" required minlength="5">
             </div>
         </div>
         <div class="grid-container">
@@ -30,10 +30,10 @@
                 <label for="password">Password</label>
             </div>
             <div class="item3">
-                <input id="password" type="password" placeholder="password" formControlName="password" required>
-                 <span class="material-icons" style="margin-left: 30px;"> 
+                <input id="password" formControlName="password" placeholder="password" autocomplete="off" [type]= "showPw ? 'text' : 'password'" required>
+                <span (click)="showPassword()" class="material-icons" style="margin-left: 30px;"> 
                     visibility
-                </span> 
+                </span>
             </div>
         </div>
         <div>
