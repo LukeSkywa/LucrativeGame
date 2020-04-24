@@ -16,7 +16,7 @@
       "prezzo": 110,
       "description": "nike af1 bianca, modello donna",
       "genere": "calzatura",
-      "preferito": false,
+      "preferito": true,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto2.jpg"
     },
@@ -26,8 +26,8 @@
       "prezzo": 49,
       "description": "paura x rosa chemical tee -  limited edition",
       "genere": "t-shirt",
-      "preferito": false,
-      "nascosto": true,
+      "preferito": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto3.jpg"
     },
     {
