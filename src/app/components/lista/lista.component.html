@@ -35,14 +35,15 @@
             </ng-container>
           </th>
 
+          <!-- CONDIVIDI -->
           <th style="width:1%">
             <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
               <span class="material-icons">share</span>
             </a>
           </th>
         
+          <!-- MOSTRA NASCONDI -->
           <th style="width:1%">
-            <!-- <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button> -->
             <span (click)="show(i)" class="material-icons">add_circle_outline </span>
             <ng-container *ngIf="viewBtn==i">
               <div class="dropdown-content">
@@ -60,8 +61,6 @@
         </tr>
       </table>
     </li>
-
-    
   </ul>
   
   <!-- BOTTONI MOSTRA DI PIU' E MOSTRA DI MENO -->
@@ -76,42 +75,45 @@
         <table style="width:100%">
           <tr >
             <th style="width:1%">
-              <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
+            <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
             <th>{{item.name}} <br>
               {{item.description}}
               {{item.id}}
             </th>
             
             <!-- GESTIONE DEI PREFERITI -->
-            <!-- SISTEMARE STILE -->
-            <ng-container *ngIf="item.preferito">
-              <span class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
-            </ng-container>
-            <ng-container *ngIf="!item.preferito">
-              <span class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
-            </ng-container>
+            <th style="width:1%">
+              <ng-container *ngIf="item.preferito">
+                <span class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
+              </ng-container>
+              <ng-container *ngIf="!item.preferito">
+                <span class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
+              </ng-container>
+            </th>
             
+            <!-- CONDIVIDI -->
             <th style="width:1%">
               <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
-              <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
+                <span class="material-icons">share</span>
+              </a>
             </th>
   
-            <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
+            <!-- NASCONDI DETTAGLIO -->
+            <!-- Bisogna cliccare nuovamente sul botton per farlo scomparire la finestra. Scelta del gruppo -->
             <th style="width:1%">
-              <!-- <a  routerLink="/detail/{{item.id}}"> -->
-                <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
-                <ng-container *ngIf="viewBtn==i">
-                  <div class="dropdown-content">
-                      <a [routerLink]="['/detail', item.id]" class="items">Scopri di più</a>
-                      <hr width=98% size=1 color=#011D28>
-                      <ng-container *ngIf="!item.nascosto">
-                          <a (click)="switchNascondi(item.id)" class="items">Nascondi</a>
-                      </ng-container>
-                      <ng-container *ngIf="item.nascosto">
-                          <a (click)="switchNascondi(item.id)" class="items">Mostra</a>
-                      </ng-container>
-                  </div>
-                </ng-container>
+              <span (click)="show(i)" class="material-icons">add_circle_outline </span>
+              <ng-container *ngIf="viewBtn==i">
+                <div class="dropdown-content">
+                    <a [routerLink]="['/detail', item.id]" class="items">Scopri di più</a>
+                    <hr width=98% size=1 color=#011D28>
+                    <ng-container *ngIf="!item.nascosto">
+                        <a (click)="switchNascondi(item.id)" class="items">Nascondi</a>
+                    </ng-container>
+                    <ng-container *ngIf="item.nascosto">
+                        <a (click)="switchNascondi(item.id)" class="items">Mostra</a>
+                    </ng-container>
+                </div>
+              </ng-container>
             </th>
           </tr>
         </table>
