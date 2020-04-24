@@ -71,6 +71,7 @@ img.share{
   background: white;
   color: #00bdff;
   border: solid 2px white;
+  outline: transparent;
 }
 /* FINE BOTTONI Tutti-Preferiti-Nascondi*/
 
@@ -81,7 +82,7 @@ img.share{
 .dropdown-content {
   display: block;
   background-color: rgb(204, 227, 235);
-  right: 7%;
+  right: 5%;
   position: absolute;
   height: 80px;
   width: fit-content;
@@ -89,4 +90,38 @@ img.share{
   border-radius: 10px;
   line-height: 30px;
   text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited {
+  color : #008CFF;
+  text-decoration: none
+ }
+
+ .dtl{
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: #00bdff;
+  padding: 7px 20px;
+	border-radius: 25px;
+  border: solid 2px white;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+  margin-left: 8px;
+}
+
+.dtl:focus {
+  padding: 7px 20px;
+  border-radius: 25px;
+  background: transparent;
+  color: #00bdff;
+  border: solid 2px white;
+  outline: transparent;
 }
