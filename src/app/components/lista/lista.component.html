@@ -2,6 +2,9 @@
 <body>
   <app-menu></app-menu>
 
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
   <!-- SISTEMARE I BOTTONI -->
 
   <div class="btnAllineamento">
@@ -29,7 +32,7 @@
             <span (click)="switchPreferito(item.id)" class="preferito">&#10084;</span>
           </ng-container>
           <ng-container *ngIf="!item.preferito">
-            <span (click)="switchPreferito(item.id)"> 
+            <span (click)="switchPreferito(item.id)">
               <th style="width:1%">
                 <img class="preferito" src="/assets/lista/icons-preferito.png" alt="icon preferito" />
               </th>
@@ -52,16 +55,16 @@
             </div>
           </ng-container> -->
 
-          
+
           <th style="width:1%">
             <!-- <a  routerLink="/detail/{{item.id}}"> -->
             <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
             <ng-container *ngIf="viewBtn==i">
               <div class="dropdown-content">
-                  <a [routerLink]="['/detail', item.id]" class="items">Scopri di più</a>
+                  <a [routerLink]="['/detail', item.id]" class="items" id="iconaLink">Scopri di più</a>
                   <hr width=98% size=1 color=#011D28>
                   <ng-container *ngIf="!item.nascosto">
-                      <a (click)="switchNascondi(item.id)" class="items">Nascondi</a>
+                      <a (click)="switchNascondi(item.id)" class="items" id="iconaX">Nascondi</a>
                   </ng-container>
                   <ng-container *ngIf="item.nascosto">
                       <a (click)="switchNascondi(item.id)" class="items">Mostra</a>
@@ -73,9 +76,9 @@
       </table>
     </li>
 
-    
+
   </ul>
-  
+
   <!-- BOTTONI MOSTRA DI PIU' E MOSTRA DI MENO -->
     <div>
       <button *ngIf="i==5 && !mostraPiu;" (click)="mostraDiPiu()" class="btn">Mostra di più</button>
@@ -93,7 +96,7 @@
               {{item.description}}
               {{item.id}}
             </th>
-            
+
             <!-- GESTIONE DEI PREFERITI -->
             <!-- SISTEMARE STILE -->
             <ng-container *ngIf="item.preferito">
@@ -102,12 +105,12 @@
             <ng-container *ngIf="!item.preferito">
               <span (click)="switchPreferito(item.id)" class="nonPreferito">&#9825;</span>
             </ng-container>
-            
+
             <th style="width:1%">
               <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
               <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
             </th>
-  
+
             <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
             <th style="width:1%">
               <!-- <a  routerLink="/detail/{{item.id}}"> -->
@@ -128,14 +131,14 @@
           </tr>
         </table>
       </li>
-  
-      
+
+
     </ul>
       <div>
         <button *ngIf="clothesListFiltered.length >= 5" (click)="mostraDiMeno()" class="btn">Mostra di meno</button>
       </div>
-  
+
     </ng-container>
-  
+
 </body>
 
