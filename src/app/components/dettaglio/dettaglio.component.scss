@@ -39,7 +39,7 @@ flex-direction:column;
   color: white;
   width: 40px;
   height: 40px;
-  line-height: 40px;
+  line-height: 30px;
   border-radius: 50%;
   border: solid 2px white;
   text-align: center;
@@ -47,12 +47,16 @@ flex-direction:column;
   overflow: hidden;
   font-weight: bold;
   transition: .4s;
+  margin-left: 5px;
 }
 
 .btn:focus {
-    background: white;
-    color: #00bdff;
-    border: solid 2px #00bdff;
+  width: 43px;
+  height: 43px;
+  background: white;
+  color: #00bdff;
+  line-height: 40px;
+  border: solid 2px #00bdff;
 }
 
 /*FINE Btn Taglia*/
@@ -72,6 +76,7 @@ flex-direction:column;
   overflow: hidden;
   font-weight: bold;
   transition: .4s;
+  margin-right: 6px;
 }
 
 .btnRosso:focus {
@@ -95,6 +100,7 @@ flex-direction:column;
   overflow: hidden;
   font-weight: bold;
   transition: .4s;
+  margin-right: 6px;
 }
 
 .btnGiallo:focus {
@@ -138,27 +144,30 @@ footer{
 
 .iconPinterest{
   position: absolute;
-  right: 0;
+  right: 10px;
+  /*margin-right: 15px;*/
 }
 
 .iconSnapchat{
   position: absolute;
-  right: 30px;
+  right: 50px;
+  /*margin-right:25px;*/
 }
 
 .iconTelegram{
   position: absolute;
-  right: 60px;
+  right: 90px;
+  /*margin-right: 25px;*/
 }
 
 .iconInstagram{
   position: absolute;
-  right: 90px;
+  right: 120px;
 }
 
 .iconFacebook{
   position: absolute;
-  right: 120px;
+  right: 160px;
 }
 
 
