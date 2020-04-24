@@ -16,7 +16,8 @@ ul {
 }
 
 .prova{
-  background: rgb(183, 213, 223);
+  background: white;
+  opacity: 0.9;
   width: auto;
   padding: 10px;
   margin: 20px;
@@ -37,7 +38,7 @@ img{
 
 th {
   text-align: left;
- object-position: center;
+  object-position: center;
   margin: 20px;
   width: 20%;
 }
@@ -50,17 +51,18 @@ img.share{
 .btn{
   display: inline-block;
   text-decoration: none;
-  background: rgb(183, 213, 223);
+  // background: rgb(183, 213, 223);
+  background: white;
   color: #00bdff;
   padding: 7px 20px;
 	border-radius: 25px;
-  border: solid 2px rgb(183, 213, 223);
+  border: solid 2px white;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
   font-weight: bold;
   transition: .4s;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .btn:focus {
@@ -68,12 +70,58 @@ img.share{
   border-radius: 25px;
   background: white;
   color: #00bdff;
-border: solid 2px rgb(183, 213, 223);
+  border: solid 2px white;
+  outline: transparent;
 }
 
 .btnAllineamento{
   text-align: left;
 }
 
-/* FINE BOTTONI Tutti-Preferiti-Nascondi*/
+.dropdown-content {
+  display: block;
+  background-color: white;
+  right: 6%;
+  position: absolute;
+  height: 80px;
+  width: fit-content;
+  margin-top: -40px;
+  border-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid grey;
+}
 
+a{
+  text-decoration: none;
+}
+
+a:visited {
+  color : #008CFF;
+  text-decoration: none
+ }
+
+ .dtl{
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: #00bdff;
+  padding: 7px 20px;
+	border-radius: 25px;
+  border: solid 2px white;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+  margin-left: 8px;
+}
+
+.dtl:focus {
+  padding: 7px 20px;
+  border-radius: 25px;
+  background: transparent;
+  color: #00bdff;
+  border: solid 2px white;
+  outline: transparent;
+}

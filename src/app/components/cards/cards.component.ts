@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ClothesItem } from 'src/models/clothes-item.interface';
-import { Router } from '@angular/router';
 import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
+import { Router } from '@angular/router';
+import { ClothesItem } from 'src/models/clothes-item.interface';
 
 @Component({
-  selector: 'app-lista',
-  templateUrl: './lista.component.html',
-  styleUrls: ['./lista.component.scss']
+  selector: 'app-cards',
+  templateUrl: './cards.component.html',
+  styleUrls: ['./cards.component.scss']
 })
-export class ListaComponent implements OnInit {
-  
-  viewBtn: number;
+export class CardsComponent implements OnInit {
+
   mostraPiu: Boolean;
   clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
@@ -22,7 +21,6 @@ export class ListaComponent implements OnInit {
   retrieveClothes(){
     this.httpClothesService.getClothes().subscribe(reponse => {
       this.clothesList = reponse;
-      this.clothesListFiltered = reponse;
     }, err => {
       console.log('errore');
     });
@@ -50,10 +48,6 @@ export class ListaComponent implements OnInit {
     this.httpClothesService.updateClothes(clothes).subscribe(() => {});
   }
 
-  show(index: number) {
-    this.viewBtn === index ? this.viewBtn = null : this.viewBtn = index;
-  }
-
   mostraDiPiu(){ this.mostraPiu = true; }
 
   mostraDiMeno(){ this.mostraPiu = false; }
@@ -61,6 +55,5 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
     this.retrieveClothes();
   }
-
 
 }

@@ -5,23 +5,24 @@
   <!-- SISTEMARE I BOTTONI -->
 
   <div class="btnAllineamento">
-    <button  (click)="viewList(1)" class="btn"> Tutti </button>
+    <button  (click)="viewList(1)"  class="btn"> Tutti </button>
     <button  (click)="viewList(2)"  class="btn"> Preferiti </button>
     <button  (click)="viewList(3)"  class="btn"> Nascosti </button>
   </div>
 
   <!-- LISTA TUTTI -->
-  <ng-container>
+  <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
   <ul>
-    <li class= "prova" *ngFor="let item of clothesListFiltered">
+    <li class= "prova" *ngIf="i < 5 && !mostraPiu" >
       <table style="width:100%">
-        <tr>
+        <tr >
           <th style="width:1%">
             <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
           <th>{{item.name}} <br>
             {{item.description}}
             {{item.id}}
           </th>
+
           <!-- GESTIONE DEI PREFERITI -->
           <!-- SISTEMARE STILE -->
           <ng-container *ngIf="item.preferito">
@@ -37,16 +38,99 @@
           </th>
 
           <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
-          <th style="width:1%">
-            <a  routerLink="/detail/{{item.id}}">
-            <img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></a>
-          </th>
+          <!-- DA MIGLIORARE ESTETICAMENTE IL MOSTRA DI PIU' E NASCONDI -->
+          <!-- <ng-container>
+            <div class="dropdown-content">
+                <a href="" class="items"> mostra di più</a>
+                <hr width=100% size=1 color=#011D28>
+                <a href="" class="items">nascondi</a>
+            </div>
+          </ng-container> -->
 
+
+          <th style="width:1%">
+            <!-- <a  routerLink="/detail/{{item.id}}"> -->
+            <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+            <ng-container *ngIf="viewBtn==i">
+              <div class="dropdown-content">
+                  <a [routerLink]="['/detail', item.id]" class="items">Scopri di più</a>
+                  <hr width=98% size=1 color=#011D28>
+                  <ng-container *ngIf="!item.nascosto">
+                      <a (click)="switchNascondi(item.id)" class="items">Nascondi</a>
+                  </ng-container>
+                  <ng-container *ngIf="item.nascosto">
+                      <a (click)="switchNascondi(item.id)" class="items">Mostra</a>
+                  </ng-container>
+              </div>
+            </ng-container>
+          </th>
         </tr>
       </table>
     </li>
+
+
   </ul>
+
+  <!-- BOTTONI MOSTRA DI PIU' E MOSTRA DI MENO -->
+    <div>
+      <button *ngIf="i==5 && !mostraPiu;" (click)="mostraDiPiu()" class="btn">Mostra di più</button>
+    </div>
   </ng-container>
-  <br>
+
+  <ng-container *ngIf="mostraPiu">
+    <ul>
+      <li class= "prova"*ngFor="let item of clothesListFiltered; let i = index" >
+        <table style="width:100%">
+          <tr >
+            <th style="width:1%">
+              <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
+            <th>{{item.name}} <br>
+              {{item.description}}
+              {{item.id}}
+            </th>
+
+            <!-- GESTIONE DEI PREFERITI -->
+            <!-- SISTEMARE STILE -->
+            <ng-container *ngIf="item.preferito">
+              <span (click)="switchPreferito(item.id)" class="preferito">&#10084;</span>
+            </ng-container>
+            <ng-container *ngIf="!item.preferito">
+              <span (click)="switchPreferito(item.id)" class="nonPreferito">&#9825;</span>
+            </ng-container>
+
+            <th style="width:1%">
+              <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com">
+              <img class="share" src="/assets/lista/icon-share.png" alt="icon share" /></a>
+            </th>
+
+            <!-- METTERE IL BOTTON GIUSTO CHE PERMETTE DI ANDARE SU DETTAGLIO E NASCONDERE -->
+            <th style="width:1%">
+              <!-- <a  routerLink="/detail/{{item.id}}"> -->
+                <button class="btn" (click)="show(i)"><img class="share" src="/assets/lista/icon-piuInfo.png" alt="icon share" /></button>
+                <ng-container *ngIf="viewBtn==i">
+                  <div class="dropdown-content">
+                      <a [routerLink]="['/detail', item.id]" class="items">Scopri di più</a>
+                      <hr width=98% size=1 color=#011D28>
+                      <ng-container *ngIf="!item.nascosto">
+                          <a (click)="switchNascondi(item.id)" class="items">Nascondi</a>
+                      </ng-container>
+                      <ng-container *ngIf="item.nascosto">
+                          <a (click)="switchNascondi(item.id)" class="items">Mostra</a>
+                      </ng-container>
+                  </div>
+                </ng-container>
+            </th>
+          </tr>
+        </table>
+      </li>
+
+
+    </ul>
+      <div>
+        <button *ngIf="clothesListFiltered.length >= 5" (click)="mostraDiMeno()" class="btn">Mostra di meno</button>
+      </div>
+
+    </ng-container>
+
 </body>
 
