@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse, HttpParams } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from 'src/models/user.interface';
 import { ClothesItem } from 'src/models/clothes-item.interface';
@@ -41,6 +41,10 @@ export class HttpService {
     return this.httpClient.put('http://localhost:3000/clothes/' + clothes.id, clothes)
   }
 
+  getClothesFilterd(filtro:string):Observable<any>{
+    return this.httpClient.get('http://localhost:3000/clothes?'+filtro +'=true');
+  }
+  
   //SEND FEEDBACK
   invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
     headers: import("@angular/common/http").HttpHeaders;

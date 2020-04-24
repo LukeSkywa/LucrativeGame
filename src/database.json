@@ -7,7 +7,7 @@
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
       "preferito": true,
-      "nascosto": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
@@ -56,7 +56,7 @@
       "prezzo": 123,
       "description": "sneakers in pelle, colori vari",
       "genere": "calzatura",
-      "preferito": true,
+      "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto5.jpg"
     },
@@ -76,7 +76,7 @@
       "prezzo": 200,
       "description": "sneakers in pelle, colori vari",
       "genere": "calzatura",
-      "preferito": true,
+      "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto5.jpg"
     }

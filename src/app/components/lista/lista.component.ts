@@ -10,6 +10,7 @@ import { HttpService } from 'src/app/services/http/http.service';
 })
 export class ListaComponent implements OnInit {
   
+  listSel: number;
   viewBtn: number;
   mostraPiu: Boolean;
   clothesList: ClothesItem [] = [];
@@ -30,6 +31,7 @@ export class ListaComponent implements OnInit {
   }
  
   viewList(list: number){
+    this.listSel = list;
     this.clothesListFiltered = this.clothesList.filter( item => {
       switch(list){
         case 1: return !item.nascosto; //SE E' NASCOSTO NON LO FACCIO VEDERE. 
@@ -43,12 +45,18 @@ export class ListaComponent implements OnInit {
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.preferito = !clothes.preferito;
     this.httpService.updateClothes(clothes).subscribe(() => {});
+    if(this.listSel === 2){
+      this.viewList(2);
+    }
   }
  
   switchNascondi(id:number){
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.nascosto = !clothes.nascosto;
     this.httpService.updateClothes(clothes).subscribe(() => {});
+    if(this.listSel === 3){
+      this.viewList(3);
+    }
   }
 
   show(index: number) {
