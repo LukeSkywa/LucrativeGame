@@ -10,6 +10,7 @@ import { HttpClothesService } from 'src/app/services/http/http-clothes.service';
 })
 export class ListaComponent implements OnInit {
   
+  daMostrare:number;
   mostraPiu: Boolean;
   clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
@@ -46,6 +47,15 @@ export class ListaComponent implements OnInit {
     let clothes: ClothesItem = this.clothesList.find( item => item.id === id);
     clothes.nascosto = !clothes.nascosto;
     this.httpClothesService.updateClothes(clothes).subscribe(() => {});
+  }
+
+  show(i: number) {
+    if (this.daMostrare == i) {
+      this.daMostrare = null;
+    }
+    else {
+      this.daMostrare = i;
+    }
   }
 
   mostraDiPiu(){ this.mostraPiu = true; }
