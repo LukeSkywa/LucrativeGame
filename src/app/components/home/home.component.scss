@@ -1,86 +1,240 @@
-$textcolor: white;
-$fontsize: 19px;
-$coloreInizioSfumatura: RGB(0, 107, 255);
-$coloreFineSfumatura: RGB(0, 194, 255);
-$coloreCopy: RGB(89, 167, 255);
-$coloreIcona: white;
-
-/* Use the variables */
-
-body {
-    background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 200%;
-    width: 100%;;
-}
-
-div {
-    color: $textcolor;
-    font-size: $fontsize;
-    height: 100%;
-    margin-top: -5%;
-    padding-top: 3%;
-}
-
-.titolo {
-    font-size: 300%;
-    padding-left: 1%;
-}
-
-.testo {
-    color: white;
-    padding-left: 1%;
-    margin-top: -2%;
-    font-size: 200%;
-}
-
-.copy {
-    text-decoration: none;
-    font-size: 9px;
-    padding-left: 2%;
-    color: $coloreCopy;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
-}
-
-i {
-    color: $coloreIcona;
-}
-
-img {
-    width: 20px;
-}
-
-//carousel
-.slider {
-    /* CURRENT way. */
-    scroll-snap-type: x mandatory;
-    /* OLD WAY. Probably not worth including at all.
-  
-    -webkit-scroll-snap-points-x: repeat(300px);
-        -ms-scroll-snap-points-x: repeat(300px);
-            scroll-snap-points-x: repeat(300px);
-    -webkit-scroll-snap-type: mandatory;
-        -ms-scroll-snap-type: mandatory;
-            scroll-snap-type: mandatory;
-  
-     */
-}
-
-.slides>div {
-    /* CURRENT way. */
-    scroll-snap-align: start;
-}
-
-.slides {
-    scroll-behavior: smooth;
-}
-
-.slides>div:target {
-    transform: scale(0.8);
-}
+    $textcolor: white;
+    $fontsize: 19px;
+    $coloreInizioSfumatura: RGB(0, 107, 255);
+    $coloreFineSfumatura: RGB(0, 194, 255);
+    $coloreCopy: RGB(89, 167, 255);
+    $coloreIcona: white;
+    $coloreTestoLingua: rgb(97, 163, 255);
+    /* Use the variables */
+    
+    body {
+        background-image: linear-gradient(to right, $coloreInizioSfumatura, $coloreFineSfumatura);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 200%;
+    }
+    
+    div {
+        color: $textcolor;
+        font-size: $fontsize;
+        height: 100%;
+        margin-top: -5%;
+        padding-top: 3%;
+    }
+    
+    .titolo {
+        font-size: 300%;
+        padding-left: 1%;
+    }
+    
+    .testo {
+        color: white;
+        padding-left: 1%;
+        margin-top: -2%;
+        font-size: 200%;
+    }
+    
+    .copy {
+        text-decoration: none;
+        font-size: 9px;
+        padding-left: 2%;
+        color: $coloreCopy;
+    }
+    
+    i {
+        color: $coloreIcona;
+    }
+    
+    button {
+        background-color: inherit;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        color: white;
+        border: 1px solid white;
+        font-size: 12px;
+        font-weight: lighter;
+        float: right;
+        margin-right: 10px;
+        margin-bottom: 2px;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: white;
+        color: $coloreTestoLingua;
+    }
+    
+    img {
+        width: 20px;
+    }
+    
+    //carousel
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        padding: 0;
+        margin: 0;
+    }
+    
+    //è la parte che contiene il testo
+    .slider {
+        position: relative;
+        width: 950px;
+        height: 250px;
+        margin: 20px auto;
+        overflow: hidden;
+        outline: none;
+        margin-left: -1.5px;
+        margin-bottom: 80px;
+    }
+    
+    //bottoni (posizione)
+    .slider-controls {
+        position: absolute;
+        bottom: 0px;
+        top: 85%;
+        left: 5.5%;
+        width: 220px;
+        text-align: center;
+        transform: translatex(-50%);
+        z-index: 1000;
+        list-style: none;
+        text-align: center;
+    }
+    
+    .slider input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    // etichetta dei bottoni, larghezza ed altezza bottoni, distanza tra uno e l'altro, colore
+    .slider-controls label {
+        display: inline-block;
+        border: 1px solid white;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: inherit;
+        transition: background-color 0.2s linear;
+        margin-left: 5px;
+    }
+    
+    //colore bottoni quando vengono premuti
+    #btn-1:checked~.slider-controls label[for="btn-1"] {
+        background-color: white;
+        border: 1px solid white;
+    }
+    
+    #btn-2:checked~.slider-controls label[for="btn-2"] {
+        background-color: white;
+        border: 1px solid white;
+    }
+    
+    #btn-3:checked~.slider-controls label[for="btn-3"] {
+        background-color: white;
+        border: 1px solid white;
+    }
+    
+    #btn-4:checked~.slider-controls label[for="btn-4"] {
+        background-color: white;
+        border: 1px solid white;
+    }
+    /* SLIDES */
+    
+    .slides {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+    
+    .slide {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        height: 600px;
+        opacity: 0;
+        transform: translatex(-100%);
+        transition: transform 250ms linear;
+    }
+    
+    .slide-content {
+        height: 600px;
+        width: 100%;
+    }
+    
+    //formattazione testo slide
+    .slide-text {
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+    /* Slide animations */
+    
+    //animazioni dei bottoni
+    #btn-1:checked~.slides .slide:nth-child(1) {
+        transform: translatex(0);
+        opacity: 1;
+    }
+    
+    #btn-2:checked~.slides .slide:nth-child(2) {
+        transform: translatex(0);
+        opacity: 1;
+    }
+    
+    #btn-3:checked~.slides .slide:nth-child(3) {
+        transform: translatex(0);
+        opacity: 1;
+    }
+    
+    #btn-4:checked~.slides .slide:nth-child(4) {
+        transform: translatex(0);
+        opacity: 1;
+    }
+    
+    #btn-1:not(:checked)~.slides .slide:nth-child(1) {
+        animation-name: swap-out;
+        animation-duration: 300ms;
+        animation-timing-function: linear;
+    }
+    
+    #btn-2:not(:checked)~.slides .slide:nth-child(2) {
+        animation-name: swap-out;
+        animation-duration: 300ms;
+        animation-timing-function: linear;
+    }
+    
+    #btn-3:not(:checked)~.slides .slide:nth-child(3) {
+        animation-name: swap-out;
+        animation-duration: 300ms;
+        animation-timing-function: linear;
+    }
+    
+    #btn-4:not(:checked)~.slides .slide:nth-child(4) {
+        animation-name: swap-out;
+        animation-duration: 300ms;
+        animation-timing-function: linear;
+    }
+    
+    @keyframes swap-out {
+        0% {
+            transform: translatex(0);
+            opacity: 1;
+        }
+        50% {
+            transform: translatex(50%);
+            opacity: 0;
+        }
+        100% {
+            transform: translatex(100%);
+        }
+    }
