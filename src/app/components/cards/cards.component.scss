@@ -24,7 +24,11 @@ body {
 }
 
 .title {
-    font-size: 10px;
+    font-size: 20px;
+}
+
+.description {
+    font-size: 13px;
 }
 
 .card:hover {
@@ -33,7 +37,7 @@ body {
 }
 
 img {
-    width: 100%;
+    width: 80%;
 }
 
 img.share {
