@@ -1,144 +1,172 @@
 $textcolor: white;
 $fontsize: 19px;
 $coloreCopy: RGB(89, 167, 255);
- 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
- 
+
+
 /* Create three equal columns that floats next to each other */
+
 .column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
 }
- 
+
+
 /* Clear floats after the columns */
+
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
- 
+
+
 /*Btn Taglia*/
-.btn{
-  display: inline-block;
-  text-decoration: none;
-  background: transparent;
-  color: white;
-  width: 40px;
-  height: 40px;
-  line-height: 30px;
-  border-radius: 50%;
-  border: solid 2px white;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
-  margin-right: 10px;
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: transparent;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: solid 2px white;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin-right: 10px;
+    outline: none;
+    cursor: pointer;
 }
- 
+
 .btn:focus {
-  width: 43px;
-  height: 43px;
-  background: white;
-  color: #00bdff;
-  line-height: 40px;
-  border: solid 2px #00bdff;
+    width: 43px;
+    height: 43px;
+    background: white;
+    color: #00bdff;
+    line-height: 40px;
+    border: solid 2px #00bdff;
 }
- 
+
+
 /*FINE Btn Taglia*/
- 
+
+
 /*Btn Colore ROSSO*/
-.btnRosso{
-  display: inline-block;
-  text-decoration: none;
-  background: red;
-  width: 20px;
-  height: 20px;
-  line-height: 50px;
-  border-radius: 50%;
-  border: solid 1px black;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
-  margin-right: 6px;
+
+.btnRosso {
+    display: inline-block;
+    text-decoration: none;
+    background: red;
+    width: 20px;
+    height: 20px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: solid 1px black;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin-right: 6px;
+    outline: none;
+    cursor: pointer;
 }
- 
+
 .btnRosso:focus {
     background: red;
     border: solid 2px white;
 }
+
+
 /*FINE Btn Colore ROSSO*/
- 
+
+
 /*Btn Colore GIALLO*/
-.btnGiallo{
-  display: inline-block;
-  text-decoration: none;
-  background: yellow;
-  width: 20px;
-  height: 20px;
-  line-height: 50px;
-  border-radius: 50%;
-  border: solid 1px black;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
-  margin-right: 6px;
+
+.btnGiallo {
+    display: inline-block;
+    text-decoration: none;
+    background: yellow;
+    width: 20px;
+    height: 20px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: solid 1px black;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin-right: 6px;
+    outline: none;
+    cursor: pointer;
 }
- 
+
 .btnGiallo:focus {
     background: yellow;
     border: solid 2px white;
 }
- 
+
+
 /*FINE Btn Colore GIALLO*/
- 
+
+
 /*Btn Colore BLUE*/
-.btnBlu{
-  display: inline-block;
-  text-decoration: none;
-  background: blue;
-  width: 20px;
-  height: 20px;
-  line-height: 50px;
-  border-radius: 50%;
-  border: solid 1px black;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
+
+.btnBlu {
+    display: inline-block;
+    text-decoration: none;
+    background: blue;
+    width: 20px;
+    height: 20px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: solid 1px black;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    outline: none;
+    cursor: pointer;
 }
- 
+
 .btnBlu:focus {
     background: blue;
     border: solid 2px white;
 }
- 
+
 footer {
-  color: $textcolor;
-  font-size: $fontsize;
-  width:100%;
-  grid-row: 3;
+    color: $textcolor;
+    font-size: $fontsize;
+    width: 100%;
+    grid-row: 3;
 }
 
 .copy {
-  text-decoration: none;
-  font-size: 9px;
-  padding-left: 2%;
-  color: $coloreCopy;
+    text-decoration: none;
+    font-size: 9px;
+    padding-left: 2%;
+    color: $coloreCopy;
 }
- 
-.main-container{
-  display: grid;
-  grid-template-rows: 100px 1fr 50px;
-  height: 100vh;
-  color: white;
+
+.main-container {
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    height: 100vh;
+    color: white;
+}
+
+.immagine-centrale {
+    width: 80%;
 }
