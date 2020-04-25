@@ -46,6 +46,7 @@ $coloreCopy: RGB(89, 167, 255);
     margin-right: 10px;
     outline: none;
     cursor: pointer;
+    font-weight: lighter;
 }
 
 .btn:focus {
@@ -146,6 +147,7 @@ $coloreCopy: RGB(89, 167, 255);
     border: solid 2px white;
 }
 
+//footer
 footer {
     color: $textcolor;
     font-size: $fontsize;
@@ -160,6 +162,8 @@ footer {
     color: $coloreCopy;
 }
 
+//fine footer
+//main
 .main-container {
     display: grid;
     grid-template-rows: 100px 1fr 50px;
@@ -167,6 +171,12 @@ footer {
     color: white;
 }
 
+//immagine
 .centerImg {
     width: 80%;
+}
+
+//formattazione testo
+.title-item {
+    font-size: 20px;
 }
