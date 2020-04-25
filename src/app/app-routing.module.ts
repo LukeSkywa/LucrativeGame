@@ -11,6 +11,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { ModificaAvatarProfiloComponent } from './components/modifica-avatar-profilo/modifica-avatar-profilo.component';
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'detail/:id', component: DettaglioComponent, canActivate: [LoginRouteGuardService]},
     { path: 'profilo', component: ProfiloComponent, canActivate: [LoginRouteGuardService]},
     { path: 'modifica-profilo', component: ModificaProfiloComponent, canActivate: [LoginRouteGuardService]},
+    { path: 'modifica-avatar-profilo', component: ModificaAvatarProfiloComponent, canActivate: [LoginRouteGuardService]},
     { path: 'home', component: HomeComponent},
     { path: 'feedback', component: FeedbackComponent, canActivate: [LoginRouteGuardService]}, //Non può accedere al feedback se non è loggato
     { path: 'list', component: ListaComponent, canActivate: [LoginRouteGuardService]},

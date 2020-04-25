@@ -10,15 +10,16 @@ import { HttpService } from 'src/app/services/http/http.service';
 })
 export class ProfiloComponent implements OnInit {
 
-  user: User;
+  public user: User;
 
   constructor(private httpService: HttpService ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): any {
     this.httpService.getUserLogged().subscribe(response => {
       this.user = response;
+      console.log(this.user)
     });
-    console.log(this.user);
+    // console.log(this.user);
   }
 
 }

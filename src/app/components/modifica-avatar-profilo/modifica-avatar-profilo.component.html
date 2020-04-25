@@ -1,1 +1,14 @@
-<p>modifica-avatar-profilo works!</p>
+<div class="container">
+    <h1>Scegli la tua immagine profilo</h1>
+    <div class="avatar">
+        <ng-container *ngFor="let avatar of avatars">
+            <img src="/assets/users/{{avatar}}" alt="avatar" (click)="changeAvatar(avatar)">
+        </ng-container>
+    </div>
+    <!-- <h1>Oppure inserisci il link della tua immagine</h1>
+    <form [formGroup]="modificaImg" (ngSubmit)="modificaImmagineLink(modificaImg)">
+        <label for="immagine" id="labelImg">immagine</label>
+        <input type="text" id="immagine" formControlName="immagine" class="person"><br>
+        <button type="submit " [disabled]="modificaImg.status==='INVALID' " ng-class="disabled ">Invio</button>
+    </form> -->
+</div>
