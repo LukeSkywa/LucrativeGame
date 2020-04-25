@@ -77,11 +77,21 @@ form.submit:hover{
     margin-right: auto;
 }
 
-/*Icon image*/
-.icon{
-    width: 90px;
+.title span {
+  position: relative;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 45%;
+  align-self: auto;
+  margin: auto;
+  top: -30px;
+  right: 20px;
 }
 
 .colorUomoDonna{
 	background-color: #006cff;
 }
+

@@ -31,7 +31,8 @@ export class ModificaAvatarProfiloComponent implements OnInit {
   changeAvatar(avatar){
     this.user.path = '/assets/users/' + avatar;
     this.httpService.updateUser(this.user).subscribe(() => {
-      this.router.navigateByUrl('/modifica-profilo')
+      window.alert("Modifica dell'avatar effettuata con successo!")
+      this.router.navigateByUrl('/profilo')
     })
   }
   ngOnInit(): void {
