@@ -5,15 +5,68 @@ $coloreCopy: RGB(89, 167, 255);
     box-sizing: border-box;
 }
 
+.main-container {
+    display: grid;
+    //grid-template-rows: 100px 1fr 50px;
+    height: 100vh;
+    color: white;
+}
 
-/* Create three equal columns that floats next to each other */
+//display grid
+.grid-container {
+    display: grid;
+    grid-template-rows: 300px 300px;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
 
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
+//elemento 1
+.item-1 {
     height: 300px;
-    /* Should be removed. Only for demonstration */
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+//elemento 2
+.item-2 {
+    height: 300px;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+//elemento 3
+.item-3 {
+    height: 300px;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+//elemento 4
+.item-4 {
+    height: 300px;
+    padding: 10px;
+}
+
+//stile e formattazione vari elementi
+//elemento 3
+.item-3 button {
+    margin-top: 7%;
+}
+
+.item-3 h2 {
+    padding-top: 3%;
+}
+
+.item-3-description {
+    padding-top: 2%;
 }
 
 
@@ -164,13 +217,6 @@ footer {
 
 //fine footer
 //main
-.main-container {
-    display: grid;
-    grid-template-rows: 100px 1fr 50px;
-    height: 100vh;
-    color: white;
-}
-
 //immagine
 .centerImg {
     width: 90%;
@@ -187,3 +233,180 @@ footer {
     font-size: 100%;
     margin-left: 1%;
 }
+
+//fine formattazione testo
+//carousel
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+//è la parte che contiene il testo
+.slider {
+    position: relative;
+    width: 950px;
+    height: 250px;
+    margin: 20px auto;
+    overflow: hidden;
+    outline: none;
+    margin-left: -1.5px;
+    margin-bottom: 80px;
+}
+
+//bottoni (posizione)
+.slider-controls {
+    position: absolute;
+    bottom: 0px;
+    top: 90%;
+    left: 5.5%;
+    width: 220px;
+    text-align: center;
+    transform: translatex(-50%);
+    z-index: 1000;
+    list-style: none;
+    text-align: center;
+}
+
+.slider input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+// etichetta dei bottoni, larghezza ed altezza bottoni, distanza tra uno e l'altro, colore
+.slider-controls label {
+    display: inline-block;
+    border: 1px solid white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: inherit;
+    transition: background-color 0.2s linear;
+    margin-left: 5px;
+}
+
+//colore bottoni quando vengono premuti
+#btn-1:checked~.slider-controls label[for="btn-1"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-2:checked~.slider-controls label[for="btn-2"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-3:checked~.slider-controls label[for="btn-3"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-4:checked~.slider-controls label[for="btn-4"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+
+/* SLIDES */
+
+.slides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 600px;
+    opacity: 0;
+    transform: translatex(-100%);
+    transition: transform 250ms linear;
+}
+
+.slide-content {
+    height: 600px;
+    width: 100%;
+}
+
+//formattazione testo slide
+.slide-text {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+
+/* Slide animations */
+
+//animazioni dei bottoni
+#btn-1:checked~.slides .slide:nth-child(1) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-2:checked~.slides .slide:nth-child(2) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-3:checked~.slides .slide:nth-child(3) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-4:checked~.slides .slide:nth-child(4) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-1:not(:checked)~.slides .slide:nth-child(1) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+#btn-2:not(:checked)~.slides .slide:nth-child(2) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+#btn-3:not(:checked)~.slides .slide:nth-child(3) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+#btn-4:not(:checked)~.slides .slide:nth-child(4) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+@keyframes swap-out {
+    0% {
+        transform: translatex(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translatex(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatex(100%);
+    }
+}
+
+//fine carousel
