@@ -173,10 +173,17 @@ footer {
 
 //immagine
 .centerImg {
-    width: 80%;
+    width: 90%;
 }
 
 //formattazione testo
 .title-item {
-    font-size: 20px;
+    font-size: 300%;
+    margin-top: -1%;
+    margin-left: 1%;
+}
+
+.description-item {
+    font-size: 100%;
+    margin-left: 1%;
 }
