@@ -6,7 +6,7 @@
       "prezzo": 1.972,
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
-      "preferito": true,
+      "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
@@ -92,7 +92,7 @@
       "telefono": "3487190652",
       "genere": "Uomo",
       "admin": true,
-      "path": "/assets/users/avatar6.png"
+      "path": "/assets/users/avatar5.png"
     },
     {
       "id": 2,
