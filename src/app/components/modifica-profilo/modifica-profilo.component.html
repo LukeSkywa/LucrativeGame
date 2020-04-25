@@ -2,13 +2,8 @@
     <app-menu></app-menu>
     <div class="title">
         <h3>Benvenuto</h3>
-        <img class="icon" src="/assets/users/profile.jpg" class="profilo" alt="profilo">
+        <img class="icon" src="/assets/users/profile.jpg" class="profilo" alt="profilo" routerLink="/modificaImg">
     </div>
-    
-    <label for="img"></label>
-    <input style="display: none;" type="file"  (change)="onFileChanged($event)" #fileInput > 
-    <input type="submit" (click)="fileInput.click()" value="Select file">
-    <!-- <button (click)="onUpload()"> Upload! </button> -->
     
     <div class="box">
         <form [formGroup]="modificaProfilo" (ngSubmit)="sendModify()">

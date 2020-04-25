@@ -21,6 +21,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ModificaAvatarProfiloComponent } from './components/modifica-avatar-profilo/modifica-avatar-profilo.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     SignupComponent,
     FeedbackComponent,
     ProfiloComponent,
-    ModificaProfiloComponent
+    ModificaProfiloComponent,
+    ModificaAvatarProfiloComponent
   ],
   imports: [
     BrowserModule,
