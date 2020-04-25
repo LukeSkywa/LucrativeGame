@@ -1,35 +1,84 @@
 <div class="main-container">
-  <div>
-    <app-menu></app-menu>
-  </div>
- 
-  <div class="row">
-    <div class="column left">
-      <h1> {{clothes.name}} </h1>
-      <h3>DESCRIZIONE DEL PRODOTTO:</h3>
-      <p>{{clothes.description}}</p>
+    <div>
+        <app-menu></app-menu>
     </div>
- 
-    <div class="column middle">
-      <img class="imgPosition" src="{{clothes.path}}" alt="Il logo del nostro blog" />
+
+    <div class="grid-container">
+
+        <!--Elemento uno griglia-->
+        <div class="item-1">
+            <h1 class="title-item"> {{clothes.name}} </h1>
+            <p class="description-item">{{clothes.description}}</p>
+        </div>
+
+        <!--Elemento due griglia-->
+        <div class="item-2">
+            <img class="imgPosition" src="{{clothes.path}}" class="centerImg" alt="Il logo del nostro blog" />
+        </div>
+
+        <!--Elemento tre griglia-->
+        <div class="item-3">
+            <button class="btnRosso"></button> <button class="btnGiallo"></button> <button class="btnBlu"></button>
+            <h2>{{clothes.prezzo}} €</h2>
+            <p class="item-3-description">{{clothes.description}}</p>
+            <p>Selezionare la taglia desiderata:</p>
+            <button class="btn">S</button> <button class="btn">M</button> <button class="btn">L</button>
+
+        </div>
+
+        <!--Elemento quattro griglia-->
+        <!--carousel-->
+        <!--creazione bottoni-->
+        <div class="slider item-4">
+            <input type="radio" name="toggle" id="btn-1" checked>
+            <input type="radio" name="toggle" id="btn-2">
+            <input type="radio" name="toggle" id="btn-3">
+            <input type="radio" name="toggle" id="btn-4">
+
+            <div class="slider-controls">
+                <label for="btn-1"></label>
+                <label for="btn-2"></label>
+                <label for="btn-3"></label>
+                <label for="btn-4"></label>
+            </div>
+
+            <!--craezione varie slides carousel (4)-->
+            <ul class="slides">
+                <li class="slide">
+                    <div class="slide-content">
+                        <p class="slide-text">Descrizine 1</p>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="slide-content">
+
+                        <p class="slide-text">Descrizione 2</p>
+
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="slide-content">
+
+                        <p class="slide-text">Descrizione 3</p>
+
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="slide-content">
+                        <p class="slide-text">Descizione 4</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- fine carousel-->
     </div>
- 
-    <div class="column right">
-        <button class="btnRosso"></button>  <button class="btnGiallo"></button>  <button class="btnBlu"></button>
-      <h2>{{clothes.prezzo}} €</h2>
-      <p>{{clothes.description}}</p>
-      <p>SELEZIONARE LA TAGLIA DESIDERATA:</p>
-      <button class="btn">S</button>  <button class="btn">M</button>  <button class="btn">L</button>
- 
-    </div>
-  </div>
- 
-  <footer>
-    <i class="fa fa-facebook" style="padding-left: 1%;"></i>
-    <i class="fa fa-instagram" style="padding-left: 1%;"></i>
-    <i class="fa fa-telegram" style="padding-left: 1%;"></i>
-    <i class="fa fa-snapchat-ghost" style="padding-left: 1%;"></i>
-    <i class="fa fa-pinterest-p" style="padding-left: 1%;"></i>
-    <u class="copy">Copyright 2020 | Kana spa</u>
-  </footer>
+    <footer>
+        <u class="copy">Copyright 2020 | Kana spa</u>
+        <i class="fa fa-pinterest-p" style="padding-left: 1%;padding-right: 1%;float:right;"></i>
+        <i class="fa fa-snapchat-ghost" style="padding-left: 1%; float:right;"></i>
+        <i class="fa fa-telegram" style="padding-left: 1%; float:right;"></i>
+        <i class="fa fa-instagram" style="padding-left: 1%; float:right;"></i>
+        <i class="fa fa-facebook" style="padding-left: 1%; float:right;"></i>
+    </footer>
 </div>

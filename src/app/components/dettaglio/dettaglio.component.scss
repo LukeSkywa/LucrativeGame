@@ -1,144 +1,412 @@
 $textcolor: white;
 $fontsize: 19px;
 $coloreCopy: RGB(89, 167, 255);
- 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
- 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+
+.main-container {
+    display: grid;
+    //grid-template-rows: 100px 1fr 50px;
+    height: 100vh;
+    color: white;
 }
- 
+
+//display grid
+.grid-container {
+    display: grid;
+    grid-template-rows: 300px 300px;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+//elemento 1
+.item-1 {
+    height: 300px;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+//elemento 2
+.item-2 {
+    height: 300px;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+//elemento 3
+.item-3 {
+    height: 300px;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+//elemento 4
+.item-4 {
+    height: 300px;
+    padding: 10px;
+}
+
+//stile e formattazione vari elementi
+//elemento 3
+.item-3 button {
+    margin-top: 7%;
+}
+
+.item-3 h2 {
+    padding-top: 3%;
+}
+
+.item-3-description {
+    padding-top: 2%;
+}
+
+
 /* Clear floats after the columns */
+
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
- 
+
+
 /*Btn Taglia*/
-.btn{
-  display: inline-block;
-  text-decoration: none;
-  background: transparent;
-  color: white;
-  width: 40px;
-  height: 40px;
-  line-height: 30px;
-  border-radius: 50%;
-  border: solid 2px white;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
-  margin-right: 10px;
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: transparent;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: solid 2px white;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin-right: 10px;
+    outline: none;
+    cursor: pointer;
+    font-weight: lighter;
 }
- 
+
 .btn:focus {
-  width: 43px;
-  height: 43px;
-  background: white;
-  color: #00bdff;
-  line-height: 40px;
-  border: solid 2px #00bdff;
+    width: 43px;
+    height: 43px;
+    background: white;
+    color: #00bdff;
+    line-height: 40px;
+    border: solid 2px #00bdff;
 }
- 
+
+
 /*FINE Btn Taglia*/
- 
+
+
 /*Btn Colore ROSSO*/
-.btnRosso{
-  display: inline-block;
-  text-decoration: none;
-  background: red;
-  width: 20px;
-  height: 20px;
-  line-height: 50px;
-  border-radius: 50%;
-  border: solid 1px black;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
-  margin-right: 6px;
+
+.btnRosso {
+    display: inline-block;
+    text-decoration: none;
+    background: red;
+    width: 20px;
+    height: 20px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: solid 1px black;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin-right: 6px;
+    outline: none;
+    cursor: pointer;
 }
- 
+
 .btnRosso:focus {
     background: red;
     border: solid 2px white;
 }
+
+
 /*FINE Btn Colore ROSSO*/
- 
+
+
 /*Btn Colore GIALLO*/
-.btnGiallo{
-  display: inline-block;
-  text-decoration: none;
-  background: yellow;
-  width: 20px;
-  height: 20px;
-  line-height: 50px;
-  border-radius: 50%;
-  border: solid 1px black;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
-  margin-right: 6px;
+
+.btnGiallo {
+    display: inline-block;
+    text-decoration: none;
+    background: yellow;
+    width: 20px;
+    height: 20px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: solid 1px black;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin-right: 6px;
+    outline: none;
+    cursor: pointer;
 }
- 
+
 .btnGiallo:focus {
     background: yellow;
     border: solid 2px white;
 }
- 
+
+
 /*FINE Btn Colore GIALLO*/
- 
+
+
 /*Btn Colore BLUE*/
-.btnBlu{
-  display: inline-block;
-  text-decoration: none;
-  background: blue;
-  width: 20px;
-  height: 20px;
-  line-height: 50px;
-  border-radius: 50%;
-  border: solid 1px black;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  font-weight: bold;
-  transition: .4s;
+
+.btnBlu {
+    display: inline-block;
+    text-decoration: none;
+    background: blue;
+    width: 20px;
+    height: 20px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: solid 1px black;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    outline: none;
+    cursor: pointer;
 }
- 
+
 .btnBlu:focus {
     background: blue;
     border: solid 2px white;
 }
- 
+
+//footer
 footer {
-  color: $textcolor;
-  font-size: $fontsize;
-  width:100%;
-  grid-row: 3;
+    color: $textcolor;
+    font-size: $fontsize;
+    width: 100%;
+    grid-row: 3;
 }
 
 .copy {
-  text-decoration: none;
-  font-size: 9px;
-  padding-left: 2%;
-  color: $coloreCopy;
+    text-decoration: none;
+    font-size: 9px;
+    padding-left: 2%;
+    color: $coloreCopy;
 }
- 
-.main-container{
-  display: grid;
-  grid-template-rows: 100px 1fr 50px;
-  height: 100vh;
-  color: white;
+
+//fine footer
+//main
+//immagine
+.centerImg {
+    width: 90%;
 }
+
+//formattazione testo
+.title-item {
+    font-size: 300%;
+    margin-top: -1%;
+    margin-left: 1%;
+}
+
+.description-item {
+    font-size: 100%;
+    margin-left: 1%;
+}
+
+//fine formattazione testo
+//carousel
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+//è la parte che contiene il testo
+.slider {
+    position: relative;
+    width: 950px;
+    height: 250px;
+    margin: 20px auto;
+    overflow: hidden;
+    outline: none;
+    margin-left: -1.5px;
+    margin-bottom: 80px;
+}
+
+//bottoni (posizione)
+.slider-controls {
+    position: absolute;
+    bottom: 0px;
+    top: 90%;
+    left: 5.5%;
+    width: 220px;
+    text-align: center;
+    transform: translatex(-50%);
+    z-index: 1000;
+    list-style: none;
+    text-align: center;
+}
+
+.slider input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+// etichetta dei bottoni, larghezza ed altezza bottoni, distanza tra uno e l'altro, colore
+.slider-controls label {
+    display: inline-block;
+    border: 1px solid white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: inherit;
+    transition: background-color 0.2s linear;
+    margin-left: 5px;
+}
+
+//colore bottoni quando vengono premuti
+#btn-1:checked~.slider-controls label[for="btn-1"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-2:checked~.slider-controls label[for="btn-2"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-3:checked~.slider-controls label[for="btn-3"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+#btn-4:checked~.slider-controls label[for="btn-4"] {
+    background-color: white;
+    border: 1px solid white;
+}
+
+
+/* SLIDES */
+
+.slides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 600px;
+    opacity: 0;
+    transform: translatex(-100%);
+    transition: transform 250ms linear;
+}
+
+.slide-content {
+    height: 600px;
+    width: 100%;
+}
+
+//formattazione testo slide
+.slide-text {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+
+/* Slide animations */
+
+//animazioni dei bottoni
+#btn-1:checked~.slides .slide:nth-child(1) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-2:checked~.slides .slide:nth-child(2) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-3:checked~.slides .slide:nth-child(3) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-4:checked~.slides .slide:nth-child(4) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-1:not(:checked)~.slides .slide:nth-child(1) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+#btn-2:not(:checked)~.slides .slide:nth-child(2) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+#btn-3:not(:checked)~.slides .slide:nth-child(3) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+#btn-4:not(:checked)~.slides .slide:nth-child(4) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+@keyframes swap-out {
+    0% {
+        transform: translatex(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translatex(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatex(100%);
+    }
+}
+
+//fine carousel
