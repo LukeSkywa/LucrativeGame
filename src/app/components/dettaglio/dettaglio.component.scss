@@ -3,7 +3,8 @@ $fontsize: 19px;
 $coloreCopy: RGB(89, 167, 255);
 $btnTextColor: white;
 $btnBorderColor: white;
-$carouselBackground: rgb(27, 190, 255);
+$coloreInizioCarousel: rgb(27, 184, 255);
+$coloreFineCarousel: rgb(27, 194, 255);
 * {
     box-sizing: border-box;
 }
@@ -250,27 +251,28 @@ footer {
 //è la parte che contiene il testo
 .slider {
     position: relative;
-    width: 320px;
-    height: 150px;
+    width: 350px;
+    height: 100px;
     margin: 20px auto;
     overflow: hidden;
     outline: none;
     margin-left: 2.5%;
-    margin-bottom: 80px;
-    background-color: $carouselBackground;
+    opacity: 0.9;
+    background-image: linear-gradient(to right, $coloreInizioCarousel, $coloreFineCarousel);
+    margin-top: -28px;
 }
 
 //bottoni (posizione)
 .slider-controls {
     position: absolute;
     bottom: 0px;
-    left: 320px;
+    left: 350px;
     width: 220px;
     text-align: center;
     transform: translatex(-50%);
-    z-index: 100000000;
     list-style: none;
     text-align: center;
+    top: 80%;
 }
 
 .slider input[type="radio"] {
@@ -344,11 +346,17 @@ footer {
     width: 100%;
 }
 
+.imgCarosuel {
+    float: left;
+    height: 20%;
+}
+
 //formattazione testo slide
 .slide-text {
     margin-bottom: 20px;
-    font-size: 20px;
-    color: inherit;
+    font-size: 15px;
+    color: rgb(0, 106, 255);
+    font-weight: bold;
 }
 
 
@@ -397,6 +405,11 @@ footer {
     animation-name: swap-out;
     animation-duration: 300ms;
     animation-timing-function: linear;
+}
+
+.slider-controls:focus {
+    background-color: white;
+    color: white;
 }
 
 @keyframes swap-out {
