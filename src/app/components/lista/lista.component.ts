@@ -10,6 +10,7 @@ import { HttpService } from 'src/app/services/http/http.service';
 })
 export class ListaComponent implements OnInit {
   
+  length:number;
   listSel: number;
   viewBtn: number;
   mostraPiu: Boolean;
@@ -22,9 +23,12 @@ export class ListaComponent implements OnInit {
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
     this.listSel= list;
     this.httpService.getClothesFiltered(filtro1,cond1,filtro2,cond2).subscribe( response => {
-      this.clothesListFiltered = response;
+      if(this.mostraPiu == false)
+        this.clothesListFiltered = response.slice(0,5);
+      else
+        this.clothesListFiltered = response;
+      this.length = this.clothesListFiltered.length;
     })
-
   }
  
   switchPreferito(id:number){
@@ -55,8 +59,18 @@ export class ListaComponent implements OnInit {
     this.viewBtn === index ? this.viewBtn = null : this.viewBtn = index;
   }
  
-  mostraDiPiu(){ this.mostraPiu = true;   }
-  mostraDiMeno(){ this.mostraPiu = false;  }
+  mostra(){ 
+    this.mostraPiu = !this.mostraPiu; 
+    if(this.listSel === 3){
+      this.viewList(3,'nascosto', 'true');
+    }
+    if(this.listSel === 2){ //nei preferetiti vengono visualizzati anche quelli nascosti. Da la precedenza ai preferiti
+     this.viewList(2,'preferito','true','nascosto','false');
+    }
+    if(this.listSel === 1){
+      this.viewList(1,'nascosto','false');
+    }
+  }
  
   ngOnInit(): void {
     this.viewList(1,'nascosto','false');

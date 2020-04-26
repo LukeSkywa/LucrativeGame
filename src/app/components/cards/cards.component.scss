@@ -3,16 +3,20 @@ $coloreInizioSfumatura: RGB(0, 107, 255);
 $coloreFineSfumatura: RGB(0, 194, 255);
 //fine definizione variabili
 //definizione css
-.container {
+.main-container {
 	margin: -5px;
 	padding: 0;
 	text-align: center;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(to right, #006cff , #00bdff);
-  color: #008CFF;
+    background-image: linear-gradient(to right, #006cff , #00bdff);
+    color: #008CFF;
 	height: 100%;
-  width: auto;
+    width: auto;
 
+}
+
+.container{
+    margin-left: -35px;
 }
 
 .card {
@@ -58,12 +62,12 @@ img.share {
 
 .btn{
     display: inline-block;
+    width: 150px;
     text-decoration: none;
-    // background: rgb(183, 213, 223);
     background: white;
     color: #00bdff;
     padding: 7px 20px;
-      border-radius: 25px;
+    border-radius: 25px;
     border: solid 2px white;
     text-align: center;
     vertical-align: middle;
@@ -109,10 +113,12 @@ img.share {
 
 
 /* FINE BOTTONI Tutti-Preferiti-Nascondi*/
-
+.button{
+    margin-top: 20px;
+}
 .btnAllineamento {
     text-align: left;
-    margin-left: 2%;
+    margin-left: 3%;
 }
 
 .align {

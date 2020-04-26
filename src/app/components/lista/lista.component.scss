@@ -13,6 +13,7 @@
 
 ul {
   list-style-type: none;
+  margin-left: -30px;
 }
 
 .prova{
@@ -56,7 +57,7 @@ img.preferito{
 .btn{
   display: inline-block;
   text-decoration: none;
-  // background: rgb(183, 213, 223);
+  width: 150px;
   background: white;
   color: #00bdff;
   padding: 7px 20px;
@@ -82,6 +83,7 @@ img.preferito{
 
 .btnAllineamento{
   text-align: left;
+  margin-left: 2%;
 }
 
 .dropdown-content {

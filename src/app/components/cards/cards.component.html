@@ -1,34 +1,34 @@
-<div class="container">
+<div class="main-container">
     <app-menu></app-menu>
 
+    <!-- SISTEMARE I BOTTONI -->
     <div class="btnAllineamento">
-        <button (click)="viewList(1)" class="btn"> Tutti </button>
-        <button (click)="viewList(2)" class="btn"> Preferiti </button>
-        <button (click)="viewList(3)" class="btn"> Nascosti </button>
+        <button  (click)="viewList(1,'nascosto','false')"  class="btn"> Tutti </button>
+        <button  (click)="viewList(2,'preferito','true','nascosto','false')"  class="btn"> Preferiti </button>
+        <button  (click)="viewList(3,'nascosto', 'true')"  class="btn"> Nascosti </button>
     </div>
     
-    <div>
+    <div class="container">
         <div *ngFor="let item of clothesListFiltered" class="card">
-            
             <img src="{{item.path}}" alt="path item" class="img">
-            <!-- <ng-container *ngIf="item.preferito">
+            <ng-container *ngIf="item.preferito">
                 <span id="info" class="material-icons preferito" (click)="switchPreferito(item.id)"> favorite </span>
             </ng-container>
             <ng-container *ngIf="!item.preferito">
                 <span id="info" class="material-icons preferito" (click)="switchPreferito(item.id)"> favorite_border </span>
-            </ng-container> -->
+            </ng-container>
             <div>
                 <h1 class="title"> {{item.name}} </h1>
                 <p class="description"> {{item.description}} </p>
-                
-
             </div>
             <span class="material-icons align"> more_horiz </span>
 
         </div>
+        <div class="button">
+            <button *ngIf="!mostraPiu && clothesListFiltered.length==5" (click)="mostra()" class="btn">Mostra di più</button>
+            <button *ngIf="mostraPiu  && clothesListFiltered.length>5" (click)="mostra()" class="btn">Mostra di meno</button>
+        </div>
     </div>
-    <div>
-        <button class="showMore">Mostra di più</button>
-    </div>
+    
 
 </div>
