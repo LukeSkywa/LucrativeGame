@@ -348,6 +348,7 @@ footer {
 .slide-text {
     margin-bottom: 20px;
     font-size: 20px;
+    color: inherit;
 }
 
 
@@ -415,11 +416,20 @@ footer {
 //fine carousel
 //medai query
 @media screen and (max-width: 992px) {
-    .main-container {
+    .slider-controls {
+        top: 640px;
+    }
+    .grid-container {
         display: table;
     }
-    .slider {
-        margin-top: 80px;
+    .centerImg {
+        margin-top: -45%;
+    }
+    .item-3 {
+        margin-top: -20%;
+    }
+    .item-4 {
+        margin-top: -10%;
     }
 }
 
@@ -427,8 +437,19 @@ footer {
 /* On screens that are 600px or less, set the background color to olive */
 
 @media screen and (max-width: 600px) {
-    .main-container {
+    .slider-controls {
+        top: 640px;
+    }
+    .grid-container {
         display: table;
-        margin-top: 80px;
+    }
+    .centerImg {
+        margin-top: -45%;
+    }
+    .item-3 {
+        margin-top: -20%;
+    }
+    .item-4 {
+        margin-top: -10%;
     }
 }
