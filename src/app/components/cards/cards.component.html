@@ -8,15 +8,22 @@
     </div>
     
     <div>
-        <div *ngFor="let item of clothesList;" class="card">
-            <img src="{{item.path}}" alt="path item">
+        <div *ngFor="let item of clothesListFiltered" class="card">
+            
+            <img src="{{item.path}}" alt="path item" class="img">
+            <!-- <ng-container *ngIf="item.preferito">
+                <span id="info" class="material-icons preferito" (click)="switchPreferito(item.id)"> favorite </span>
+            </ng-container>
+            <ng-container *ngIf="!item.preferito">
+                <span id="info" class="material-icons preferito" (click)="switchPreferito(item.id)"> favorite_border </span>
+            </ng-container> -->
             <div>
                 <h1 class="title"> {{item.name}} </h1>
                 <p class="description"> {{item.description}} </p>
+                
+
             </div>
-            <span class="material-icons align">
-                more_horiz
-            </span>
+            <span class="material-icons align"> more_horiz </span>
 
         </div>
     </div>

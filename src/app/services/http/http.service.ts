@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpResponse, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from 'src/models/user.interface';
 import { ClothesItem } from 'src/models/clothes-item.interface';
@@ -41,10 +41,16 @@ export class HttpService {
     return this.httpClient.put('http://localhost:3000/clothes/' + clothes.id, clothes)
   }
 
-  getClothesFilterd(filtro:string):Observable<any>{
-    return this.httpClient.get('http://localhost:3000/clothes?'+filtro +'=true');
+  getClothesFiltered(filtro1?:string, cond1?: string, filtro2?:string, cond2?:string): Observable<any>{
+    let params:HttpParams;
+    if (filtro1 != null && filtro1 !== '') { 
+         return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1);
+    }
+    if (filtro1 != null && filtro1 !== '' && filtro2 != null && filtro2 !== '') { 
+      return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1 + '&' + filtro1 + '=' + cond2);
+    }
   }
-  
+
   //SEND FEEDBACK
   invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
     headers: import("@angular/common/http").HttpHeaders;
