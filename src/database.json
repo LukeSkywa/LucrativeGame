@@ -7,7 +7,7 @@
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
       "preferito": false,
-      "nascosto": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
@@ -17,7 +17,7 @@
       "description": "nike af1 bianca, modello donna",
       "genere": "calzatura",
       "preferito": false,
-      "nascosto": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto2.jpg"
     },
     {
@@ -26,8 +26,8 @@
       "prezzo": 49,
       "description": "paura x rosa chemical tee -  limited edition",
       "genere": "t-shirt",
-      "preferito": true,
-      "nascosto": true,
+      "preferito": false,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto3.jpg"
     },
     {
@@ -37,7 +37,7 @@
       "description": "t shirt con stampa death metal, colore rosa",
       "genere": "t-shirt",
       "preferito": false,
-      "nascosto": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto4.jpg"
     },
     {
@@ -76,7 +76,7 @@
       "prezzo": 200,
       "description": "sneakers in pelle, colori vari",
       "genere": "calzatura",
-      "preferito": false,
+      "preferito": true,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto5.jpg"
     }

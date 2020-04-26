@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
-import { Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http/http.service';
  
 @Component({
@@ -14,48 +13,57 @@ export class ListaComponent implements OnInit {
   listSel: number;
   viewBtn: number;
   mostraPiu: Boolean;
+  clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
  
-  constructor(private router: Router, private httpService: HttpService) { 
+  constructor(private httpService: HttpService) { 
     this.mostraPiu = false;
   }
  
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
     this.listSel= list;
     this.httpService.getClothesFiltered(filtro1,cond1,filtro2,cond2).subscribe( response => {
-      if(this.mostraPiu == false){
-        this.clothesListFiltered = response.slice(0,5);
-      }
-      else{
         this.clothesListFiltered = response;
-      }
-        this.length = this.clothesListFiltered.length;
     })
+    // this.taglia();
   }
+
+  // taglia(){
+  //   if(!this.mostraPiu){
+  //     this.clothesListFiltered = this.clothesList.slice(0,5);
+  //   }
+  //   if(this.mostraPiu === true){
+  //     this.clothesListFiltered = this.clothesList;
+  //   }
+  // }
  
   switchPreferito(id:number){
     let clothes: ClothesItem = this.clothesListFiltered.find( item => item.id === id);
     clothes.preferito = !clothes.preferito;
-    this.httpService.updateClothes(clothes).subscribe(() => {});
-    if(this.listSel === 2){
-       this.viewList(2,'preferito','true');
-    }
+    this.httpService.updateClothes(clothes).subscribe(() => {
+      if(this.listSel === 2){
+        this.viewList(2,'preferito','true','nascosto','false')
+      }
+    });
+    
   }
  
   switchNascondi(id:number){
     let clothes: ClothesItem = this.clothesListFiltered.find( item => item.id === id);
     clothes.nascosto = !clothes.nascosto;
     console.log(this.listSel);
-    this.httpService.updateClothes(clothes).subscribe(() => {});
-    if(this.listSel === 1){
-      this.viewList(1,'nascosto','false');
-    }
-    if(this.listSel === 2){
-      this.viewList(2,'preferito','true')
-    }
-    if(this.listSel === 3){
-      this.viewList(3,'nascosto','true');
-    }
+    this.httpService.updateClothes(clothes).subscribe(() => {
+      if(this.listSel === 1){
+        this.viewList(1,'nascosto','false');
+      }
+      if(this.listSel === 2){
+        this.viewList(2,'preferito','true','nascosto','false')
+      }
+      if(this.listSel === 3){
+        this.viewList(3,'nascosto','true');
+      }
+    });
+    
   }
 
   show(index: number) {

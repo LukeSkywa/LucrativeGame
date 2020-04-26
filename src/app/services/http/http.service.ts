@@ -46,7 +46,7 @@ export class HttpService {
          return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1);
     }
     if (filtro1 != null && filtro1 !== '' && filtro2 != null && filtro2 !== '') { 
-      return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1 + '&' + filtro1 + '=' + cond2);
+      return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1 + '&' + filtro2 + '=' + cond2);
     }
   }
   
