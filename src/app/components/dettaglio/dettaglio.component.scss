@@ -251,7 +251,7 @@ footer {
 //è la parte che contiene il testo
 .slider {
     position: relative;
-    width: 350px;
+    width: 370px;
     height: 100px;
     margin: 20px auto;
     overflow: hidden;
@@ -260,6 +260,7 @@ footer {
     opacity: 0.9;
     background-image: linear-gradient(to right, $coloreInizioCarousel, $coloreFineCarousel);
     margin-top: -28px;
+    word-wrap: break-word;
 }
 
 //bottoni (posizione)
@@ -356,10 +357,12 @@ footer {
 
 //formattazione testo slide
 .slide-text {
-    margin-bottom: 20px;
+    text-align: center;
+    padding-right: 10px;
     font-size: 15px;
     color: rgb(0, 106, 255);
     font-weight: bold;
+    word-wrap: break-word;
 }
 
 
