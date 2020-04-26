@@ -6,8 +6,8 @@
       "prezzo": 1.972,
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
-      "preferito": true,
-      "nascosto": false,
+      "preferito": false,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
@@ -16,8 +16,8 @@
       "prezzo": 110,
       "description": "nike af1 bianca, modello donna",
       "genere": "calzatura",
-      "preferito": true,
-      "nascosto": false,
+      "preferito": false,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto2.jpg"
     },
     {
@@ -26,8 +26,8 @@
       "prezzo": 49,
       "description": "paura x rosa chemical tee -  limited edition",
       "genere": "t-shirt",
-      "preferito": false,
-      "nascosto": false,
+      "preferito": true,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto3.jpg"
     },
     {
@@ -37,7 +37,7 @@
       "description": "t shirt con stampa death metal, colore rosa",
       "genere": "t-shirt",
       "preferito": false,
-      "nascosto": false,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto4.jpg"
     },
     {

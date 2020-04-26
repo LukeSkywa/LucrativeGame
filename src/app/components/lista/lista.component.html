@@ -18,7 +18,6 @@
               <img id="prod" src="{{item.path}}" alt="{{item.path}}" /></th>
             <th>{{item.name}} <br>
               {{item.description}}
-              <!-- {{item.id}} -->
             </th>
 
             <!-- GESTIONE DEI PREFERITI -->
@@ -46,13 +45,9 @@
                 <div class="dropdown-content">
                     <a [routerLink]="['/detail', item.id]" id="info" class="items">Scopri di più</a>
                     <hr width=98% size=1 color=#011D28>
-                    <ng-container *ngIf="!item.nascosto">
-                        <a (click)="switchNascondi(item.id)" id="info" class="items">Nascondi</a>
-                    </ng-container>
-                    <ng-container *ngIf="item.nascosto">
-                        <a (click)="switchNascondi(item.id)" id="info" class="items">Mostra</a>
-                    </ng-container>
-                </div>
+                    <a *ngIf="!item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Nascondi</a>
+                    <a *ngIf="item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Mostra</a>
+               </div>
               </ng-container>
             </th>
           </tr>

@@ -23,11 +23,13 @@ export class ListaComponent implements OnInit {
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
     this.listSel= list;
     this.httpService.getClothesFiltered(filtro1,cond1,filtro2,cond2).subscribe( response => {
-      if(this.mostraPiu == false)
+      if(this.mostraPiu == false){
         this.clothesListFiltered = response.slice(0,5);
-      else
+      }
+      else{
         this.clothesListFiltered = response;
-      this.length = this.clothesListFiltered.length;
+      }
+        this.length = this.clothesListFiltered.length;
     })
   }
  
@@ -36,22 +38,23 @@ export class ListaComponent implements OnInit {
     clothes.preferito = !clothes.preferito;
     this.httpService.updateClothes(clothes).subscribe(() => {});
     if(this.listSel === 2){
-       this.viewList(2,'preferito','true','nascosto','false');
+       this.viewList(2,'preferito','true');
     }
   }
  
   switchNascondi(id:number){
     let clothes: ClothesItem = this.clothesListFiltered.find( item => item.id === id);
     clothes.nascosto = !clothes.nascosto;
+    console.log(this.listSel);
     this.httpService.updateClothes(clothes).subscribe(() => {});
-    if(this.listSel === 3){
-       this.viewList(3,'nascosto', 'true');
-    }
-    if(this.listSel === 2){ //nei preferetiti vengono visualizzati anche quelli nascosti. Da la precedenza ai preferiti
-      this.viewList(2,'preferito','true','nascosto','false');
-    }
     if(this.listSel === 1){
-       this.viewList(1,'nascosto','false');
+      this.viewList(1,'nascosto','false');
+    }
+    if(this.listSel === 2){
+      this.viewList(2,'preferito','true')
+    }
+    if(this.listSel === 3){
+      this.viewList(3,'nascosto','true');
     }
   }
 
@@ -61,14 +64,14 @@ export class ListaComponent implements OnInit {
  
   mostra(){ 
     this.mostraPiu = !this.mostraPiu; 
+    if(this.listSel === 1){
+      this.viewList(1,'nascosto','false');
+    }
     if(this.listSel === 3){
       this.viewList(3,'nascosto', 'true');
     }
     if(this.listSel === 2){ //nei preferetiti vengono visualizzati anche quelli nascosti. Da la precedenza ai preferiti
      this.viewList(2,'preferito','true','nascosto','false');
-    }
-    if(this.listSel === 1){
-      this.viewList(1,'nascosto','false');
     }
   }
  

@@ -49,11 +49,7 @@ export class HttpService {
       return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1 + '&' + filtro1 + '=' + cond2);
     }
   }
-  getClothesResearch(filtro?:string): Observable<any>{
-    if (filtro != null && filtro !== '') { 
-         return this.httpClient.get('http://localhost:3000/clothes?q=' + filtro);
-    }
-  }
+  
 
   //SEND FEEDBACK
   invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
