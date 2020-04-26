@@ -51,7 +51,7 @@ export class HttpService {
   }
   getClothesResearch(filtro?:string): Observable<any>{
     if (filtro != null && filtro !== '') { 
-         return this.httpClient.get('http://localhost:3000/clothes?q=' + filtro1);
+         return this.httpClient.get('http://localhost:3000/clothes?q=' + filtro);
     }
   }
 
