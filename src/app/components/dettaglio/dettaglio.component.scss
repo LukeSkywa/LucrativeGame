@@ -346,9 +346,12 @@ footer {
     width: 100%;
 }
 
-.imgCarosuel {
+.imgCarousel {
     float: left;
-    height: 20%;
+    margin-top: -19px;
+    margin-left: -30px;
+    height: 120px;
+    width: 40%;
 }
 
 //formattazione testo slide
