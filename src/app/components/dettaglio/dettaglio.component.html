@@ -26,7 +26,14 @@
 
         </div>
 
-        <!--Elemento quattro griglia-->
+        <!--Elemento quattro griglia (carosello)-->
+        <div class="slider-controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
+            <label for="btn-4"></label>
+        </div>
+
         <!--carousel-->
         <!--creazione bottoni-->
         <div class="slider item-4">
@@ -35,37 +42,35 @@
             <input type="radio" name="toggle" id="btn-3">
             <input type="radio" name="toggle" id="btn-4">
 
-            <div class="slider-controls">
-                <label for="btn-1"></label>
-                <label for="btn-2"></label>
-                <label for="btn-3"></label>
-                <label for="btn-4"></label>
-            </div>
+
 
             <!--craezione varie slides carousel (4)-->
             <ul class="slides">
                 <li class="slide">
                     <div class="slide-content">
-                        <p class="slide-text">Descrizine 1</p>
+                        <img class="imgCarousel" src="{{clothes.path}}" alt="Immagine prodotto" />
+                        <p class="slide-text">{{clothes.description}}</p>
                     </div>
+
                 </li>
                 <li class="slide">
                     <div class="slide-content">
-
-                        <p class="slide-text">Descrizione 2</p>
-
-                    </div>
-                </li>
-                <li class="slide">
-                    <div class="slide-content">
-
-                        <p class="slide-text">Descrizione 3</p>
+                        <img class="imgCarousel" src="{{clothes.path}}" alt="Immagine prodotto" />
+                        <p class="slide-text">{{clothes.prezzo}} €</p>
 
                     </div>
                 </li>
                 <li class="slide">
                     <div class="slide-content">
-                        <p class="slide-text">Descizione 4</p>
+                        <img class="imgCarousel" src="{{clothes.path}}" alt="Immagine prodotto" />
+                        <p class="slide-text">{{clothes.description}}</p>
+
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="slide-content">
+                        <img class="imgCarousel" src="{{clothes.path}}" alt="Immagine prodotto" />
+                        <p class="slide-text">{{clothes.prezzo}}</p>
                     </div>
                 </li>
             </ul>

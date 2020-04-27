@@ -1,6 +1,10 @@
 $textcolor: white;
 $fontsize: 19px;
 $coloreCopy: RGB(89, 167, 255);
+$btnTextColor: white;
+$btnBorderColor: white;
+$coloreInizioCarousel: rgb(27, 184, 255);
+$coloreFineCarousel: rgb(27, 194, 255);
 * {
     box-sizing: border-box;
 }
@@ -8,8 +12,8 @@ $coloreCopy: RGB(89, 167, 255);
 .main-container {
     display: grid;
     //grid-template-rows: 100px 1fr 50px;
-    // height: 100vh;
-    color: white;
+    height: 100vh;
+    color: $textcolor;
 }
 
 //display grid
@@ -85,12 +89,12 @@ $coloreCopy: RGB(89, 167, 255);
     display: inline-block;
     text-decoration: none;
     background: transparent;
-    color: white;
+    color: $btnTextColor;
     width: 40px;
     height: 40px;
     line-height: 30px;
     border-radius: 50%;
-    border: solid 2px white;
+    border: solid 2px $btnBorderColor;
     text-align: center;
     vertical-align: middle;
     overflow: hidden;
@@ -247,27 +251,29 @@ footer {
 //è la parte che contiene il testo
 .slider {
     position: relative;
-    width: 950px;
-    height: 250px;
+    width: 370px;
+    height: 100px;
     margin: 20px auto;
     overflow: hidden;
     outline: none;
-    margin-left: -1.5px;
-    margin-bottom: 80px;
+    margin-left: 2.5%;
+    opacity: 0.9;
+    background-image: linear-gradient(to right, $coloreInizioCarousel, $coloreFineCarousel);
+    margin-top: -28px;
+    word-wrap: break-word;
 }
 
 //bottoni (posizione)
 .slider-controls {
     position: absolute;
     bottom: 0px;
-    top: 90%;
-    left: 5.5%;
+    left: 350px;
     width: 220px;
     text-align: center;
     transform: translatex(-50%);
-    z-index: 1000;
     list-style: none;
     text-align: center;
+    top: 80%;
 }
 
 .slider input[type="radio"] {
@@ -341,10 +347,22 @@ footer {
     width: 100%;
 }
 
+.imgCarousel {
+    float: left;
+    margin-top: -19px;
+    margin-left: -30px;
+    height: 120px;
+    width: 40%;
+}
+
 //formattazione testo slide
 .slide-text {
-    margin-bottom: 20px;
-    font-size: 40px;
+    text-align: center;
+    padding-right: 10px;
+    font-size: 15px;
+    color: rgb(0, 106, 255);
+    font-weight: bold;
+    word-wrap: break-word;
 }
 
 
@@ -395,6 +413,11 @@ footer {
     animation-timing-function: linear;
 }
 
+.slider-controls:focus {
+    background-color: white;
+    color: white;
+}
+
 @keyframes swap-out {
     0% {
         transform: translatex(0);
@@ -410,3 +433,42 @@ footer {
 }
 
 //fine carousel
+//medai query
+@media screen and (max-width: 992px) {
+    .slider-controls {
+        top: 640px;
+    }
+    .grid-container {
+        display: table;
+    }
+    .centerImg {
+        margin-top: -45%;
+    }
+    .item-3 {
+        margin-top: -20%;
+    }
+    .item-4 {
+        margin-top: -10%;
+    }
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (max-width: 600px) {
+    .slider-controls {
+        top: 640px;
+    }
+    .grid-container {
+        display: table;
+    }
+    .centerImg {
+        margin-top: -45%;
+    }
+    .item-3 {
+        margin-top: -20%;
+    }
+    .item-4 {
+        margin-top: -10%;
+    }
+}
