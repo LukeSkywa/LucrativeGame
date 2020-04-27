@@ -102,21 +102,21 @@
       "password": "ciao",
       "email": "antoninopigolotti@gmail.com",
       "telefono": "456767889",
-      "genere": "M",
+      "genere": "Uomo",
       "admin": true,
       "path": "/assets/users/profile.jpg"
     },
     {
       "id": 3,
-      "nome": "Matteo",
+      "nome": "Mattea",
       "cognome": "Sorti",
       "username": "matteosorti",
       "password": "1234",
       "email": "matteosorti@gmail.com",
       "telefono": "34567788",
-      "genere": "M",
+      "genere": "Altro",
       "admin": true,
-      "path": "/assets/users/profile.jpg"
+      "path": "/assets/users/avatar11.png"
     },
     {
       "id": 4,
@@ -126,7 +126,7 @@
       "password": "123456",
       "email": "andreabonardi@gmail.com",
       "telefono": "00110022",
-      "genere": "M",
+      "genere": "Uomo",
       "admin": true,
       "path": "/assets/users/profile.jpg"
     }
