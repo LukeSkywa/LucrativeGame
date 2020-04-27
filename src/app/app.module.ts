@@ -20,8 +20,8 @@ import { CardsComponent } from './components/cards/cards.component';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+//import { MatCardModule } from '@angular/material/card';
+//import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -46,8 +46,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCardModule,
-    MatSlideToggleModule
+    //MatCardModule,
+    //MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -108,15 +108,15 @@
     },
     {
       "id": 3,
-      "nome": "Matteo",
+      "nome": "Mattea",
       "cognome": "Sorti",
       "username": "matteosorti",
       "password": "1234",
       "email": "matteosorti@gmail.com",
       "telefono": "34567788",
-      "genere": "M",
+      "genere": "Altro",
       "admin": true,
-      "path": "/assets/users/profile.jpg"
+      "path": "/assets/users/avatar11.png"
     },
     {
       "id": 4,
