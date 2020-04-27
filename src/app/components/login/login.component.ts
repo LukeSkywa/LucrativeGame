@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
-      memorizza: [] //SE E' VERO MEMORIZZA NELLA LOCAL STORAGE.
+      memorizza: [false] //SE E' VERO MEMORIZZA NELLA LOCAL STORAGE.
     })
   }
   
@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(form) {
+    console.log(form.memorizza);
     this.loginSignUp.eseguiLogin(form);
   }
 }
