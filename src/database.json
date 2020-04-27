@@ -104,11 +104,11 @@
       "telefono": "456767889",
       "genere": "Uomo",
       "admin": true,
-      "path": "/assets/users/profile.jpg"
+      "path": "/assets/users/avatar13.png"
     },
     {
       "id": 3,
-      "nome": "Mattea",
+      "nome": "Matteo",
       "cognome": "Sorti",
       "username": "matteosorti",
       "password": "1234",
