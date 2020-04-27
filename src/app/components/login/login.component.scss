@@ -85,6 +85,10 @@ input:focus {
     background-color: inherit;
 }
 
+input:required{
+	box-shadow: none;
+}
+
 
 .più {
     margin-left: 88%;

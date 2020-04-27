@@ -84,6 +84,10 @@ input:focus {
     background-color: inherit;
 }
 
+input:required{
+	box-shadow: none;
+}
+
 .tastoX {
     margin-left: 85%;
     margin-top: -150px;
