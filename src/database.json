@@ -102,7 +102,7 @@
       "password": "ciao",
       "email": "antoninopigolotti@gmail.com",
       "telefono": "456767889",
-      "genere": "M",
+      "genere": "Uomo",
       "admin": true,
       "path": "/assets/users/profile.jpg"
     },
@@ -126,7 +126,7 @@
       "password": "123456",
       "email": "andreabonardi@gmail.com",
       "telefono": "00110022",
-      "genere": "M",
+      "genere": "Uomo",
       "admin": true,
       "path": "/assets/users/profile.jpg"
     }
