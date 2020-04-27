@@ -50,10 +50,15 @@ export class HttpService {
       return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1 + '&' + filtro2 + '=' + cond2);
     }
     if (filtro1 != null && filtro1 !== '' && cond1 != null && cond1 !== '') { 
-         return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1);
+      return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1);
     }
   }
   
+  getClothesResearch(filtro?: string):Observable<any>{
+    if(filtro != null && filtro != ''){
+      return this.httpClient.get('http://localhost:3000/clothes?q=' + filtro)
+    }
+  }
 
   //SEND FEEDBACK
   invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
