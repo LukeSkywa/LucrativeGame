@@ -18,6 +18,7 @@ export class ListaComponent implements OnInit {
  
   constructor(private httpService: HttpService) { 
     this.mostraPiu = false;
+    this.viewList(1,"nascosto","false");
   }
  
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
@@ -25,17 +26,17 @@ export class ListaComponent implements OnInit {
     this.httpService.getClothesFiltered(filtro1,cond1,filtro2,cond2).subscribe( response => {
         this.clothesListFiltered = response;
     })
-    // this.taglia();
+    
   }
 
-  // taglia(){
-  //   if(!this.mostraPiu){
-  //     this.clothesListFiltered = this.clothesList.slice(0,5);
-  //   }
-  //   if(this.mostraPiu === true){
-  //     this.clothesListFiltered = this.clothesList;
-  //   }
-  // }
+  taglia(){
+    if(!this.mostraPiu){
+      this.clothesListFiltered = this.clothesList.slice(0,5);
+    }
+    if(this.mostraPiu === true){
+      this.clothesListFiltered = this.clothesList;
+    }
+  }
  
   switchPreferito(id:number){
     let clothes: ClothesItem = this.clothesListFiltered.find( item => item.id === id);
@@ -78,13 +79,13 @@ export class ListaComponent implements OnInit {
     if(this.listSel === 3){
       this.viewList(3,'nascosto', 'true');
     }
-    if(this.listSel === 2){ //nei preferetiti vengono visualizzati anche quelli nascosti. Da la precedenza ai preferiti
-     this.viewList(2,'preferito','true','nascosto','false');
+    if(this.listSel === 2){
+     this.viewList(2,'preferito','true');
     }
   }
  
   ngOnInit(): void {
-    this.viewList(1,'nascosto','false');
+    
   }
  
 }

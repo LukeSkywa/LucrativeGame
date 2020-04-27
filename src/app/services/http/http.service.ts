@@ -42,11 +42,11 @@ export class HttpService {
   }
 
   getClothesFiltered(filtro1?:string, cond1?: string, filtro2?:string, cond2?:string): Observable<any>{
-    if (filtro1 != null && filtro1 !== '') { 
-         return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1);
-    }
     if (filtro1 != null && filtro1 !== '' && filtro2 != null && filtro2 !== '') { 
       return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1 + '&' + filtro2 + '=' + cond2);
+    }
+    if (filtro1 != null && filtro1 !== '' && cond1 != null && cond1 !== '') { 
+         return this.httpClient.get('http://localhost:3000/clothes?' + filtro1 + '=' + cond1);
     }
   }
   
