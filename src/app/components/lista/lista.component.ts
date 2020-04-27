@@ -9,11 +9,9 @@ import { HttpService } from 'src/app/services/http/http.service';
 })
 export class ListaComponent implements OnInit {
   
-  length:number;
   listSel: number;
   viewBtn: number;
   mostraPiu: Boolean;
-  clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
  
   constructor(private httpService: HttpService) { 
@@ -22,20 +20,11 @@ export class ListaComponent implements OnInit {
   }
  
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
+    this.viewBtn = null;
     this.listSel= list;
     this.httpService.getClothesFiltered(filtro1,cond1,filtro2,cond2).subscribe( response => {
         this.clothesListFiltered = response;
     })
-    
-  }
-
-  taglia(){
-    if(!this.mostraPiu){
-      this.clothesListFiltered = this.clothesList.slice(0,5);
-    }
-    if(this.mostraPiu === true){
-      this.clothesListFiltered = this.clothesList;
-    }
   }
  
   switchPreferito(id:number){
@@ -46,7 +35,6 @@ export class ListaComponent implements OnInit {
         this.viewList(2,'preferito','true','nascosto','false')
       }
     });
-    
   }
  
   switchNascondi(id:number){
@@ -64,7 +52,6 @@ export class ListaComponent implements OnInit {
         this.viewList(3,'nascosto','true');
       }
     });
-    
   }
 
   show(index: number) {
@@ -84,8 +71,6 @@ export class ListaComponent implements OnInit {
     }
   }
  
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
  
 }

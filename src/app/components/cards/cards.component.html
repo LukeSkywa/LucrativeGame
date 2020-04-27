@@ -10,23 +10,22 @@
     
     <div class="container">
         <div *ngFor="let item of clothesListFiltered" class="card">
-            <img src="{{item.path}}" alt="path item" class="img">
-            <ng-container *ngIf="item.preferito">
-                <span id="info" class="material-icons preferito" (click)="switchPreferito(item.id)"> favorite </span>
-            </ng-container>
-            <ng-container *ngIf="!item.preferito">
-                <span id="info" class="material-icons preferito" (click)="switchPreferito(item.id)"> favorite_border </span>
-            </ng-container>
-            <div>
-                <h1 class="title"> {{item.name}} </h1>
-                <p class="description"> {{item.description}} </p>
-            </div>
-            <span class="material-icons align"> more_horiz </span>
+            <ng-container>
+                <img src="{{item.path}}" alt="path item" class="img">
+            
+                <!-- CONDIVIDI -->
+                <span class="material-icons">share</span>
 
-        </div>
-        <div class="button">
-            <button *ngIf="!mostraPiu && clothesListFiltered.length==5" (click)="mostra()" class="btn">Mostra di più</button>
-            <button *ngIf="mostraPiu  && clothesListFiltered.length>5" (click)="mostra()" class="btn">Mostra di meno</button>
+                <!-- GESTIONE DEI PREFERITI -->
+                <span *ngIf="item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
+                <span *ngIf="!item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
+                
+                <div>
+                    <h1 class="title"> {{item.name}} </h1>
+                    <p class="description"> {{item.description}} </p>
+                </div>
+                <span class="material-icons align"> more_horiz </span>
+            </ng-container>
         </div>
     </div>
     
