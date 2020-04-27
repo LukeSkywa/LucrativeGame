@@ -6,8 +6,8 @@
       "prezzo": 1.972,
       "description": "jeans skinny con borchie. Colore nero, strappati",
       "genere": "jeans",
-      "preferito": false,
-      "nascosto": false,
+      "preferito": true,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
@@ -16,7 +16,7 @@
       "prezzo": 110,
       "description": "nike af1 bianca, modello donna",
       "genere": "calzatura",
-      "preferito": false,
+      "preferito": true,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto2.jpg"
     },

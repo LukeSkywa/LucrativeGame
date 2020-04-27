@@ -9,24 +9,33 @@
     </div>
     
     <div class="container">
-        <div *ngFor="let item of clothesListFiltered" class="card">
-            <ng-container>
-                <img src="{{item.path}}" alt="path item" class="img">
-            
-                <!-- CONDIVIDI -->
-                <span class="material-icons">share</span>
-
-                <!-- GESTIONE DEI PREFERITI -->
-                <span *ngIf="item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
-                <span *ngIf="!item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
+        <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
+            <div class="card">
+                <ng-container>
+                    <img src="{{item.path}}" alt="path item" class="img">
                 
-                <div>
-                    <h1 class="title"> {{item.name}} </h1>
-                    <p class="description"> {{item.description}} </p>
-                </div>
-                <span class="material-icons align"> more_horiz </span>
-            </ng-container>
-        </div>
+                    <!-- CONDIVIDI -->
+                    <span class="material-icons">share</span>
+    
+                    <!-- GESTIONE DEI PREFERITI -->
+                    <span *ngIf="item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
+                    <span *ngIf="!item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
+                    
+                    <div>
+                        <h1 class="title"> {{item.name}} </h1>
+                        <p class="description"> {{item.description}} </p>
+                    </div>
+                    <!-- FUNZIONA BA BISOGNA SISTEMARE BENE LA GRAFICA -->
+                    <span id="info" (click)="show(i)" class="material-icons align">more_horiz </span>
+                    <div class="dropdown-content" *ngIf="viewBtn==i">
+                        <a [routerLink]="['/detail', item.id]" id="info" class="items">Scopri di più</a>
+                        <hr width=98% size=1 color=#011D28>
+                        <a *ngIf="!item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Nascondi</a>
+                        <a *ngIf="item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Mostra</a>
+                    </div>
+                </ng-container>
+            </div>
+        </ng-container>
     </div>
     
 

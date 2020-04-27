@@ -21,7 +21,8 @@ export class CardsComponent implements OnInit {
   }
 
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
-    this.listSel= list;
+    this.viewBtn = null;
+    this.listSel = list;
     this.httpService.getClothesFiltered(filtro1,cond1,filtro2,cond2).subscribe( response => {
         this.clothesListFiltered = response;
     })
