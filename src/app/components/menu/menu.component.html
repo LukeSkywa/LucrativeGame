@@ -1,13 +1,19 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<div>
+    <ul>
+        <li *ngFor="let item of menu"> 
+            <a routerLink="{{item.url}}">{{item.descrizione}}</a>
+        </li>
+        <li> <a id="cursor" (click)="logout()"> Esci </a></li>
 
-    <div>
-        <ul>
-            <!-- <li> Benvenuto {{username}} </li> -->
-            <li> <a class="active" routerLink="/home">Homepage</a></li>
-            <li> <a routerLink="/list"> Lista </a>  </li>
-            <li> <a routerLink="/cards">Cards</a></li>
-            <li> <a routerLink="/feedback"> Feedback </a> </li>
-            <li> <a routerLink="/profilo"> Profilo </a></li>
-            <li> <a id="cursor" (click)="logout()"> Esci </a></li>
-            <img src="/assets/logo-prova.png" alt="Il logo del nostro blog"/>
-        </ul>
-    </div>
+        <!-- RICERCA -->
+        <li *ngIf="ricerca">
+            <form>
+                <input type="search">
+                <i class="fa fa-search"></i>
+            </form>
+        </li>
+        <img src="/assets/logo-prova.png" alt="Il logo del nostro blog"/>
+    </ul>
+</div>
+
