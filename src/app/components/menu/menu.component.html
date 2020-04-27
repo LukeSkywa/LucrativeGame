@@ -1,13 +1,15 @@
+<div>
+    <ul>
+        <li *ngFor="let item of menu"> 
+            <a routerLink="{{item.url}}">{{item.descrizione}}</a>
+        </li>
+        <li> <a id="cursor" (click)="logout()"> Esci </a></li>
 
-    <div>
-        <ul>
-            <!-- <li> Benvenuto {{username}} </li> -->
-            <li> <a class="active" routerLink="/home">Homepage</a></li>
-            <li> <a routerLink="/list"> Lista </a>  </li>
-            <li> <a routerLink="/cards">Cards</a></li>
-            <li> <a routerLink="/feedback"> Feedback </a> </li>
-            <li> <a routerLink="/profilo"> Profilo </a></li>
-            <li> <a id="cursor" (click)="logout()"> Esci </a></li>
-            <img src="/assets/logo-prova.png" alt="Il logo del nostro blog"/>
+        <!-- RICERCA -->
+        <li *ngIf="ricerca">
+            <input type="text" #nome placeholder="cerca">
+        </li>
+        <img src="/assets/logo-prova.png" alt="Il logo del nostro blog"/>
         </ul>
     </div>
+
