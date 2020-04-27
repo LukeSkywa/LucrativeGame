@@ -3,24 +3,24 @@
 
     <!-- SISTEMARE I BOTTONI -->
     <div class="btnAllineamento">
-        <button  (click)="viewList(1,'nascosto','false')"  class="btn"> Tutti </button>
+        <button  (click)="viewList(1,'nascosto','false')"  class="btn" autofocus> Tutti </button>
         <button  (click)="viewList(2,'preferito','true','nascosto','false')"  class="btn"> Preferiti </button>
         <button  (click)="viewList(3,'nascosto', 'true')"  class="btn"> Nascosti </button>
     </div>
-    
+
     <div class="container">
         <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
             <div class="card" *ngIf="i < 5 && !mostraPiu">
                 <ng-container >
                     <img src="{{item.path}}" alt="path item" class="img">
-                
+
                     <!-- CONDIVIDI -->
                     <span class="material-icons">share</span>
-    
+
                     <!-- GESTIONE DEI PREFERITI -->
                     <span *ngIf="item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
                     <span *ngIf="!item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
-                    
+
                     <div>
                         <h1 class="title"> {{item.name}} </h1>
                         <p class="description"> {{item.description}} </p>
@@ -39,21 +39,21 @@
             <button *ngIf="i==5 && !mostraPiu;" (click)="mostra()" class="btn">Mostra di più</button>
         </ng-container>
     </div>
-    
+
     <ng-container *ngIf="mostraPiu">
         <div class="container">
             <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
                 <div class="card">
                     <ng-container >
                         <img src="{{item.path}}" alt="path item" class="img">
-                    
+
                         <!-- CONDIVIDI -->
                         <span class="material-icons">share</span>
-        
+
                         <!-- GESTIONE DEI PREFERITI -->
                         <span *ngIf="item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
                         <span *ngIf="!item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
-                        
+
                         <div>
                             <h1 class="title"> {{item.name}} </h1>
                             <p class="description"> {{item.description}} </p>
@@ -67,9 +67,9 @@
                             <a *ngIf="item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Mostra</a>
                         </div>
                     </ng-container>
-                </div>                
+                </div>
             </ng-container>
-            
+
             <!-- SISTEMARE IL BOTTON CON I CSS -->
             <button *ngIf="clothesListFiltered.length >= 5" (click)="mostra()" class="btn">Mostra di meno</button>
         </div>
