@@ -261,6 +261,7 @@ footer {
     background-image: linear-gradient(to right, $coloreInizioCarousel, $coloreFineCarousel);
     margin-top: -28px;
     word-wrap: break-word;
+    border-radius: 10px;
 }
 
 //bottoni (posizione)
@@ -349,20 +350,22 @@ footer {
 
 .imgCarousel {
     float: left;
-    margin-top: -19px;
+    margin-top: -20px;//
     margin-left: -30px;
     height: 120px;
     width: 40%;
+    margin-right: 4px;//
 }
 
 //formattazione testo slide
 .slide-text {
-    text-align: center;
+    text-align: left;
     padding-right: 10px;
     font-size: 15px;
     color: rgb(0, 106, 255);
     font-weight: bold;
     word-wrap: break-word;
+    
 }
 
 

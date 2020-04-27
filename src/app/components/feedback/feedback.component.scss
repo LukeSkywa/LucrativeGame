@@ -62,9 +62,17 @@ input {
 	height: 45px;
 	background-color: white;
 }
+input:required{
+	box-shadow: none;
+}
+
+textarea:required{
+	box-shadow: none;
+}
+
 form.submit {
 	&:hover {
-		background-color: red;
+		background-color: red;//
 		cursor: pointer;
 	}
 }
@@ -128,4 +136,6 @@ form.submit {
 .colorUomoDonna{
 	background-color: #006cff;
 }
+
+
 
