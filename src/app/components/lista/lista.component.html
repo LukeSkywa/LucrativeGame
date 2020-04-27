@@ -50,7 +50,7 @@
 
   <!-- BOTTONI MOSTRA DI PIU' E MOSTRA DI MENO -->
     <div>
-      <button *ngIf="i==5 && !mostraPiu;" (click)="mostra()" class="btn">Mostra di più</button>
+      <button *ngIf="i==5 && !mostraPiu;" (click)="mostra()" class="btnMostraDiPiu">Mostra di più</button>
     </div>
   </ng-container>
 
@@ -95,7 +95,7 @@
 
     </ul>
       <div>
-        <button *ngIf="clothesListFiltered.length >= 5" (click)="mostra()" class="btn">Mostra di meno</button>
+        <button *ngIf="clothesListFiltered.length >= 5" (click)="mostra()" class="btnMostraDiPiu">Mostra di meno</button>
       </div>
   </ng-container>
 
