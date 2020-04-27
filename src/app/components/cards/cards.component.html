@@ -10,8 +10,8 @@
     
     <div class="container">
         <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
-            <div class="card">
-                <ng-container>
+            <div class="card" *ngIf="i < 5 && !mostraPiu">
+                <ng-container >
                     <img src="{{item.path}}" alt="path item" class="img">
                 
                     <!-- CONDIVIDI -->
@@ -35,8 +35,44 @@
                     </div>
                 </ng-container>
             </div>
+            <!-- SISTEMARE IL BOTTON CON I CSS -->
+            <button *ngIf="i==5 && !mostraPiu;" (click)="mostra()" class="btn">Mostra di più</button>
         </ng-container>
     </div>
     
+    <ng-container *ngIf="mostraPiu">
+        <div class="container">
+            <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
+                <div class="card">
+                    <ng-container >
+                        <img src="{{item.path}}" alt="path item" class="img">
+                    
+                        <!-- CONDIVIDI -->
+                        <span class="material-icons">share</span>
+        
+                        <!-- GESTIONE DEI PREFERITI -->
+                        <span *ngIf="item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite </span>
+                        <span *ngIf="!item.preferito" id="info" class="material-icons" (click)="switchPreferito(item.id)"> favorite_border </span>
+                        
+                        <div>
+                            <h1 class="title"> {{item.name}} </h1>
+                            <p class="description"> {{item.description}} </p>
+                        </div>
+                        <!-- FUNZIONA BA BISOGNA SISTEMARE BENE LA GRAFICA -->
+                        <span id="info" (click)="show(i)" class="material-icons align">more_horiz </span>
+                        <div class="dropdown-content" *ngIf="viewBtn==i">
+                            <a [routerLink]="['/detail', item.id]" id="info" class="items">Scopri di più</a>
+                            <hr width=98% size=1 color=#011D28>
+                            <a *ngIf="!item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Nascondi</a>
+                            <a *ngIf="item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Mostra</a>
+                        </div>
+                    </ng-container>
+                </div>                
+            </ng-container>
+            
+            <!-- SISTEMARE IL BOTTON CON I CSS -->
+            <button *ngIf="clothesListFiltered.length >= 5" (click)="mostra()" class="btn">Mostra di meno</button>
+        </div>
+    </ng-container>
 
 </div>
