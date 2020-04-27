@@ -27,7 +27,11 @@ export class LoginSignupService {
     this.userListStored.forEach(element => {
       if(element.username === form.username && element.password === form.password){
         element.admin === true ? sessionStorage.setItem('privilege','admin') : sessionStorage.setItem('privilege','user')
-        sessionStorage.setItem('user', JSON.stringify(element.id));
+        if(form.memorizza){
+          localStorage.setItem('user', JSON.stringify(element.id));
+        }else{
+          sessionStorage.setItem('user', JSON.stringify(element.id));
+        }
         controllo = true;
       } 
     });

@@ -19,7 +19,8 @@ export class LoginComponent implements OnInit {
     this.showPw = false;
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      memorizza: [] //SE E' VERO MEMORIZZA NELLA LOCAL STORAGE.
     })
   }
   
