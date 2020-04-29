@@ -61,13 +61,13 @@
         },
         {
             "id": 7,
-            "name": "Vestito 7",
+            "name": "Felpa Balenciaga",
             "prezzo": 250,
-            "description": "sneakers in pelle, colori vari",
-            "genere": "calzatura",
+            "description": "Felpa Balenciaga colore nero con cappuccio e scritta Balenciaga sul retro",
+            "genere": "Felpe",
             "preferito": false,
             "nascosto": false,
-            "path": "/assets/imgClothes/prodotto5.jpg"
+            "path": "/assets/imgClothes/prodotto7.jpg"
         },
         {
             "id": 8,
