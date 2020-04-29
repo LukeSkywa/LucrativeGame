@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { HttpService } from 'src/app/services/http/http.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
@@ -12,18 +12,20 @@ export class CardsComponent implements OnInit {
 
   sub:any;
   ricerca:string = '';
+  private button;
 
   listSel: number;
   viewBtn: number;
   mostraPiu: Boolean;
-  clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
 
-  constructor(private httpService: HttpService, private route: ActivatedRoute) { 
+  constructor(private httpService: HttpService,private router:Router, private route: ActivatedRoute, private elementRef:ElementRef) { 
     this.mostraPiu = false;
   }
 
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
+    this.router.navigateByUrl('/cards');
+    
     this.viewBtn = null;
     this.listSel = list;
     this.httpService.getClothesFiltered(filtro1,cond1,filtro2,cond2).subscribe( response => {
@@ -91,6 +93,10 @@ export class CardsComponent implements OnInit {
       this.viewList(1,'nascosto','false');
     });
   }
- 
+  
+  switch(){
+    this.button = this.elementRef.nativeElement.querySelector("#btn1");
+    this.button.classList.remove("focus");
+  }
 
 }

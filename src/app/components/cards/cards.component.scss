@@ -86,6 +86,16 @@ img.share {
     color: #006cff;
 }
 
+.focus {
+    padding: 7px 20px;
+    border-radius: 25px;
+    background: white;
+    opacity: 1; //AGGIUNTO
+    color: #006cff;
+    border: solid 2px white;
+    outline: transparent;
+}
+
 .btnMostraDiPiu {
     //AGGIUNTO
     display: block;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { HttpService } from 'src/app/services/http/http.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,15 +12,15 @@ export class ListaComponent implements OnInit {
   
   sub:any;
   ricerca:string = '';
+  private button;
 
   listSel: number;
   viewBtn: number;
   mostraPiu: Boolean;
   clothesListFiltered: ClothesItem [] = [];
  
-  constructor(private httpService: HttpService, private route:ActivatedRoute, private router:Router) { 
+  constructor(private httpService: HttpService, private route:ActivatedRoute, private router:Router, private elementRef: ElementRef) { 
     this.mostraPiu = false;
-    
   }
  
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
@@ -92,6 +92,11 @@ export class ListaComponent implements OnInit {
       else
       this.viewList(1,'nascosto','false');
     });
+  }
+
+  switch(){
+    this.button = this.elementRef.nativeElement.querySelector("#btn1");
+    this.button.classList.remove("focus");
   }
  
 }

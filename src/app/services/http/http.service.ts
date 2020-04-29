@@ -17,11 +17,11 @@ export class HttpService {
   }
 
   getUserLogged():Observable<any>{
-    if(sessionStorage.getItem('user')){
-      return this.httpClient.get('http://localhost:3000/users/' + Number.parseInt(JSON.parse(sessionStorage.getItem('user'))));
-    }else if(localStorage.getItem('user')){
+    if(localStorage.getItem('user')){
       return this.httpClient.get('http://localhost:3000/users/' + Number.parseInt(JSON.parse(localStorage.getItem('user'))));
-    }
+    }else if(sessionStorage.getItem('user')){
+      return this.httpClient.get('http://localhost:3000/users/' + Number.parseInt(JSON.parse(sessionStorage.getItem('user'))));
+    } 
   }
 
   postUser(user: User){

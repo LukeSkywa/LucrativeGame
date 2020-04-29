@@ -3,9 +3,9 @@
 
   <!-- SISTEMARE I BOTTONI -->
   <div class="btnAllineamento">
-    <button  (click)="viewList(1,'nascosto','false')"  class="btn" autofocus> Tutti </button>
-    <button  (click)="viewList(2,'preferito','true','nascosto','false')"  class="btn"> Preferiti </button>
-    <button  (click)="viewList(3,'nascosto', 'true')"  class="btn"> Nascosti </button>
+    <button id="btn1" (click)="viewList(1,'nascosto','false');switch();"  class="btn focus" autofocus> Tutti </button>
+    <button  (click)="viewList(2,'preferito','true','nascosto','false');switch();"  class="btn"> Preferiti </button>
+    <button  (click)="viewList(3,'nascosto', 'true');switch();"  class="btn"> Nascosti </button>
   </div>
 
   <!-- LISTA TUTTI -->
