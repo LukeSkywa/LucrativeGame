@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { HttpService } from 'src/app/services/http/http.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
  
 @Component({
   selector: 'app-lista',
@@ -18,12 +18,14 @@ export class ListaComponent implements OnInit {
   mostraPiu: Boolean;
   clothesListFiltered: ClothesItem [] = [];
  
-  constructor(private httpService: HttpService, private route:ActivatedRoute) { 
+  constructor(private httpService: HttpService, private route:ActivatedRoute, private router:Router) { 
     this.mostraPiu = false;
     
   }
  
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
+    this.router.navigateByUrl('/list');
+    
     this.viewBtn = null;
     this.listSel= list;
     this.httpService.getClothesFiltered(filtro1,cond1,filtro2,cond2).subscribe( response => {
@@ -85,9 +87,10 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       this.ricerca = params['filtro'];
-
+      if(this.ricerca)
         this.search(this.ricerca)
-      
+      else
+      this.viewList(1,'nascosto','false');
     });
   }
  
