@@ -1,132 +1,134 @@
 {
-    "clothes": [{
-            "id": 1,
-            "name": "Jeans casual strapapti biker con borchie street fit",
-            "prezzo": 1.972,
-            "description": "Jeans strapapti, di colore nero, adatti per un look moderno e giovanile ",
-            "genere": "Jeans",
-            "preferito": false,
-            "nascosto": false,
-            "path": "/assets/imgClothes/prodotto1.jpg"
-        },
-        {
-            "id": 2,
-            "name": "Nike Air Force 1",
-            "prezzo": 110,
-            "description": "Scarpa Nike Air Force 1 bianca, scarpa comoda, casual, adatta per ogni occasione",
-            "genere": "Scarpe",
-            "preferito": false,
-            "nascosto": false,
-            "path": "/assets/imgClothes/prodotto2.jpg"
-        },
-        {
-            "id": 3,
-            "name": "T-shirt Paura X Rosa Tee",
-            "prezzo": 49,
-            "description": "T-shirt Paura x Rosa Chemical Tee -  Limited Edition, colore bianco ",
-            "genere": "T-shirt",
-            "preferito": true,
-            "nascosto": false,
-            "path": "/assets/imgClothes/prodotto3.jpg"
-        },
-        {
-            "id": 4,
-            "name": "death metal tee",
-            "prezzo": 45,
-            "description": "t shirt con stampa death metal, colore rosa",
-            "genere": "t-shirt",
-            "preferito": false,
-            "nascosto": true,
-            "path": "/assets/imgClothes/prodotto4.jpg"
-        },
-        {
-            "id": 5,
-            "name": "Sneakers Balenciaga triple s",
-            "prezzo": 750,
-            "description": "Snekers in pelle di Balenciaga, disponibile in vari colori. ",
-            "genere": "Scarpe",
-            "preferito": false,
-            "nascosto": false,
-            "path": "/assets/imgClothes/prodotto5.jpg"
-        },
-        {
-            "id": 6,
-            "name": "Sneakers Valentino Garavani ",
-            "prezzo": 400,
-            "description": "Sneakers di Valentino Garavani in pelle, disponibile in colorazione bianca con scritta VLNT laterale",
-            "genere": "Scarpe",
-            "preferito": false,
-            "nascosto": false,
-            "path": "/assets/imgClothes/prodotto6.png"
-        },
-        {
-            "id": 7,
-            "name": "Felpa Balenciaga",
-            "prezzo": 250,
-            "description": "Felpa Balenciaga colore nero con cappuccio e scritta Balenciaga sul retro",
-            "genere": "Felpe",
-            "preferito": false,
-            "nascosto": false,
-            "path": "/assets/imgClothes/prodotto7.jpg"
-        },
-        {
-            "id": 8,
-            "name": "Scarpe Air Max 97",
-            "prezzo": 200,
-            "description": "Scarpe Air Max 97 colore nero e bianco",
-            "genere": "Scarpe",
-            "preferito": false,
-            "nascosto": false,
-            "path": "/assets/imgClothes/prodotto8.jpg"
-        }
-    ],
-    "users": [{
-            "id": 1,
-            "nome": "Davide",
-            "cognome": "Carizzoni",
-            "username": "davidecarizzoni",
-            "password": "12345",
-            "email": "davidecarizzoni@gmail.com",
-            "telefono": "3487190652",
-            "genere": "Uomo",
-            "admin": true,
-            "path": "/assets/users/avatar6.png"
-        },
-        {
-            "id": 2,
-            "nome": "Antonino",
-            "cognome": "Pigolotti",
-            "username": "antoninopigolotti",
-            "password": "ciao",
-            "email": "antoninopigolotti@gmail.com",
-            "telefono": "456767889",
-            "genere": "Uomo",
-            "admin": true,
-            "path": "/assets/users/avatar13.png"
-        },
-        {
-            "id": 3,
-            "nome": "Matteo",
-            "cognome": "Sorti",
-            "username": "matteosorti",
-            "password": "1234",
-            "email": "matteosorti@gmail.com",
-            "telefono": "34567788",
-            "genere": "Altro",
-            "admin": true,
-            "path": "/assets/users/avatar11.png"
-        },
-        {
-            "id": 4,
-            "nome": "Andrea",
-            "cognome": "Bonardi",
-            "username": "andreabonardi",
-            "password": "123456",
-            "email": "andreabonardi@gmail.com",
-            "telefono": "00110022",
-            "genere": "Uomo",
-            "admin": true,
-            "path": "/assets/users/profile.jpg"
-        }
-    ]
+  "clothes": [
+    {
+      "id": 1,
+      "name": "Jeans casual strapapti biker con borchie street fit",
+      "prezzo": 1.972,
+      "description": "Jeans strapapti, di colore nero, adatti per un look moderno e giovanile ",
+      "genere": "Jeans",
+      "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nike Air Force 1",
+      "prezzo": 110,
+      "description": "Scarpa Nike Air Force 1 bianca, scarpa comoda, casual, adatta per ogni occasione",
+      "genere": "Scarpe",
+      "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "T-shirt Paura X Rosa Tee",
+      "prezzo": 49,
+      "description": "T-shirt Paura x Rosa Chemical Tee -  Limited Edition, colore bianco ",
+      "genere": "T-shirt",
+      "preferito": true,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "death metal tee",
+      "prezzo": 45,
+      "description": "t shirt con stampa death metal, colore rosa",
+      "genere": "t-shirt",
+      "preferito": false,
+      "nascosto": true,
+      "path": "/assets/imgClothes/prodotto4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Sneakers Balenciaga triple s",
+      "prezzo": 750,
+      "description": "Snekers in pelle di Balenciaga, disponibile in vari colori. ",
+      "genere": "Scarpe",
+      "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Sneakers Valentino Garavani ",
+      "prezzo": 400,
+      "description": "Sneakers di Valentino Garavani in pelle, disponibile in colorazione bianca con scritta VLNT laterale",
+      "genere": "Scarpe",
+      "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto6.png"
+    },
+    {
+      "id": 7,
+      "name": "Felpa Balenciaga",
+      "prezzo": 250,
+      "description": "Felpa Balenciaga colore nero con cappuccio e scritta Balenciaga sul retro",
+      "genere": "Felpe",
+      "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Scarpe Air Max 97",
+      "prezzo": 200,
+      "description": "Scarpe Air Max 97 colore nero e bianco",
+      "genere": "Scarpe",
+      "preferito": false,
+      "nascosto": false,
+      "path": "/assets/imgClothes/prodotto8.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nome": "Davide",
+      "cognome": "Carizzoni",
+      "username": "davidecarizzoni",
+      "password": "12345",
+      "email": "davidecarizzoni@gmail.com",
+      "telefono": "3487190652",
+      "genere": "Uomo",
+      "admin": true,
+      "path": "/assets/users/avatar6.png"
+    },
+    {
+      "id": 2,
+      "nome": "Antonino",
+      "cognome": "Pigolotti",
+      "username": "antoninopigolotti",
+      "password": "ciao",
+      "email": "antoninopigolotti@gmail.com",
+      "telefono": "456767889",
+      "genere": "Uomo",
+      "admin": true,
+      "path": "/assets/users/avatar13.png"
+    },
+    {
+      "id": 3,
+      "nome": "Matteo",
+      "cognome": "Sorti",
+      "username": "matteosorti",
+      "password": "1234",
+      "email": "matteosorti@gmail.com",
+      "telefono": "34567788",
+      "genere": "Altro",
+      "admin": true,
+      "path": "/assets/users/avatar11.png"
+    },
+    {
+      "id": 4,
+      "nome": "Andrea",
+      "cognome": "Bonardi",
+      "username": "andreabonardi",
+      "password": "123456",
+      "email": "andreabonardi@gmail.com",
+      "telefono": "00110022",
+      "genere": "Uomo",
+      "admin": true,
+      "path": "/assets/users/profile.jpg"
+    }
+  ]
 }
