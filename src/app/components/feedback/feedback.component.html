@@ -5,7 +5,7 @@
     </div>
 
     <div class="box">
-      <form [formGroup]="feedbackForm" (ngSubmit)="addFeedback(feedbackForm)" ngNativeValidate>
+      <form [formGroup]="feedbackForm" (ngSubmit)="sendFeedback(feedbackForm)" ngNativeValidate>
         <input type="text" id="iconaUtente" name="nome" class="form-control" placeholder="Nome" formControlName="nome" required><br>
         <input type="text" id="iconaUtente" name="cognome" class="form-control" placeholder="Cognome" formControlName="cognome"required><br>
         <select #genere type="text" id="iconaUomoDonna" formControlName="genere" class="form-control">

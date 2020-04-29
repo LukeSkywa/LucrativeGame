@@ -29,7 +29,7 @@ export class FeedbackComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addFeedback(contactForm){
+  sendFeedback(contactForm){
     console.log(contactForm.value);
     if (contactForm.valid) {
       const feedback = contactForm.value;
