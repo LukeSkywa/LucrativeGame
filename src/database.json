@@ -51,13 +51,13 @@
         },
         {
             "id": 6,
-            "name": "Sneakers Valentino Garvani ",
+            "name": "Sneakers Valentino Garavani ",
             "prezzo": 400,
-            "description": "Sneakers di Valentino Garvani in pelle, disponibile in colorazione bianca con scritta VLNT laterale",
+            "description": "Sneakers di Valentino Garavani in pelle, disponibile in colorazione bianca con scritta VLNT laterale",
             "genere": "Scarpe",
             "preferito": false,
             "nascosto": false,
-            "path": "/assets/imgClothes/prodotto5.jpg"
+            "path": "/assets/imgClothes/prodotto5.pngda"
         },
         {
             "id": 7,
