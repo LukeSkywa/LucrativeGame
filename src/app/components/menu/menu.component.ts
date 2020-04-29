@@ -37,7 +37,7 @@ export class MenuComponent implements OnInit {
   }
 
   search(filtro:string){
-    this.router.navigateByUrl("list/"+filtro);
+    this.router.navigateByUrl("list/"+ filtro);
   }
 
 }

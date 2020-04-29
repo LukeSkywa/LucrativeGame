@@ -20,7 +20,7 @@ export class ListaComponent implements OnInit {
  
   constructor(private httpService: HttpService, private route:ActivatedRoute) { 
     this.mostraPiu = false;
-    this.viewList(1,"nascosto","false");
+    
   }
  
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
@@ -58,6 +58,13 @@ export class ListaComponent implements OnInit {
     });
   }
 
+  search(filtro: string){
+    this.httpService.getClothesResearch(filtro).subscribe(response => {
+      this.clothesListFiltered = response;
+      console.log(this.clothesListFiltered);
+    });
+  }
+
   show(index: number) {
     this.viewBtn === index ? this.viewBtn = null : this.viewBtn = index;
   }
@@ -78,7 +85,9 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       this.ricerca = params['filtro'];
-      this.viewList(2,'preferito','true','nascosto','false')
+
+        this.search(this.ricerca)
+      
     });
   }
  

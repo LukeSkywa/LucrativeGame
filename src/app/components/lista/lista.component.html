@@ -9,6 +9,11 @@
   </div>
 
   <!-- LISTA TUTTI -->
+  <ng-container *ngIf="clothesListFiltered.length === 0">
+    <div>
+      <h2>Nessun risultato trovato</h2>
+    </div>
+  </ng-container>
   <ng-container *ngFor="let item of clothesListFiltered; let i = index;">
   <ul>
     <li class= "prova" *ngIf="i < 5 && !mostraPiu" >

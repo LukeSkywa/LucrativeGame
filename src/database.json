@@ -37,7 +37,7 @@
       "description": "t shirt con stampa death metal, colore rosa",
       "genere": "t-shirt",
       "preferito": false,
-      "nascosto": true,
+      "nascosto": false,
       "path": "/assets/imgClothes/prodotto4.jpg"
     },
     {
