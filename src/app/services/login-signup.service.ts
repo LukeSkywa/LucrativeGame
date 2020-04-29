@@ -15,8 +15,8 @@ export class LoginSignupService {
   }
 
   retrieveUsers(){
-    this.httpService.getUsers().subscribe(reponse => {
-      this.userListStored = reponse;
+    this.httpService.getUsers().subscribe(response => {
+      this.userListStored = response;
     }, err => {
       console.log('error');
     });

@@ -1,5 +1,5 @@
 export interface MenuItem{
-    id:number;
-    descrizione:string;
-    url:string;
+    id: number;
+    descrizione: string;
+    url: string;
 }

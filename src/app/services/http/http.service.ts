@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse, HttpParams} from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from 'src/models/user.interface';
 import { ClothesItem } from 'src/models/clothes-item.interface';
@@ -41,6 +41,7 @@ export class HttpService {
     return this.httpClient.get<ClothesItem>('http://localhost:3000/clothes/' + id);
   }
 
+  // IMPLEMENTABILE
   updateClothes(clothes:ClothesItem){
     return this.httpClient.put('http://localhost:3000/clothes/' + clothes.id, clothes)
   }
