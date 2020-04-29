@@ -9,8 +9,8 @@
         <!-- RICERCA -->
         <li *ngIf="ricerca">
             <form>
-                <input type="search">
-                <i class="fa fa-search"></i>
+                <input #ricerca type="search">
+                <i class="fa fa-search" (click)="search(ricerca.value)"></i>
             </form>
         </li>
         <img src="/assets/logo-prova.png" alt="Il logo del nostro blog"/>

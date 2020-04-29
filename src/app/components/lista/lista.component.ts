@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { HttpService } from 'src/app/services/http/http.service';
+import { ActivatedRoute } from '@angular/router';
  
 @Component({
   selector: 'app-lista',
@@ -9,12 +10,15 @@ import { HttpService } from 'src/app/services/http/http.service';
 })
 export class ListaComponent implements OnInit {
   
+  sub:any;
+  ricerca:string = '';
+
   listSel: number;
   viewBtn: number;
   mostraPiu: Boolean;
   clothesListFiltered: ClothesItem [] = [];
  
-  constructor(private httpService: HttpService) { 
+  constructor(private httpService: HttpService, private route:ActivatedRoute) { 
     this.mostraPiu = false;
     this.viewList(1,"nascosto","false");
   }
@@ -71,6 +75,11 @@ export class ListaComponent implements OnInit {
     }
   }
  
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sub = this.route.params.subscribe(params => {
+      this.ricerca = params['filtro'];
+      this.viewList(2,'preferito','true','nascosto','false')
+    });
+  }
  
 }

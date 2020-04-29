@@ -23,7 +23,9 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'feedback', component: FeedbackComponent, canActivate: [LoginRouteGuardService]}, //Non può accedere al feedback se non è loggato
     { path: 'list', component: ListaComponent, canActivate: [LoginRouteGuardService]},
+    { path: 'list/:filtro', component: ListaComponent, canActivate: [LoginRouteGuardService]},
     { path: 'cards', component: CardsComponent, canActivate: [LoginRouteGuardService]},
+    { path: 'cards/:filtro', component: CardsComponent, canActivate: [LoginRouteGuardService]},
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: '**', component:PageNotFoundComponent}
 ]
