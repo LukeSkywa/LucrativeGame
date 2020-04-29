@@ -32,7 +32,7 @@
         {
             "id": 4,
             "name": "death metal tee",
-            "prezzo": 25,
+            "prezzo": 45,
             "description": "t shirt con stampa death metal, colore rosa",
             "genere": "t-shirt",
             "preferito": false,
@@ -42,7 +42,7 @@
         {
             "id": 5,
             "name": "Sneakers Balenciaga triple s",
-            "prezzo": 500,
+            "prezzo": 750,
             "description": "Snekers in pelle di Balenciaga, disponibile in vari colori. ",
             "genere": "Scarpe",
             "preferito": false,
@@ -51,10 +51,10 @@
         },
         {
             "id": 6,
-            "name": "Vestito 6",
-            "prezzo": 123,
-            "description": "sneakers in pelle, colori vari",
-            "genere": "calzatura",
+            "name": "Sneakers Valentino Garvani ",
+            "prezzo": 400,
+            "description": "Sneakers di Valentino Garvani in pelle, disponibile in colorazione bianca con scritta VLNT laterale",
+            "genere": "Scarpe",
             "preferito": false,
             "nascosto": false,
             "path": "/assets/imgClothes/prodotto5.jpg"
