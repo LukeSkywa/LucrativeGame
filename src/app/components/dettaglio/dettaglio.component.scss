@@ -299,6 +299,10 @@ footer {
     margin-left: 5px;
 }
 
+.slider-controls label:hover {
+    background-color: white;
+}
+
 //colore bottoni quando vengono premuti
 #btn-1:checked~.slider-controls label[for="btn-1"] {
     background-color: white;
@@ -350,11 +354,11 @@ footer {
 
 .imgCarousel {
     float: left;
-    margin-top: -20px;//
+    margin-top: -20px; //
     margin-left: -30px;
     height: 120px;
     width: 40%;
-    margin-right: 4px;//
+    margin-right: 4px; //
 }
 
 //formattazione testo slide
@@ -365,7 +369,6 @@ footer {
     color: rgb(0, 106, 255);
     font-weight: bold;
     word-wrap: break-word;
-    
 }
 
 
