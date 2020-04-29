@@ -35,10 +35,10 @@
                     <!-- FUNZIONA BA BISOGNA SISTEMARE BENE LA GRAFICA -->
                     <span id="info" (click)="show(i)" class="material-icons align">more_horiz </span>
                     <div class="dropdown-content" *ngIf="viewBtn==i">
-                        <a [routerLink]="['/detail', item.id]" id="info" class="items">Scopri di più</a>
+                        <a [routerLink]="['/detail', item.id]" id="info3" class="items">Scopri di più</a>
                         <hr width=98% size=1 color=#011D28>
-                        <a *ngIf="!item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Nascondi</a>
-                        <a *ngIf="item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Mostra</a>
+                        <a *ngIf="!item.nascosto" (click)="switchNascondi(item.id)" id="info3" class="items">Nascondi</a>
+                        <a *ngIf="item.nascosto" (click)="switchNascondi(item.id)" id="info3" class="items">Mostra</a>
                     </div>
                 </ng-container>
             </div>
@@ -69,10 +69,10 @@
                         <!-- FUNZIONA BA BISOGNA SISTEMARE BENE LA GRAFICA -->
                         <span id="info" (click)="show(i)" class="material-icons align">more_horiz </span>
                         <div class="dropdown-content" *ngIf="viewBtn==i">
-                            <a [routerLink]="['/detail', item.id]" id="info" class="items">Scopri di più</a>
+                            <a [routerLink]="['/detail', item.id]" id="info3" class="items">Scopri di più</a>
                             <hr width=98% size=1 color=#011D28>
-                            <a *ngIf="!item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Nascondi</a>
-                            <a *ngIf="item.nascosto" (click)="switchNascondi(item.id)" id="info" class="items">Mostra</a>
+                            <a *ngIf="!item.nascosto" (click)="switchNascondi(item.id)" id="info3" class="items">Nascondi</a>
+                            <a *ngIf="item.nascosto" (click)="switchNascondi(item.id)" id="info3" class="items">Mostra</a>
                         </div>
                     </ng-container>
                 </div>

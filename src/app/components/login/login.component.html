@@ -28,10 +28,10 @@
             <div>
                 <input id="password" formControlName="password" placeholder="password" autocomplete="off" [type]="showPw ? 'text' : 'password'" required>
                 <ng-container *ngIf="showPw">
-                    <span (click)="showPassword()" class="material-icons" style="margin-left: 30px;"> visibility </span>
+                    <span (click)="showPassword()" class="material-icons" style="margin-left: 30px; cursor: pointer;"> visibility </span>
                 </ng-container>
                 <ng-container *ngIf="!showPw">
-                    <span (click)="showPassword()" class="material-icons" style="margin-left: 30px;"> visibility_off </span>
+                    <span (click)="showPassword()" class="material-icons" style="margin-left: 30px; cursor: pointer;"> visibility_off </span>
                 </ng-container>
             </div>
         </div>

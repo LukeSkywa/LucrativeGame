@@ -2,30 +2,30 @@
   "clothes": [
     {
       "id": 1,
-      "name": "ginnastica",
+      "name": "Jeans casual strapapti biker con borchie street fit",
       "prezzo": 1.972,
-      "description": "jeans skinny con borchie. Colore nero, strappati",
-      "genere": "jeans",
+      "description": "Jeans strapapti, di colore nero, adatti per un look moderno e giovanile ",
+      "genere": "Jeans",
       "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto1.jpg"
     },
     {
       "id": 2,
-      "name": "nike af1",
+      "name": "Nike Air Force 1",
       "prezzo": 110,
-      "description": "nike af1 bianca, modello donna",
-      "genere": "calzatura",
+      "description": "Scarpa Nike Air Force 1 bianca, scarpa comoda, casual, adatta per ogni occasione",
+      "genere": "Scarpe",
       "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto2.jpg"
     },
     {
       "id": 3,
-      "name": "paura x rosa tee",
+      "name": "T-shirt Paura X Rosa Tee",
       "prezzo": 49,
-      "description": "paura x rosa chemical tee -  limited edition",
-      "genere": "t-shirt",
+      "description": "T-shirt Paura x Rosa Chemical Tee -  Limited Edition, colore bianco ",
+      "genere": "T-shirt",
       "preferito": true,
       "nascosto": true,
       "path": "/assets/imgClothes/prodotto3.jpg"
@@ -33,7 +33,7 @@
     {
       "id": 4,
       "name": "death metal tee",
-      "prezzo": 25,
+      "prezzo": 45,
       "description": "t shirt con stampa death metal, colore rosa",
       "genere": "t-shirt",
       "preferito": false,
@@ -42,43 +42,43 @@
     },
     {
       "id": 5,
-      "name": "sneakers dsquared2",
-      "prezzo": 500,
-      "description": "sneakers in pelle, colori vari",
-      "genere": "calzatura",
+      "name": "Sneakers Balenciaga triple s",
+      "prezzo": 750,
+      "description": "Snekers in pelle di Balenciaga, disponibile in vari colori. ",
+      "genere": "Scarpe",
       "preferito": false,
       "nascosto": false,
       "path": "/assets/imgClothes/prodotto5.jpg"
     },
     {
       "id": 6,
-      "name": "Vestito 6",
-      "prezzo": 123,
-      "description": "sneakers in pelle, colori vari",
-      "genere": "calzatura",
+      "name": "Sneakers Valentino Garavani ",
+      "prezzo": 400,
+      "description": "Sneakers di Valentino Garavani in pelle, disponibile in colorazione bianca con scritta VLNT laterale",
+      "genere": "Scarpe",
       "preferito": false,
       "nascosto": false,
-      "path": "/assets/imgClothes/prodotto5.jpg"
+      "path": "/assets/imgClothes/prodotto6.png"
     },
     {
       "id": 7,
-      "name": "Vestito 7",
+      "name": "Felpa Balenciaga",
       "prezzo": 250,
-      "description": "sneakers in pelle, colori vari",
-      "genere": "calzatura",
+      "description": "Felpa Balenciaga colore nero con cappuccio e scritta Balenciaga sul retro",
+      "genere": "Felpe",
       "preferito": false,
       "nascosto": false,
-      "path": "/assets/imgClothes/prodotto5.jpg"
+      "path": "/assets/imgClothes/prodotto7.jpg"
     },
     {
       "id": 8,
-      "name": "Vestito 8",
+      "name": "Scarpe Air Max 97",
       "prezzo": 200,
-      "description": "sneakers in pelle, colori vari",
-      "genere": "calzatura",
+      "description": "Scarpe Air Max 97 colore nero e bianco",
+      "genere": "Scarpe",
       "preferito": false,
       "nascosto": false,
-      "path": "/assets/imgClothes/prodotto5.jpg"
+      "path": "/assets/imgClothes/prodotto8.jpg"
     }
   ],
   "users": [
