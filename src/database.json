@@ -71,13 +71,13 @@
         },
         {
             "id": 8,
-            "name": "Vestito 8",
+            "name": "Scarpe Air Max 97",
             "prezzo": 200,
-            "description": "sneakers in pelle, colori vari",
-            "genere": "calzatura",
+            "description": "Scarpe Air Max 97 colore nero e bianco",
+            "genere": "Scarpe",
             "preferito": false,
             "nascosto": false,
-            "path": "/assets/imgClothes/prodotto5.jpg"
+            "path": "/assets/imgClothes/prodotto8.jpg"
         }
     ],
     "users": [{
