@@ -27,7 +27,7 @@
       "description": "paura x rosa chemical tee -  limited edition",
       "genere": "t-shirt",
       "preferito": true,
-      "nascosto": false,
+      "nascosto": true,
       "path": "/assets/imgClothes/prodotto3.jpg"
     },
     {

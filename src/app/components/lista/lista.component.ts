@@ -79,7 +79,7 @@ export class ListaComponent implements OnInit {
     if(this.listSel === 3){
       this.viewList(3,'nascosto', 'true');
     }
-    if(this.listSel === 2){
+    if(this.listSel === 2){ 
      this.viewList(2,'preferito','true');
     }
   }

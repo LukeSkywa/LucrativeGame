@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClothesItem } from 'src/models/clothes-item.interface';
 import { HttpService } from 'src/app/services/http/http.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
@@ -9,15 +10,17 @@ import { HttpService } from 'src/app/services/http/http.service';
 })
 export class CardsComponent implements OnInit {
 
+  sub:any;
+  ricerca:string = '';
+
   listSel: number;
   viewBtn: number;
   mostraPiu: Boolean;
   clothesList: ClothesItem [] = [];
   clothesListFiltered: ClothesItem [] = [];
 
-  constructor(private httpService: HttpService) { 
+  constructor(private httpService: HttpService, private route: ActivatedRoute) { 
     this.mostraPiu = false;
-    this.viewList(1,"nascosto","false");
   }
 
   viewList(list:number, filtro1?:string, cond1?: string, filtro2?:string, cond2?:string){
@@ -54,6 +57,13 @@ export class CardsComponent implements OnInit {
       }
     });
   }
+  
+  search(filtro: string){
+    this.httpService.getClothesResearch(filtro).subscribe(response => {
+      this.clothesListFiltered = response;
+      console.log(this.clothesListFiltered);
+    });
+  }
 
   show(index: number) {
     this.viewBtn === index ? this.viewBtn = null : this.viewBtn = index;
@@ -72,6 +82,15 @@ export class CardsComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sub = this.route.params.subscribe(params => {
+      this.ricerca = params['filtro'];
+      if(this.ricerca)
+        this.search(this.ricerca)
+      else
+      this.viewList(1,'nascosto','false');
+    });
+  }
+ 
 
 }

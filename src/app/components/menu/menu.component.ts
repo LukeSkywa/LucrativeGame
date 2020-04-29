@@ -10,9 +10,12 @@ import { MenuItem } from 'src/models/menu-item.interface';
 })
 export class MenuComponent implements OnInit {
 
-  sub:any;
-
+  sub: any;
   ricerca: boolean;
+
+  ricercaLista: boolean;
+  ricercaCards: boolean;
+  
   filtro: string = '';
   menu: MenuItem[] = [
     {id:1, descrizione:'HomePage', url:'/home'},
@@ -26,13 +29,21 @@ export class MenuComponent implements OnInit {
 
   constructor(private router:Router, private route:ActivatedRoute) {
     this.ricerca = false;
+    this.ricercaLista = false;
+    this.ricercaCards = false;
     this.sub = this.route.params.subscribe(params => {
       this.filtro = params['filtro'];
     });
     router.events.subscribe(event => {​
-      if(event instanceof NavigationEnd) 
-        event.urlAfterRedirects === "/list" || event.urlAfterRedirects === "/list/"+this.filtro ? this.ricerca=true: this.ricerca=false;
-        console.log(this.router);
+      if(event instanceof NavigationEnd)
+        if(event.urlAfterRedirects === "/list" || event.urlAfterRedirects === "/list/" + this.filtro){
+          this.ricerca = true;
+          this.ricercaLista = true;
+        }
+        else if(event.urlAfterRedirects === "/cards" || event.urlAfterRedirects === "/cards/" + this.filtro){
+          this.ricerca = true;
+          this.ricercaCards = true;
+        }
     });
   }
 
@@ -44,7 +55,10 @@ export class MenuComponent implements OnInit {
   }
 
   search(filtro:string){
-    this.router.navigateByUrl("list/"+ filtro);
+    if(this.ricercaLista)
+      this.router.navigateByUrl("list/" + filtro);
+    if(this.ricercaCards)
+      this.router.navigateByUrl("cards/" + filtro);
   }
 
 }
