@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { MenuItem } from 'src/models/menu-item.interface';
+import { RouterService } from 'src/app/services/router.service';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class MenuComponent implements OnInit {
 
   username = sessionStorage.getItem('username');
 
-  constructor(private router:Router, private route:ActivatedRoute) {
+  constructor(private router:Router, private route:ActivatedRoute, private routerSertvice: RouterService) {
     this.ricerca = false;
     this.ricercaLista = false;
     this.ricercaCards = false;
@@ -59,6 +60,10 @@ export class MenuComponent implements OnInit {
       this.router.navigateByUrl("list/" + filtro);
     if(this.ricercaCards)
       this.router.navigateByUrl("cards/" + filtro);
+  }
+
+  navigate(url:string){
+    this.routerSertvice.navigateTo(url);
   }
 
 }

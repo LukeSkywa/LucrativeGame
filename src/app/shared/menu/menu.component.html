@@ -1,7 +1,7 @@
 <div>
     <ul>
         <li *ngFor="let item of menu"> 
-            <a routerLink="{{item.url}}">{{item.descrizione}}</a>
+            <a (click)= "navigate(item.url)">{{item.descrizione}}</a>
         </li>
         <li> <a id="cursor" (click)="logout()"> Esci </a></li>
 
@@ -15,4 +15,5 @@
         <img src="/assets/logo-prova.png" alt="Il logo del nostro blog"/>
     </ul>
 </div>
+
 
