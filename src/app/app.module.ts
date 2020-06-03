@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 import { ModificaAvatarProfiloComponent } from './components/modifica-avatar-profilo/modifica-avatar-profilo.component';
@@ -21,7 +20,6 @@ import { SharedModule } from './shared/shared.module';
     AppComponent,
     DettaglioComponent,
     PageNotFoundComponent,
-    FeedbackComponent,
     ProfiloComponent,
     ModificaProfiloComponent,
     ModificaAvatarProfiloComponent
