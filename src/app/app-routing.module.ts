@@ -1,14 +1,11 @@
 import { NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginRouteGuardService } from './services/route-guard/login-route-guard.service';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 import { ModificaAvatarProfiloComponent } from './components/modifica-avatar-profilo/modifica-avatar-profilo.component';
 
 const routes: Routes = [
-    { path: 'detail/:id', component: DettaglioComponent, canActivate: [LoginRouteGuardService]},
     { path: 'profilo', component: ProfiloComponent, canActivate: [LoginRouteGuardService]},
     { path: 'modifica-profilo', component: ModificaProfiloComponent, canActivate: [LoginRouteGuardService]},
     { path: 'modifica-avatar-profilo', component: ModificaAvatarProfiloComponent, canActivate: [LoginRouteGuardService]},
@@ -21,8 +18,9 @@ const routes: Routes = [
     { path: 'cards', loadChildren: () => import('./feature/cards/cards.module').then(m => m.CardsModule) },
     { path: 'cards/:filtro', loadChildren: () => import('./feature/cards/cards.module').then(m => m.CardsModule) },
     { path: 'feedback', loadChildren: () => import('./feature/feedback/feedback.module').then(m => m.FeedbackModule) },
+    { path: 'detail/:id', loadChildren: () => import('./feature/dettaglio/dettaglio.module').then(m => m.DettaglioModule) },
+    { path: '**', loadChildren: () => import('./feature/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
 
-    { path: '**', component:PageNotFoundComponent}
 ]
 
 @NgModule({
