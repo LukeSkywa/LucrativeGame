@@ -7,7 +7,6 @@ import { ListaComponent } from './components/lista/lista.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SignupComponent } from './components/signup/signup.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
@@ -26,7 +25,6 @@ import { SharedModule } from './shared/shared.module';
     CardsComponent,
     DettaglioComponent,
     PageNotFoundComponent,
-    SignupComponent,
     FeedbackComponent,
     ProfiloComponent,
     ModificaProfiloComponent,

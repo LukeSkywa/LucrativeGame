@@ -129,6 +129,18 @@
       "genere": "Uomo",
       "admin": true,
       "path": "/assets/users/profile.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "",
+      "cognome": "",
+      "email": "",
+      "username": "olasdds",
+      "password": "cico",
+      "telefono": "",
+      "genere": "",
+      "path": "/assets/users/profile.jpg",
+      "admin": false
     }
   ]
 }
