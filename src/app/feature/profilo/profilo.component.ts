@@ -19,7 +19,6 @@ export class ProfiloComponent implements OnInit {
       this.user = response;
       console.log(this.user)
     });
-    // console.log(this.user);
   }
 
 }
